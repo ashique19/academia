@@ -133,6 +133,7 @@ class Course extends Model
     public function scopeWithCardRelations(Builder $query): Builder
     {
         return $query->with([
+            'scheme',
             'subcategory:id,name,slug,course_category_id',
             'subcategory.category:id,name,slug,color_token',
             'deliveryModes:id,name,slug,icon',

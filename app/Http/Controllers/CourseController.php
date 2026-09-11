@@ -19,7 +19,7 @@ class CourseController extends Controller
         $course->load([
             'subcategory.category', 'deliveryModes', 'modules', 'scheme', 'faqs',
             'schedules' => fn ($q) => $q->upcoming()->publiclyVisible()
-                ->with(['city.country', 'venue', 'deliveryMode'])->orderBy('starts_at')->take(12),
+                ->with(['course.scheme', 'city.country', 'venue', 'deliveryMode'])->orderBy('starts_at')->take(12),
         ]);
 
         // Fire-and-forget popularity counter. No model events, no updated_at

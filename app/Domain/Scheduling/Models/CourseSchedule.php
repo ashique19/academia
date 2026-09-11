@@ -141,7 +141,8 @@ class CourseSchedule extends Model
     public function scopeWithListRelations(Builder $query): Builder
     {
         return $query->with([
-            'course:id,title,slug,duration_days,level,price_cents,course_subcategory_id',
+            'course:id,title,slug,duration_days,level,price_cents,course_subcategory_id,certification_scheme_id',
+            'course.scheme',
             'course.subcategory:id,name,slug,course_category_id',
             'course.subcategory.category:id,name,slug',
             'city:id,name,slug,country_id',
