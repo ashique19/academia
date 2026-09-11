@@ -16,6 +16,23 @@ class CourseScheduleFactory extends Factory
 {
     protected $model = CourseSchedule::class;
 
+    /**
+     * Keep ends_at consistent with starts_at.
+     *
+     * Callers routinely override only starts_at (e.g. now()->addMonth()); left
+     * alone, ends_at would keep the definition's unrelated date and could land
+     * before starts_at, which the database now rejects. Recompute it whenever
+     * the pair is inconsistent, without disturbing states that set both.
+     */
+    public function configure(): static
+    {
+        return $this->afterMaking(function (CourseSchedule $schedule): void {
+            if ($schedule->ends_at === null || $schedule->ends_at <= $schedule->starts_at) {
+                $schedule->ends_at = $schedule->starts_at->copy()->addHours(8);
+            }
+        });
+    }
+
     public function definition(): array
     {
         $startsAt = now()->addDays($this->faker->numberBetween(7, 180))->setTime(9, 0);
