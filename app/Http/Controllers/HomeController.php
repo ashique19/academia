@@ -32,34 +32,27 @@ class HomeController extends Controller
         return view('pages.home', [
             'promotion' => $promotions->active(),
 
-            'categories' => Cache::remember('home.categories', now()->addHour(), fn () =>
-                CourseCategory::active()->ordered()->withPublishedCourseCount()->get()),
+            'categories' => Cache::remember('home.categories', now()->addHour(), fn () => CourseCategory::active()->ordered()->withPublishedCourseCount()->get()),
 
-            'featured' => Cache::remember('home.featured', now()->addHour(), fn () =>
-                Course::published()->featured()->withCardRelations()
-                    ->orderByDesc('booking_count')->take(8)->get()),
+            'featured' => Cache::remember('home.featured', now()->addHour(), fn () => Course::published()->featured()->withCardRelations()
+                ->orderByDesc('booking_count')->take(8)->get()),
 
-            'popular' => Cache::remember('home.popular', now()->addHour(), fn () =>
-                Course::published()->withCardRelations()
-                    ->orderByDesc('booking_count')->take(8)->get()),
+            'popular' => Cache::remember('home.popular', now()->addHour(), fn () => Course::published()->withCardRelations()
+                ->orderByDesc('booking_count')->take(8)->get()),
 
-            'upcoming' => Cache::remember('home.upcoming', now()->addMinutes(30), fn () =>
-                CourseSchedule::query()->upcoming()->bookable()->withListRelations()
-                    ->orderBy('starts_at')->take(8)->get()),
+            'upcoming' => Cache::remember('home.upcoming', now()->addMinutes(30), fn () => CourseSchedule::query()->upcoming()->bookable()->withListRelations()
+                ->orderBy('starts_at')->take(8)->get()),
 
-            'cities' => Cache::remember('home.cities', now()->addHours(6), fn () =>
-                City::active()->hasUpcomingSessions()->withUpcomingSessionCount()
-                    ->with('country')->orderByDesc('upcoming_sessions_count')->take(12)->get()),
+            'cities' => Cache::remember('home.cities', now()->addHours(6), fn () => City::active()->hasUpcomingSessions()->withUpcomingSessionCount()
+                ->with('country')->orderByDesc('upcoming_sessions_count')->take(12)->get()),
 
-            'testimonials' => Cache::remember('home.testimonials', now()->addHours(6), fn () =>
-                Testimonial::published()->orderBy('sort_order')->take(3)->get()),
+            'testimonials' => Cache::remember('home.testimonials', now()->addHours(6), fn () => Testimonial::published()->orderBy('sort_order')->take(3)->get()),
 
-            'posts' => Cache::remember('home.posts', now()->addHour(), fn () =>
-                BlogPost::published()->with('category')->latest('published_at')->take(3)->get()),
+            'posts' => Cache::remember('home.posts', now()->addHour(), fn () => BlogPost::published()->with('category')->latest('published_at')->take(3)->get()),
 
             'stats' => Cache::remember('home.stats', now()->addHours(6), fn () => [
                 'courses' => Course::published()->count(),
-                'cities'  => City::active()->hasUpcomingSessions()->count(),
+                'cities' => City::active()->hasUpcomingSessions()->count(),
             ]),
         ]);
     }

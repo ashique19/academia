@@ -25,8 +25,8 @@ class TestimonialObserver
         if (! $testimonial->isPublishable()) {
             throw new DomainException(
                 'A testimonial cannot be published unless it is verified with a '
-                . 'consent reference on file, or explicitly flagged as illustrative. '
-                . 'See the review policy in the build documentation.'
+                .'consent reference on file, or explicitly flagged as illustrative. '
+                .'See the review policy in the build documentation.'
             );
         }
 

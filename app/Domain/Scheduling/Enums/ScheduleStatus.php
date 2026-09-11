@@ -20,8 +20,8 @@ namespace App\Domain\Scheduling\Enums;
 enum ScheduleStatus: string
 {
     case Scheduled = 'scheduled';
-    case Open      = 'open';
-    case Full      = 'full';
+    case Open = 'open';
+    case Full = 'full';
     case Cancelled = 'cancelled';
     case Completed = 'completed';
 
@@ -45,8 +45,8 @@ enum ScheduleStatus: string
     public function badgeColor(): string
     {
         return match ($this) {
-            self::Open      => 'green',
-            self::Full      => 'gold',
+            self::Open => 'green',
+            self::Full => 'gold',
             self::Cancelled => 'red',
             self::Completed => 'neutral',
             self::Scheduled => 'neutral',
@@ -58,8 +58,8 @@ enum ScheduleStatus: string
     {
         return match ($this) {
             self::Scheduled => [self::Open, self::Cancelled],
-            self::Open      => [self::Full, self::Cancelled, self::Completed],
-            self::Full      => [self::Open, self::Cancelled, self::Completed],
+            self::Open => [self::Full, self::Cancelled, self::Completed],
+            self::Full => [self::Open, self::Cancelled, self::Completed],
             self::Cancelled => [],
             self::Completed => [],
         };

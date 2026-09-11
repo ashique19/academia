@@ -10,6 +10,7 @@ use App\Domain\Leads\Models\IndividualLead;
 use App\Domain\Leads\Models\Registration;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Data-retention enforcement (spec §22.1).
@@ -37,9 +38,9 @@ class PurgeExpiredLeads extends Command
 
     public function handle(): int
     {
-        $dryRun         = (bool) $this->option('dry-run');
+        $dryRun = (bool) $this->option('dry-run');
         $deadLeadCutoff = now()->subMonths((int) config('academia.retention.dead_leads_months'));
-        $bookingCutoff  = now()->subYears((int) config('academia.retention.bookings_years'));
+        $bookingCutoff = now()->subYears((int) config('academia.retention.bookings_years'));
 
         if ($dryRun) {
             $this->warn('Dry run. Re-run without --dry-run to anonymise.');
@@ -53,10 +54,10 @@ class PurgeExpiredLeads extends Command
                 ->where('created_at', '<', $deadLeadCutoff),
             fn (CorporateInquiry $row): array => [
                 'contact_name' => 'Erased',
-                'email'        => $this->erasedEmail($row->email),
-                'phone'        => null,
-                'job_title'    => null,
-                'message'      => null,
+                'email' => $this->erasedEmail($row->email),
+                'phone' => null,
+                'job_title' => null,
+                'message' => null,
             ],
             $dryRun,
         );
@@ -67,9 +68,9 @@ class PurgeExpiredLeads extends Command
                 ->withTrashed()
                 ->where('created_at', '<', $deadLeadCutoff),
             fn (IndividualLead $row): array => [
-                'name'    => 'Erased',
-                'email'   => $this->erasedEmail($row->email),
-                'phone'   => null,
+                'name' => 'Erased',
+                'email' => $this->erasedEmail($row->email),
+                'phone' => null,
                 'message' => null,
             ],
             $dryRun,
@@ -82,12 +83,12 @@ class PurgeExpiredLeads extends Command
                 ->withTrashed()
                 ->where('created_at', '<', $bookingCutoff),
             fn (Registration $row): array => [
-                'name'                 => 'Erased',
-                'email'                => $this->erasedEmail($row->email),
-                'phone'                => null,
-                'company'              => null,
-                'job_title'            => null,
-                'message'              => null,
+                'name' => 'Erased',
+                'email' => $this->erasedEmail($row->email),
+                'phone' => null,
+                'company' => null,
+                'job_title' => null,
+                'message' => null,
                 'dietary_requirements' => null,
             ],
             $dryRun,
@@ -95,7 +96,7 @@ class PurgeExpiredLeads extends Command
 
         $this->newLine();
         $this->line(($dryRun ? 'Would anonymise' : 'Anonymised')
-            . " — corporate inquiries: {$inquiries}, individual leads: {$leads}, bookings: {$bookings}.");
+            ." — corporate inquiries: {$inquiries}, individual leads: {$leads}, bookings: {$bookings}.");
 
         if (! $dryRun && ($inquiries + $leads + $bookings) > 0) {
             activity()->withProperties(compact('inquiries', 'leads', 'bookings'))
@@ -108,11 +109,11 @@ class PurgeExpiredLeads extends Command
     /**
      * Anonymise every row the builder matches that has not already been erased.
      *
-     * @param  callable(\Illuminate\Database\Eloquent\Model): array<string, mixed>  $attributes
+     * @param  callable(Model): array<string, mixed>  $attributes
      */
     private function anonymise(Builder $query, callable $attributes, bool $dryRun): int
     {
-        $query->where('email', 'not like', '%' . self::ERASED_DOMAIN);
+        $query->where('email', 'not like', '%'.self::ERASED_DOMAIN);
 
         if ($dryRun) {
             return $query->count();
@@ -133,6 +134,6 @@ class PurgeExpiredLeads extends Command
     /** Deterministic, non-reversible replacement that preserves row-uniqueness. */
     private function erasedEmail(?string $email): string
     {
-        return 'erased+' . substr(hash('sha256', (string) $email . 'retention'), 0, 12) . self::ERASED_DOMAIN;
+        return 'erased+'.substr(hash('sha256', (string) $email.'retention'), 0, 12).self::ERASED_DOMAIN;
     }
 }

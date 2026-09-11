@@ -7,22 +7,22 @@ namespace App\Domain\Leads\Enums;
 enum RegistrationStatus: string
 {
     /** MVP default: interest registered, no payment taken. */
-    case Interest  = 'interest';
-    case Pending   = 'pending';
+    case Interest = 'interest';
+    case Pending = 'pending';
     case Confirmed = 'confirmed';
     case Cancelled = 'cancelled';
-    case Attended  = 'attended';
-    case NoShow    = 'no_show';
+    case Attended = 'attended';
+    case NoShow = 'no_show';
 
     public function label(): string
     {
         return match ($this) {
-            self::Interest  => 'Interest registered',
-            self::Pending   => 'Pending payment',
+            self::Interest => 'Interest registered',
+            self::Pending => 'Pending payment',
             self::Confirmed => 'Confirmed',
             self::Cancelled => 'Cancelled',
-            self::Attended  => 'Attended',
-            self::NoShow    => 'No show',
+            self::Attended => 'Attended',
+            self::NoShow => 'No show',
         };
     }
 

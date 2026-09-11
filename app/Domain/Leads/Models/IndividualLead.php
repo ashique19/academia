@@ -31,10 +31,10 @@ class IndividualLead extends Model
     protected function casts(): array
     {
         return [
-            'source'         => LeadSource::class,
+            'source' => LeadSource::class,
             'preferred_date' => 'date',
-            'consented_at'   => 'datetime',
-            'confirmed_at'   => 'datetime',
+            'consented_at' => 'datetime',
+            'confirmed_at' => 'datetime',
         ];
     }
 

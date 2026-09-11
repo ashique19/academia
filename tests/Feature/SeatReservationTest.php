@@ -16,17 +16,16 @@ use Illuminate\Support\Facades\DB;
  * click "register" on the last seat within the same second, naive code reads
  * seats_available = 1 twice, and a classroom is oversold.
  */
-
 beforeEach(function () {
-    $this->service = new RegistrationService();
+    $this->service = new RegistrationService;
 });
 
 it('decrements available seats when a place is reserved', function () {
     $schedule = CourseSchedule::factory()->create([
-        'seat_limit'  => 10,
+        'seat_limit' => 10,
         'seats_taken' => 0,
-        'status'      => ScheduleStatus::Open,
-        'starts_at'   => now()->addMonth(),
+        'status' => ScheduleStatus::Open,
+        'starts_at' => now()->addMonth(),
     ]);
 
     $this->service->reserve($schedule, ['name' => 'Test', 'email' => 'test@example.com']);

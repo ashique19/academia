@@ -10,11 +10,10 @@ use App\Domain\Catalogue\Services\PromotionService;
  * Each of these corresponds to a promise printed on the public offers page.
  * If one fails, the site is making a claim the code does not honour.
  */
-
 it('adds percentages rather than compounding them', function () {
     // A buyer reading "15% + 10%" means 25%. Compounding to 23.5% at the till
     // is the small dishonesty this whole service exists to prevent.
-    $service = new PromotionService();
+    $service = new PromotionService;
 
     expect($service->applyPercentage(100_000, 25))->toBe(75_000);
 });
@@ -29,7 +28,7 @@ it('never lets stacked discounts exceed the published ceiling', function () {
 });
 
 it('rounds prices to the nearest five euros', function () {
-    $service = new PromotionService();
+    $service = new PromotionService;
     config(['academia.promotions.round_to_cents' => 500]);
 
     // 695.00 less 20% = 556.00 -> 555.00
@@ -45,7 +44,7 @@ it('returns the correct group tier for a basket quantity', function () {
         ['min_seats' => 10, 'percent' => 25],
     ]]);
 
-    $service = new PromotionService();
+    $service = new PromotionService;
 
     expect($service->groupTierFor(1))->toBeNull()
         ->and($service->groupTierFor(2))->toBeNull()
@@ -58,5 +57,5 @@ it('returns the correct group tier for a basket quantity', function () {
 });
 
 it('leaves the price untouched when no discount applies', function () {
-    expect((new PromotionService())->applyPercentage(69_500, 0))->toBe(69_500);
+    expect((new PromotionService)->applyPercentage(69_500, 0))->toBe(69_500);
 });

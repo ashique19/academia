@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Domain\Catalogue\Models;
 
+use Database\Factories\CourseSubcategoryFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -16,10 +18,11 @@ class CourseSubcategory extends Model
     use HasFactory;
 
     /** Factories live in Database\Factories, outside this model's namespace. */
-    protected static function newFactory(): \Illuminate\Database\Eloquent\Factories\Factory
+    protected static function newFactory(): Factory
     {
-        return \Database\Factories\CourseSubcategoryFactory::new();
+        return CourseSubcategoryFactory::new();
     }
+
     protected $fillable = [
         'course_category_id', 'name', 'slug', 'summary', 'sort_order', 'is_active',
     ];

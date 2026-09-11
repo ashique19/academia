@@ -39,12 +39,12 @@ class DatabaseSeeder extends Seeder
             $user = User::updateOrCreate(
                 ['email' => $email],
                 [
-                    'name'              => $name,
+                    'name' => $name,
                     // Local development only — DatabaseSeeder::run() gates this
                     // block on the environment so it can never run in production.
-                    'password'          => Hash::make('password'),
+                    'password' => Hash::make('password'),
                     'email_verified_at' => now(),
-                    'is_active'         => true,
+                    'is_active' => true,
                 ]
             );
 

@@ -14,13 +14,10 @@ class RouteServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // Search is cheap but scriptable; forms are expensive and abusable.
-        RateLimiter::for('search', fn (Request $request) =>
-            Limit::perMinute(30)->by($request->ip()));
+        RateLimiter::for('search', fn (Request $request) => Limit::perMinute(30)->by($request->ip()));
 
-        RateLimiter::for('forms', fn (Request $request) =>
-            Limit::perHour(10)->by($request->ip()));
+        RateLimiter::for('forms', fn (Request $request) => Limit::perHour(10)->by($request->ip()));
 
-        RateLimiter::for('login', fn (Request $request) =>
-            Limit::perMinute(5)->by($request->ip() . '|' . $request->input('email')));
+        RateLimiter::for('login', fn (Request $request) => Limit::perMinute(5)->by($request->ip().'|'.$request->input('email')));
     }
 }

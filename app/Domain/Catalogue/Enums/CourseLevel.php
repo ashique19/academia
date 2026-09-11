@@ -6,9 +6,9 @@ namespace App\Domain\Catalogue\Enums;
 
 enum CourseLevel: string
 {
-    case Foundation   = 'foundation';
+    case Foundation = 'foundation';
     case Intermediate = 'intermediate';
-    case Advanced     = 'advanced';
+    case Advanced = 'advanced';
 
     public function label(): string
     {
@@ -19,9 +19,9 @@ enum CourseLevel: string
     public function sortOrder(): int
     {
         return match ($this) {
-            self::Foundation   => 1,
+            self::Foundation => 1,
             self::Intermediate => 2,
-            self::Advanced     => 3,
+            self::Advanced => 3,
         };
     }
 

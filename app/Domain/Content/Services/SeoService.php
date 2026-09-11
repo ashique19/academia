@@ -21,12 +21,12 @@ class SeoService
         $seo = method_exists($model, 'seo') ? $model->seo : null;
 
         return [
-            'title'       => $seo?->title ?: ($fallbacks['title'] ?? null),
+            'title' => $seo?->title ?: ($fallbacks['title'] ?? null),
             'description' => $seo?->description ?: ($fallbacks['description'] ?? null),
-            'canonical'   => $seo?->canonical_url ?: ($fallbacks['canonical'] ?? null),
-            'robots'      => $seo?->robots ?: 'index,follow',
-            'og_title'    => $seo?->og_title ?: $seo?->title ?: ($fallbacks['title'] ?? null),
-            'og_image'    => $seo?->og_image_path ?: ($fallbacks['og_image'] ?? null),
+            'canonical' => $seo?->canonical_url ?: ($fallbacks['canonical'] ?? null),
+            'robots' => $seo?->robots ?: 'index,follow',
+            'og_title' => $seo?->og_title ?: $seo?->title ?: ($fallbacks['title'] ?? null),
+            'og_image' => $seo?->og_image_path ?: ($fallbacks['og_image'] ?? null),
         ];
     }
 

@@ -67,7 +67,7 @@ class CourseSearchService
      */
     private function likeFallback(Builder $query, string $term): Builder
     {
-        $like = '%' . str_replace(['%', '_'], ['\%', '\_'], $term) . '%';
+        $like = '%'.str_replace(['%', '_'], ['\%', '\_'], $term).'%';
 
         return $query
             ->where(fn (Builder $q) => $q

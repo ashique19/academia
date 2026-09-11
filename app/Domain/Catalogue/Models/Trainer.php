@@ -58,10 +58,10 @@ class Trainer extends Model
     protected function casts(): array
     {
         return [
-            'certifications'       => 'array',
-            'languages'            => 'array',
-            'is_public'            => 'boolean',
-            'published_at'         => 'datetime',
+            'certifications' => 'array',
+            'languages' => 'array',
+            'is_public' => 'boolean',
+            'published_at' => 'datetime',
             'reference_checked_at' => 'date',
         ];
     }
@@ -127,7 +127,7 @@ class Trainer extends Model
 
             return sprintf(
                 'A subject-matter expert with %d+ years in the field, still practising, '
-                . 'reference-checked and matched to your cohort.',
+                .'reference-checked and matched to your cohort.',
                 $years
             );
         });

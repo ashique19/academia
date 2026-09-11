@@ -35,8 +35,8 @@ class CaptureAttribution
             }
         }
 
-        $attribution['source']      = $attribution['utm_source'] ?? $this->classifyReferrer($request);
-        $attribution['landing']     = mb_substr($request->path(), 0, 200);
+        $attribution['source'] = $attribution['utm_source'] ?? $this->classifyReferrer($request);
+        $attribution['landing'] = mb_substr($request->path(), 0, 200);
         $attribution['captured_at'] = now()->toIso8601String();
 
         $request->session()->put('attribution', $attribution);
@@ -59,11 +59,11 @@ class CaptureAttribution
         }
 
         return match (true) {
-            str_contains($host, 'google.')    => 'google',
-            str_contains($host, 'bing.')      => 'bing',
+            str_contains($host, 'google.') => 'google',
+            str_contains($host, 'bing.') => 'bing',
             str_contains($host, 'duckduckgo') => 'duckduckgo',
-            str_contains($host, 'linkedin.')  => 'linkedin',
-            default                           => mb_substr($host, 0, 80),
+            str_contains($host, 'linkedin.') => 'linkedin',
+            default => mb_substr($host, 0, 80),
         };
     }
 }

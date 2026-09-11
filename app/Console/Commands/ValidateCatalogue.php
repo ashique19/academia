@@ -24,56 +24,44 @@ class ValidateCatalogue extends Command
     public function handle(): int
     {
         $errors = [
-            'Orphan sessions (course missing)' =>
-                'SELECT COUNT(*) FROM course_schedules s LEFT JOIN courses c ON c.id = s.course_id WHERE c.id IS NULL',
+            'Orphan sessions (course missing)' => 'SELECT COUNT(*) FROM course_schedules s LEFT JOIN courses c ON c.id = s.course_id WHERE c.id IS NULL',
 
-            'Classroom sessions with no city' =>
-                'SELECT COUNT(*) FROM course_schedules s
+            'Classroom sessions with no city' => 'SELECT COUNT(*) FROM course_schedules s
                  JOIN delivery_modes m ON m.id = s.delivery_mode_id
                  WHERE m.slug = \'classroom\' AND s.city_id IS NULL',
 
-            'Sessions oversold (seats_taken > seat_limit)' =>
-                'SELECT COUNT(*) FROM course_schedules WHERE seats_taken > seat_limit',
+            'Sessions oversold (seats_taken > seat_limit)' => 'SELECT COUNT(*) FROM course_schedules WHERE seats_taken > seat_limit',
 
-            'Sessions ending before they start' =>
-                'SELECT COUNT(*) FROM course_schedules WHERE ends_at <= starts_at',
+            'Sessions ending before they start' => 'SELECT COUNT(*) FROM course_schedules WHERE ends_at <= starts_at',
 
-            'Published courses with no delivery mode' =>
-                'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
+            'Published courses with no delivery mode' => 'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
                  AND NOT EXISTS (SELECT 1 FROM course_delivery_mode d WHERE d.course_id = c.id)',
 
-            'Categories with no published courses' =>
-                'SELECT COUNT(*) FROM course_categories cc WHERE NOT EXISTS (
+            'Categories with no published courses' => 'SELECT COUNT(*) FROM course_categories cc WHERE NOT EXISTS (
                      SELECT 1 FROM course_subcategories s
                      JOIN courses c ON c.course_subcategory_id = s.id
                      WHERE s.course_category_id = cc.id AND c.status = \'published\')',
 
-            'Testimonials published without verification or illustrative flag' =>
-                'SELECT COUNT(*) FROM testimonials
+            'Testimonials published without verification or illustrative flag' => 'SELECT COUNT(*) FROM testimonials
                  WHERE status = \'published\' AND is_verified = 0 AND is_illustrative = 0',
         ];
 
         $warnings = [
-            'Cities with no hand-written intro' =>
-                'SELECT COUNT(*) FROM cities WHERE is_active = 1 AND (intro IS NULL OR intro = \'\')',
+            'Cities with no hand-written intro' => 'SELECT COUNT(*) FROM cities WHERE is_active = 1 AND (intro IS NULL OR intro = \'\')',
 
-            'Active cities with no upcoming open session (city page will 404)' =>
-                'SELECT COUNT(*) FROM cities ci WHERE ci.is_active = 1 AND NOT EXISTS (
+            'Active cities with no upcoming open session (city page will 404)' => 'SELECT COUNT(*) FROM cities ci WHERE ci.is_active = 1 AND NOT EXISTS (
                      SELECT 1 FROM course_schedules s
                      WHERE s.city_id = ci.id AND s.status = \'open\' AND s.starts_at > CURRENT_TIMESTAMP)',
 
-            'Published courses with no upcoming session' =>
-                'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
+            'Published courses with no upcoming session' => 'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
                  AND c.next_session_at IS NULL',
 
-            'Published courses with no SEO description' =>
-                'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
+            'Published courses with no SEO description' => 'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
                  AND NOT EXISTS (SELECT 1 FROM seo_metadata m
                      WHERE m.seoable_id = c.id AND m.seoable_type LIKE \'%Course\'
                      AND m.description IS NOT NULL)',
 
-            'Published courses with no syllabus modules' =>
-                'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
+            'Published courses with no syllabus modules' => 'SELECT COUNT(*) FROM courses c WHERE c.status = \'published\'
                  AND NOT EXISTS (SELECT 1 FROM course_modules m WHERE m.course_id = c.id)',
         ];
 
@@ -114,6 +102,7 @@ class ValidateCatalogue extends Command
 
             if ($result === 0) {
                 $this->line("  <fg=green>✓</> {$label}");
+
                 continue;
             }
 

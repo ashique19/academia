@@ -37,11 +37,11 @@ class CorporateInquiry extends Model
     protected function casts(): array
     {
         return [
-            'status'                => LeadStatus::class,
-            'preferred_start_date'  => 'date',
+            'status' => LeadStatus::class,
+            'preferred_start_date' => 'date',
             'first_response_due_at' => 'datetime',
-            'first_responded_at'    => 'datetime',
-            'consented_at'          => 'datetime',
+            'first_responded_at' => 'datetime',
+            'consented_at' => 'datetime',
         ];
     }
 
@@ -130,16 +130,14 @@ class CorporateInquiry extends Model
 
     protected function isOverdue(): Attribute
     {
-        return Attribute::get(fn (): bool =>
-            $this->first_responded_at === null
+        return Attribute::get(fn (): bool => $this->first_responded_at === null
             && $this->first_response_due_at !== null
             && $this->first_response_due_at->isPast());
     }
 
     protected function daysOpen(): Attribute
     {
-        return Attribute::get(fn (): int =>
-            (int) $this->created_at->diffInDays($this->status->isOpen() ? now() : $this->updated_at));
+        return Attribute::get(fn (): int => (int) $this->created_at->diffInDays($this->status->isOpen() ? now() : $this->updated_at));
     }
 
     /** Rough value used for pipeline weighting before a proposal exists. */

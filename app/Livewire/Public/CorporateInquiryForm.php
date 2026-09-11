@@ -43,26 +43,41 @@ class CorporateInquiryForm extends Component
 
     // Step 1 — the need
     public ?int $deliveryModeId = null;
+
     public ?int $participants = null;
+
     public string $topic = '';
+
     public ?int $courseId = null;
+
     public string $preferredStartDate = '';
+
     public string $preferredWindow = '';
 
     // Step 2 — the company
     public string $companyName = '';
+
     public ?int $countryId = null;
+
     public ?int $cityId = null;
+
     public string $sector = '';
+
     public string $companySize = '';
 
     // Step 3 — the contact
     public string $contactName = '';
+
     public string $jobTitle = '';
+
     public string $email = '';
+
     public string $phone = '';
+
     public string $budgetRange = '';
+
     public string $message = '';
+
     public bool $consent = false;
 
     /** Honeypot. Hidden from humans; bots fill it. Must stay empty. */
@@ -85,11 +100,11 @@ class CorporateInquiryForm extends Component
         // buyer is not retyping context the site already knows.
         if ($course?->exists) {
             $this->courseId = $course->id;
-            $this->topic    = $course->title;
+            $this->topic = $course->title;
         }
 
         if ($city?->exists) {
-            $this->cityId    = $city->id;
+            $this->cityId = $city->id;
             $this->countryId = $city->country_id;
         }
     }
@@ -97,35 +112,35 @@ class CorporateInquiryForm extends Component
     public function rules(): array
     {
         return [
-            'deliveryModeId'     => ['required', 'integer', 'exists:delivery_modes,id'],
-            'participants'       => ['required', 'integer', 'min:1', 'max:5000'],
-            'topic'              => ['required', 'string', 'max:240'],
-            'courseId'           => ['nullable', 'integer', 'exists:courses,id'],
+            'deliveryModeId' => ['required', 'integer', 'exists:delivery_modes,id'],
+            'participants' => ['required', 'integer', 'min:1', 'max:5000'],
+            'topic' => ['required', 'string', 'max:240'],
+            'courseId' => ['nullable', 'integer', 'exists:courses,id'],
             'preferredStartDate' => ['nullable', 'date', 'after_or_equal:today'],
-            'preferredWindow'    => ['nullable', 'string', 'max:60'],
+            'preferredWindow' => ['nullable', 'string', 'max:60'],
 
-            'companyName'        => ['required', 'string', 'max:180'],
-            'countryId'          => ['required', 'integer', 'exists:countries,id'],
-            'cityId'             => ['nullable', 'integer', 'exists:cities,id'],
-            'sector'             => ['nullable', 'string', 'max:80'],
-            'companySize'        => ['nullable', 'string', 'max:40'],
+            'companyName' => ['required', 'string', 'max:180'],
+            'countryId' => ['required', 'integer', 'exists:countries,id'],
+            'cityId' => ['nullable', 'integer', 'exists:cities,id'],
+            'sector' => ['nullable', 'string', 'max:80'],
+            'companySize' => ['nullable', 'string', 'max:40'],
 
-            'contactName'        => ['required', 'string', 'max:120'],
-            'jobTitle'           => ['nullable', 'string', 'max:120'],
-            'email'              => ['required', 'email:rfc', 'max:180'],
-            'phone'              => ['nullable', 'string', 'max:32'],
-            'budgetRange'        => ['nullable', 'string', 'max:40'],
-            'message'            => ['nullable', 'string', 'max:4000'],
-            'consent'            => ['accepted'],
+            'contactName' => ['required', 'string', 'max:120'],
+            'jobTitle' => ['nullable', 'string', 'max:120'],
+            'email' => ['required', 'email:rfc', 'max:180'],
+            'phone' => ['nullable', 'string', 'max:32'],
+            'budgetRange' => ['nullable', 'string', 'max:40'],
+            'message' => ['nullable', 'string', 'max:4000'],
+            'consent' => ['accepted'],
         ];
     }
 
     protected function messages(): array
     {
         return [
-            'consent.accepted'     => 'Please confirm you are happy for us to contact you about this enquiry.',
+            'consent.accepted' => 'Please confirm you are happy for us to contact you about this enquiry.',
             'participants.required' => 'Roughly how many people need the training? An estimate is fine.',
-            'email.email'          => 'That email address does not look right — we need it to send the proposal.',
+            'email.email' => 'That email address does not look right — we need it to send the proposal.',
         ];
     }
 
@@ -150,12 +165,12 @@ class CorporateInquiryForm extends Component
             return;
         }
 
-        $throttleKey = 'corporate-inquiry:' . request()->ip();
+        $throttleKey = 'corporate-inquiry:'.request()->ip();
 
         if (RateLimiter::tooManyAttempts($throttleKey, maxAttempts: 3)) {
             throw ValidationException::withMessages([
                 'email' => __('We have had several enquiries from this connection in the last hour. '
-                    . 'Please call us on :phone and we will take the details directly.',
+                    .'Please call us on :phone and we will take the details directly.',
                     ['phone' => config('academia.phone')]),
             ]);
         }
@@ -165,32 +180,32 @@ class CorporateInquiryForm extends Component
         RateLimiter::hit($throttleKey, decaySeconds: 3600);
 
         $inquiries->create([
-            'company_name'         => $this->companyName,
-            'sector'               => $this->sector ?: null,
-            'company_size'         => $this->companySize ?: null,
-            'country_id'           => $this->countryId,
-            'city_id'              => $this->cityId,
-            'contact_name'         => $this->contactName,
-            'job_title'            => $this->jobTitle ?: null,
-            'email'                => $this->email,
-            'phone'                => $this->phone ?: null,
-            'participants'         => $this->participants,
-            'delivery_mode_id'     => $this->deliveryModeId,
-            'course_id'            => $this->courseId,
-            'topic'                => $this->topic,
+            'company_name' => $this->companyName,
+            'sector' => $this->sector ?: null,
+            'company_size' => $this->companySize ?: null,
+            'country_id' => $this->countryId,
+            'city_id' => $this->cityId,
+            'contact_name' => $this->contactName,
+            'job_title' => $this->jobTitle ?: null,
+            'email' => $this->email,
+            'phone' => $this->phone ?: null,
+            'participants' => $this->participants,
+            'delivery_mode_id' => $this->deliveryModeId,
+            'course_id' => $this->courseId,
+            'topic' => $this->topic,
             'preferred_start_date' => $this->preferredStartDate ?: null,
-            'preferred_window'     => $this->preferredWindow ?: null,
-            'budget_range'         => $this->budgetRange ?: null,
-            'message'              => $this->message ?: null,
-            'source'               => session('attribution.source', 'direct'),
-            'utm_source'           => session('attribution.utm_source'),
-            'utm_medium'           => session('attribution.utm_medium'),
-            'utm_campaign'         => session('attribution.utm_campaign'),
+            'preferred_window' => $this->preferredWindow ?: null,
+            'budget_range' => $this->budgetRange ?: null,
+            'message' => $this->message ?: null,
+            'source' => session('attribution.source', 'direct'),
+            'utm_source' => session('attribution.utm_source'),
+            'utm_medium' => session('attribution.utm_medium'),
+            'utm_campaign' => session('attribution.utm_campaign'),
             // GDPR Art. 7: consent must be demonstrable. Storing WHICH wording
             // was agreed to is what makes the record defensible later.
-            'consented_at'         => now(),
-            'consent_ip'           => request()->ip(),
-            'consent_version'      => config('academia.leads.consent_version'),
+            'consented_at' => now(),
+            'consent_ip' => request()->ip(),
+            'consent_version' => config('academia.leads.consent_version'),
         ]);
 
         $this->redirectRoute('thank-you', ['type' => 'corporate'], navigate: false);

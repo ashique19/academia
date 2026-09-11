@@ -10,9 +10,9 @@
 return [
 
     'legal_entity' => env('ACADEMIA_LEGAL_ENTITY', 'SlimCijfers Analytics B.V.'),
-    'trade_name'   => env('ACADEMIA_TRADE_NAME', 'Academia Training Solutions'),
-    'email'        => env('ACADEMIA_EMAIL', 'info@academiatraining.eu'),
-    'phone'        => env('ACADEMIA_PHONE', '+31 20 000 0000'),
+    'trade_name' => env('ACADEMIA_TRADE_NAME', 'Academia Training Solutions'),
+    'email' => env('ACADEMIA_EMAIL', 'info@academiatraining.eu'),
+    'phone' => env('ACADEMIA_PHONE', '+31 20 000 0000'),
 
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +23,7 @@ return [
     */
     'max_participants' => [
         'classroom' => 14,
-        'online'    => 12,
+        'online' => 12,
     ],
 
     /*
@@ -50,9 +50,9 @@ return [
         ],
 
         'early_bird' => [
-            'percent'   => 10,
-            'days'      => 60,
-            'code'      => 'EARLY10',
+            'percent' => 10,
+            'days' => 60,
+            'code' => 'EARLY10',
         ],
 
         // Prices round to the nearest multiple of this, in cents. A price
@@ -70,10 +70,10 @@ return [
     | when a verified external score AND a count >= schema_min_reviews exist.
     */
     'reviews' => [
-        'min_reviews'        => 5,
+        'min_reviews' => 5,
         'schema_min_reviews' => 20,
-        'verified_score'     => env('ACADEMIA_REVIEW_SCORE'),
-        'verified_count'     => env('ACADEMIA_REVIEW_COUNT'),
+        'verified_score' => env('ACADEMIA_REVIEW_SCORE'),
+        'verified_count' => env('ACADEMIA_REVIEW_COUNT'),
     ],
 
     /*
@@ -82,11 +82,11 @@ return [
     |--------------------------------------------------------------------------
     */
     'leads' => [
-        'sales_email'      => env('ACADEMIA_SALES_EMAIL', 'sales@academiatraining.eu'),
-        'sla_hours'        => (int) env('ACADEMIA_SLA_HOURS', 2),
-        'business_hours'   => ['start' => 8, 'end' => 18],
-        'business_days'    => [1, 2, 3, 4, 5],
-        'consent_version'  => env('ACADEMIA_CONSENT_VERSION', '2026-08-v1'),
+        'sales_email' => env('ACADEMIA_SALES_EMAIL', 'sales@academiatraining.eu'),
+        'sla_hours' => (int) env('ACADEMIA_SLA_HOURS', 2),
+        'business_hours' => ['start' => 8, 'end' => 18],
+        'business_days' => [1, 2, 3, 4, 5],
+        'consent_version' => env('ACADEMIA_CONSENT_VERSION', '2026-08-v1'),
 
         // Minimum seconds between form render and submit. Bots submit
         // instantly; humans do not. Failing this check is silent.
@@ -99,20 +99,20 @@ return [
     |--------------------------------------------------------------------------
     */
     'catalogue' => [
-        'per_page'          => 24,
+        'per_page' => 24,
         'facet_cache_hours' => 1,
         // Above this many facets on one URL, emit noindex,follow (spec §12.4).
-        'indexable_facets'  => 1,
+        'indexable_facets' => 1,
     ],
 
     'schedule' => [
         'default_window_days' => 60,
-        'per_page'            => 50,
+        'per_page' => 50,
         // Staleness alerting thresholds (spec §7.6).
         'alerts' => [
             'min_sessions_per_category' => 3,
-            'city_lookahead_days'       => 90,
-            'min_sessions_beyond_90d'   => 40,
+            'city_lookahead_days' => 90,
+            'min_sessions_beyond_90d' => 40,
         ],
     ],
 
@@ -125,7 +125,7 @@ return [
     | by a promise in the privacy policy.
     */
     'retention' => [
-        'bookings_years'    => 7,
+        'bookings_years' => 7,
         'dead_leads_months' => 24,
     ],
 ];

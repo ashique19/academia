@@ -17,10 +17,10 @@ final readonly class Discount
     public function toArray(): array
     {
         return [
-            'type'       => $this->type,
-            'label'      => $this->label,
+            'type' => $this->type,
+            'label' => $this->label,
             'percentage' => $this->percentage,
-            'code'       => $this->code,
+            'code' => $this->code,
         ];
     }
 }

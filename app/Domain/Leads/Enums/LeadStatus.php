@@ -13,26 +13,26 @@ namespace App\Domain\Leads\Enums;
  */
 enum LeadStatus: string
 {
-    case New              = 'new';
-    case Contacted        = 'contacted';
+    case New = 'new';
+    case Contacted = 'contacted';
     case ProposalRequired = 'proposal_required';
-    case ProposalSent     = 'proposal_sent';
-    case Negotiation      = 'negotiation';
-    case Won              = 'won';
-    case Lost             = 'lost';
-    case Closed           = 'closed';
+    case ProposalSent = 'proposal_sent';
+    case Negotiation = 'negotiation';
+    case Won = 'won';
+    case Lost = 'lost';
+    case Closed = 'closed';
 
     public function label(): string
     {
         return match ($this) {
-            self::New              => 'New',
-            self::Contacted        => 'Contacted',
+            self::New => 'New',
+            self::Contacted => 'Contacted',
             self::ProposalRequired => 'Proposal required',
-            self::ProposalSent     => 'Proposal sent',
-            self::Negotiation      => 'Negotiation',
-            self::Won              => 'Won',
-            self::Lost             => 'Lost',
-            self::Closed           => 'Closed',
+            self::ProposalSent => 'Proposal sent',
+            self::Negotiation => 'Negotiation',
+            self::Won => 'Won',
+            self::Lost => 'Lost',
+            self::Closed => 'Closed',
         };
     }
 
@@ -55,11 +55,11 @@ enum LeadStatus: string
     public function badgeColor(): string
     {
         return match ($this) {
-            self::New                                    => 'orange',
-            self::Contacted, self::ProposalRequired      => 'gold',
-            self::ProposalSent, self::Negotiation        => 'gold',
-            self::Won                                    => 'green',
-            self::Lost, self::Closed                     => 'neutral',
+            self::New => 'orange',
+            self::Contacted, self::ProposalRequired => 'gold',
+            self::ProposalSent, self::Negotiation => 'gold',
+            self::Won => 'green',
+            self::Lost, self::Closed => 'neutral',
         };
     }
 

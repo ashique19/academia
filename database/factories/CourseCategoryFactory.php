@@ -18,11 +18,11 @@ class CourseCategoryFactory extends Factory
         $name = Str::title($this->faker->unique()->words(2, true));
 
         return [
-            'name'       => $name,
-            'slug'       => Str::slug($name),
-            'summary'    => $this->faker->sentence(12),
+            'name' => $name,
+            'slug' => Str::slug($name),
+            'summary' => $this->faker->sentence(12),
             'sort_order' => $this->faker->numberBetween(0, 20),
-            'is_active'  => true,
+            'is_active' => true,
         ];
     }
 }

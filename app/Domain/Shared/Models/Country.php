@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Domain\Shared\Models;
 
+use Database\Factories\CountryFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -14,10 +16,11 @@ class Country extends Model
     use HasFactory;
 
     /** Factories live in Database\Factories, outside this model's namespace. */
-    protected static function newFactory(): \Illuminate\Database\Eloquent\Factories\Factory
+    protected static function newFactory(): Factory
     {
-        return \Database\Factories\CountryFactory::new();
+        return CountryFactory::new();
     }
+
     protected $fillable = [
         'name', 'iso2', 'slug', 'currency', 'vat_rate', 'timezone', 'is_active',
     ];

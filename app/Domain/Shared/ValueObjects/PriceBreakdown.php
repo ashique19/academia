@@ -66,15 +66,15 @@ final readonly class PriceBreakdown
     public function toArray(): array
     {
         return [
-            'list_price_cents'  => $this->listPriceCents,
-            'reference_cents'   => $this->referencePriceCents(),
+            'list_price_cents' => $this->listPriceCents,
+            'reference_cents' => $this->referencePriceCents(),
             'final_price_cents' => $this->finalPriceCents,
-            'discount_percent'  => $this->discountPercent,
-            'saving_cents'      => $this->savingCents(),
-            'was_capped'        => $this->wasCapped,
-            'cap_percent'       => $this->capPercent,
-            'components'        => $this->components->map->toArray()->all(),
-            'currency'          => $this->currency,
+            'discount_percent' => $this->discountPercent,
+            'saving_cents' => $this->savingCents(),
+            'was_capped' => $this->wasCapped,
+            'cap_percent' => $this->capPercent,
+            'components' => $this->components->map->toArray()->all(),
+            'currency' => $this->currency,
         ];
     }
 }

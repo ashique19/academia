@@ -36,10 +36,10 @@ class PageController extends Controller
     public function offers(PromotionService $promotions): View
     {
         return view('pages.offers', [
-            'promotion'  => $promotions->active(),
+            'promotion' => $promotions->active(),
             'groupTiers' => $promotions->groupTiers(),
-            'maxStack'   => $promotions->maxStackPercent(),
-            'earlyBird'  => config('academia.promotions.early_bird'),
+            'maxStack' => $promotions->maxStackPercent(),
+            'earlyBird' => config('academia.promotions.early_bird'),
         ]);
     }
 
@@ -63,7 +63,7 @@ class PageController extends Controller
         abort_unless($term->is_active, 404);
 
         return view('pages.glossary-term', [
-            'term'    => $term->load('subcategory'),
+            'term' => $term->load('subcategory'),
             'courses' => $term->course_subcategory_id
                 ? Course::published()->where('course_subcategory_id', $term->course_subcategory_id)
                     ->withCardRelations()->take(3)->get()
@@ -111,6 +111,6 @@ class PageController extends Controller
             'privacy', 'terms', 'cancellation-policy', 'cookie-settings',
         ], true), 404);
 
-        return view('pages.legal.' . $document);
+        return view('pages.legal.'.$document);
     }
 }

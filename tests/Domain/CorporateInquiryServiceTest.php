@@ -13,7 +13,6 @@ use Illuminate\Support\Carbon;
  * what makes the number printed on the corporate page something the team can
  * actually hit.
  */
-
 beforeEach(function () {
     config([
         'academia.leads.sla_hours' => 2,
@@ -21,7 +20,7 @@ beforeEach(function () {
         'academia.leads.business_days' => [1, 2, 3, 4, 5],
     ]);
 
-    $this->service = new CorporateInquiryService();
+    $this->service = new CorporateInquiryService;
 });
 
 it('adds two hours during the working day', function () {

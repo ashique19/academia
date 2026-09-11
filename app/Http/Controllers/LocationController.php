@@ -43,12 +43,12 @@ class LocationController extends Controller
         abort_unless($city->hasUpcomingSessions(), 404);
 
         return view('pages.city', [
-            'city'     => $city->load('country', 'venues'),
+            'city' => $city->load('country', 'venues'),
             'sessions' => $city->schedules()->upcoming()->bookable()
                 ->withListRelations()->orderBy('starts_at')->take(30)->get(),
-            'courses'  => Course::published()->inCity($city->slug)
+            'courses' => Course::published()->inCity($city->slug)
                 ->withCardRelations()->orderBy('title')->get(),
-            'nearby'   => $city->nearby(),
+            'nearby' => $city->nearby(),
         ]);
     }
 }

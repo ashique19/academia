@@ -33,12 +33,12 @@ class CourseObserver
         }
 
         DB::table('redirects')->updateOrInsert(
-            ['from_path' => '/courses/' . $original],
+            ['from_path' => '/courses/'.$original],
             [
-                'to_path'     => '/courses/' . $course->slug,
+                'to_path' => '/courses/'.$course->slug,
                 'status_code' => 301,
-                'created_at'  => now(),
-                'updated_at'  => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         );
     }

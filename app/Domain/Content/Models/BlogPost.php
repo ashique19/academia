@@ -55,7 +55,6 @@ class BlogPost extends Model
 
     protected function readingTime(): Attribute
     {
-        return Attribute::get(fn (): int =>
-            $this->reading_minutes ?? max(1, (int) ceil(str_word_count(strip_tags((string) $this->body)) / 220)));
+        return Attribute::get(fn (): int => $this->reading_minutes ?? max(1, (int) ceil(str_word_count(strip_tags((string) $this->body)) / 220)));
     }
 }

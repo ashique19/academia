@@ -12,13 +12,16 @@ use App\Domain\Scheduling\Enums\ScheduleStatus;
 use App\Domain\Shared\Models\City;
 use App\Domain\Shared\Models\Country;
 use App\Domain\Shared\Models\Venue;
+use Database\Factories\CourseScheduleFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 
 /**
  * A dated instance of a course.
@@ -41,9 +44,9 @@ class CourseSchedule extends Model
     use SoftDeletes;
 
     /** Factories live in Database\Factories, outside this model's namespace. */
-    protected static function newFactory(): \Illuminate\Database\Eloquent\Factories\Factory
+    protected static function newFactory(): Factory
     {
-        return \Database\Factories\CourseScheduleFactory::new();
+        return CourseScheduleFactory::new();
     }
 
     protected $fillable = [
@@ -57,8 +60,8 @@ class CourseSchedule extends Model
     {
         return [
             'starts_at' => 'datetime',
-            'ends_at'   => 'datetime',
-            'status'    => ScheduleStatus::class,
+            'ends_at' => 'datetime',
+            'status' => ScheduleStatus::class,
         ];
     }
 
@@ -171,14 +174,12 @@ class CourseSchedule extends Model
     /** "Only 3 seats left" is honest below this; above it, it is a dark pattern. */
     protected function isNearlyFull(): Attribute
     {
-        return Attribute::get(fn (): bool =>
-            $this->seats_available > 0 && $this->seats_available <= 3);
+        return Attribute::get(fn (): bool => $this->seats_available > 0 && $this->seats_available <= 3);
     }
 
     protected function durationDays(): Attribute
     {
-        return Attribute::get(fn (): int =>
-            (int) $this->starts_at->diffInDays($this->ends_at) + 1);
+        return Attribute::get(fn (): int => (int) $this->starts_at->diffInDays($this->ends_at) + 1);
     }
 
     /** Location as the public sees it — onsite and online are not cities. */
@@ -190,10 +191,10 @@ class CourseSchedule extends Model
             }
 
             return match ($this->deliveryMode?->slug) {
-                'onsite'     => 'Your premises',
-                'online'     => 'Live online',
+                'onsite' => 'Your premises',
+                'online' => 'Live online',
                 'self-paced' => 'Self-paced',
-                default      => 'Live online',
+                default => 'Live online',
             };
         });
     }
@@ -211,7 +212,7 @@ class CourseSchedule extends Model
      * Storage is UTC; display converts. A participant joining an hour late
      * because the site showed CET without saying so is a refund.
      */
-    public function startsAtIn(string $timezone): \Illuminate\Support\Carbon
+    public function startsAtIn(string $timezone): Carbon
     {
         return $this->starts_at->copy()->setTimezone($timezone);
     }

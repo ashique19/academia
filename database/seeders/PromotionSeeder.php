@@ -18,17 +18,17 @@ class PromotionSeeder extends Seeder
         Promotion::updateOrCreate(
             ['code' => 'AUTUMN20'],
             [
-                'name'       => 'Autumn Skills Sprint',
+                'name' => 'Autumn Skills Sprint',
                 'percentage' => 20,
-                'type'       => 'campaign',
-                'reason'     => 'Autumn is when training budgets are committed for the following year, '
-                              . 'and it is the quietest month in our classrooms. Filling those seats is '
-                              . 'worth more to us than the margin.',
-                'starts_at'  => now()->startOfMonth(),
-                'ends_at'    => now()->addMonth()->endOfMonth(),
-                'blurb'      => 'Every technology and finance course, booked this month, for any date up to March 2027.',
+                'type' => 'campaign',
+                'reason' => 'Autumn is when training budgets are committed for the following year, '
+                              .'and it is the quietest month in our classrooms. Filling those seats is '
+                              .'worth more to us than the margin.',
+                'starts_at' => now()->startOfMonth(),
+                'ends_at' => now()->addMonth()->endOfMonth(),
+                'blurb' => 'Every technology and finance course, booked this month, for any date up to March 2027.',
                 'applies_to_category_slugs' => ['it-and-cybersecurity', 'finance-and-accounting', 'data-analytics-and-bi'],
-                'is_active'  => true,
+                'is_active' => true,
             ]
         );
     }

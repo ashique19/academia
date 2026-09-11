@@ -37,9 +37,9 @@ class GdprForget extends Command
 
         DB::transaction(function () use ($email, &$redacted): void {
             $anonymous = [
-                'name'    => 'Erased',
-                'email'   => 'erased+' . substr(hash('sha256', $email), 0, 12) . '@invalid',
-                'phone'   => null,
+                'name' => 'Erased',
+                'email' => 'erased+'.substr(hash('sha256', $email), 0, 12).'@invalid',
+                'phone' => null,
                 'message' => null,
             ];
 
@@ -56,14 +56,14 @@ class GdprForget extends Command
 
             $redacted += CorporateInquiry::where('email', $email)->withTrashed()
                 ->update(['contact_name' => 'Erased', 'email' => $anonymous['email'],
-                          'phone' => null, 'message' => null, 'job_title' => null]);
+                    'phone' => null, 'message' => null, 'job_title' => null]);
 
             $redacted += IndividualLead::where('email', $email)->withTrashed()
                 ->update($anonymous);
         });
 
         $this->info(($this->option('confirm') ? 'Anonymised ' : 'Would anonymise ')
-            . "{$redacted} record(s) for {$email}.");
+            ."{$redacted} record(s) for {$email}.");
 
         if ($this->option('confirm')) {
             activity()->withProperties(['records' => $redacted])->log('GDPR erasure');

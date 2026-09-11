@@ -12,9 +12,8 @@ use App\Domain\Catalogue\Services\CertificationSchemeMatcher;
  * putting a trademark notice and an exam specification on a page that had no
  * business carrying either. These tests exist so that cannot recur.
  */
-
 beforeEach(function () {
-    $this->matcher = new CertificationSchemeMatcher();
+    $this->matcher = new CertificationSchemeMatcher;
 });
 
 it('does not match SAFe inside the word "Safety"', function () {

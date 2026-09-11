@@ -18,8 +18,8 @@ namespace App\Domain\Leads\Services;
 class SpamGuard
 {
     /**
-     * @param  string  $honeypot     Value of the hidden field. Must be empty.
-     * @param  int     $renderedAt   Unix timestamp when the form was rendered.
+     * @param  string  $honeypot  Value of the hidden field. Must be empty.
+     * @param  int  $renderedAt  Unix timestamp when the form was rendered.
      */
     public function looksAutomated(string $honeypot, int $renderedAt): bool
     {

@@ -32,8 +32,8 @@ class ScheduleStateService
         return DB::transaction(function () use ($schedule, $to, $reason): CourseSchedule {
             $schedule->update([
                 'status' => $to,
-                'notes'  => $reason
-                    ? trim(($schedule->notes ?? '') . "\n" . now()->toDateString() . ": {$reason}")
+                'notes' => $reason
+                    ? trim(($schedule->notes ?? '')."\n".now()->toDateString().": {$reason}")
                     : $schedule->notes,
             ]);
 

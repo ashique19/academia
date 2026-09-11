@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Livewire\Public;
 
+use App\Domain\Catalogue\Models\Course;
 use App\Domain\Leads\Enums\LeadSource;
 use App\Domain\Leads\Models\IndividualLead;
 use App\Domain\Leads\Services\SpamGuard;
@@ -11,7 +12,6 @@ use App\Domain\Scheduling\Exceptions\InsufficientSeatsException;
 use App\Domain\Scheduling\Exceptions\SessionNotBookableException;
 use App\Domain\Scheduling\Models\CourseSchedule;
 use App\Domain\Scheduling\Services\RegistrationService;
-use App\Domain\Catalogue\Models\Course;
 use App\Domain\Shared\Models\Country;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\RateLimiter;
@@ -36,19 +36,26 @@ class RegistrationForm extends Component
     public ?int $scheduleId = null;
 
     public string $name = '';
+
     public string $email = '';
+
     public string $phone = '';
+
     public string $company = '';
+
     public ?int $countryId = null;
+
     public string $message = '';
+
     public bool $consent = false;
 
     public string $website = '';
+
     public int $renderedAt = 0;
 
     public function mount(Course $course, ?CourseSchedule $schedule = null): void
     {
-        $this->courseId   = $course->id;
+        $this->courseId = $course->id;
         $this->scheduleId = $schedule?->id ?? $course->next_session?->id;
         $this->renderedAt = now()->timestamp;
     }
@@ -57,13 +64,13 @@ class RegistrationForm extends Component
     {
         return [
             'scheduleId' => ['nullable', 'integer', 'exists:course_schedules,id'],
-            'name'       => ['required', 'string', 'max:120'],
-            'email'      => ['required', 'email:rfc', 'max:180'],
-            'phone'      => ['nullable', 'string', 'max:32'],
-            'company'    => ['nullable', 'string', 'max:180'],
-            'countryId'  => ['nullable', 'integer', 'exists:countries,id'],
-            'message'    => ['nullable', 'string', 'max:2000'],
-            'consent'    => ['accepted'],
+            'name' => ['required', 'string', 'max:120'],
+            'email' => ['required', 'email:rfc', 'max:180'],
+            'phone' => ['nullable', 'string', 'max:32'],
+            'company' => ['nullable', 'string', 'max:180'],
+            'countryId' => ['nullable', 'integer', 'exists:countries,id'],
+            'message' => ['nullable', 'string', 'max:2000'],
+            'consent' => ['accepted'],
         ];
     }
 
@@ -75,7 +82,7 @@ class RegistrationForm extends Component
             return;
         }
 
-        $throttleKey = 'registration:' . request()->ip();
+        $throttleKey = 'registration:'.request()->ip();
 
         if (RateLimiter::tooManyAttempts($throttleKey, maxAttempts: 5)) {
             throw ValidationException::withMessages([
@@ -88,18 +95,18 @@ class RegistrationForm extends Component
         RateLimiter::hit($throttleKey, decaySeconds: 3600);
 
         $attributes = [
-            'name'            => $this->name,
-            'email'           => $this->email,
-            'phone'           => $this->phone ?: null,
-            'company'         => $this->company ?: null,
-            'country_id'      => $this->countryId,
-            'message'         => $this->message ?: null,
-            'source'          => session('attribution.source', 'direct'),
-            'utm_source'      => session('attribution.utm_source'),
-            'utm_medium'      => session('attribution.utm_medium'),
-            'utm_campaign'    => session('attribution.utm_campaign'),
-            'consented_at'    => now(),
-            'consent_ip'      => request()->ip(),
+            'name' => $this->name,
+            'email' => $this->email,
+            'phone' => $this->phone ?: null,
+            'company' => $this->company ?: null,
+            'country_id' => $this->countryId,
+            'message' => $this->message ?: null,
+            'source' => session('attribution.source', 'direct'),
+            'utm_source' => session('attribution.utm_source'),
+            'utm_medium' => session('attribution.utm_medium'),
+            'utm_campaign' => session('attribution.utm_campaign'),
+            'consented_at' => now(),
+            'consent_ip' => request()->ip(),
             'consent_version' => config('academia.leads.consent_version'),
         ];
 
@@ -122,7 +129,7 @@ class RegistrationForm extends Component
 
             throw ValidationException::withMessages([
                 'scheduleId' => $e->userMessage()
-                    . ' ' . __('We have noted your interest and will tell you when a place opens.'),
+                    .' '.__('We have noted your interest and will tell you when a place opens.'),
             ]);
         }
 
@@ -133,9 +140,9 @@ class RegistrationForm extends Component
     {
         IndividualLead::create([
             ...$attributes,
-            'course_id'          => $this->courseId,
+            'course_id' => $this->courseId,
             'course_schedule_id' => $this->scheduleId,
-            'source'             => LeadSource::CourseInterest,
+            'source' => LeadSource::CourseInterest,
         ]);
     }
 
