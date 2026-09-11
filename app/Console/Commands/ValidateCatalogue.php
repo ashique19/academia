@@ -77,8 +77,8 @@ class ValidateCatalogue extends Command
                  AND NOT EXISTS (SELECT 1 FROM course_modules m WHERE m.course_id = c.id)',
         ];
 
-        $failed = $this->run('Errors', $errors, true);
-        $warned = $this->run('Warnings', $warnings, false);
+        $failed = $this->runChecks('Errors', $errors, true);
+        $warned = $this->runChecks('Warnings', $warnings, false);
 
         $this->newLine();
 
@@ -101,7 +101,7 @@ class ValidateCatalogue extends Command
         return self::SUCCESS;
     }
 
-    private public function handle(string $heading, array $checks, bool $isError): int
+    private function runChecks(string $heading, array $checks, bool $isError): int
     {
         $this->newLine();
         $this->line("<fg=white;options=bold>{$heading}</>");
@@ -109,7 +109,8 @@ class ValidateCatalogue extends Command
         $count = 0;
 
         foreach ($checks as $label => $sql) {
-            $result = (int) (DB::selectOne($sql)?->{array_key_first((array) DB::selectOne($sql))} ?? 0);
+            $row = (array) DB::selectOne($sql);
+            $result = (int) ($row[array_key_first($row)] ?? 0);
 
             if ($result === 0) {
                 $this->line("  <fg=green>✓</> {$label}");
