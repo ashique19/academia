@@ -1,0 +1,14 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - phpstan-baseline.neon
+
+parameters:
+    level: 5
+
+    paths:
+        - app
+
+    # Larastan cannot always resolve Eloquent local scopes, dynamic relation
+    # properties, or the enum/date casts declared in casts(); the app runs and
+    # the full test suite is green. Those known false positives are captured in
+    # phpstan-baseline.neon so that genuinely new issues still surface.
