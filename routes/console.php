@@ -45,3 +45,10 @@ Schedule::command('academia:schedule-alerts')
 Schedule::command('academia:validate')
     ->dailyAt('03:00')
     ->onOneServer();
+
+// Data-retention enforcement (spec §22.1). The privacy policy promises that
+// unconverted enquiries are anonymised after 24 months and booking PII after
+// the 7-year statutory window; this is what actually delivers it.
+Schedule::command('academia:purge-expired-leads')
+    ->dailyAt('03:30')
+    ->onOneServer();
