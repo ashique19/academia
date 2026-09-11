@@ -13,7 +13,6 @@ use App\Domain\Shared\Models\City;
  * doorway page, and doorway pages are a manual-action category — so it is
  * tested rather than merely documented.
  */
-
 it('404s for a city with no upcoming sessions', function () {
     $city = City::factory()->create();
 
@@ -22,7 +21,7 @@ it('404s for a city with no upcoming sessions', function () {
 
 it('renders for a city with a real bookable session', function () {
     $city = City::factory()->hasSchedules(1, [
-        'status'    => ScheduleStatus::Open,
+        'status' => ScheduleStatus::Open,
         'starts_at' => now()->addMonth(),
     ])->create();
 
@@ -31,7 +30,7 @@ it('renders for a city with a real bookable session', function () {
 
 it('404s when the only session has already passed', function () {
     $city = City::factory()->hasSchedules(1, [
-        'status'    => ScheduleStatus::Open,
+        'status' => ScheduleStatus::Open,
         'starts_at' => now()->subMonth(),
     ])->create();
 

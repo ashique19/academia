@@ -20,12 +20,12 @@ class CityFactory extends Factory
 
         return [
             'country_id' => Country::factory(),
-            'name'       => $name,
-            'slug'       => Str::slug($name) . '-' . $this->faker->unique()->randomNumber(4),
-            'intro'      => $this->faker->paragraph(),
-            'latitude'   => $this->faker->latitude(35, 60),
-            'longitude'  => $this->faker->longitude(-10, 25),
-            'is_active'  => true,
+            'name' => $name,
+            'slug' => Str::slug($name).'-'.$this->faker->unique()->randomNumber(4),
+            'intro' => $this->faker->paragraph(),
+            'latitude' => $this->faker->latitude(35, 60),
+            'longitude' => $this->faker->longitude(-10, 25),
+            'is_active' => true,
         ];
     }
 }

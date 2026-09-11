@@ -6,7 +6,7 @@ use App\Domain\Leads\Services\SpamGuard;
 
 beforeEach(function () {
     config(['academia.leads.min_form_seconds' => 3]);
-    $this->guard = new SpamGuard();
+    $this->guard = new SpamGuard;
 });
 
 it('flags a submission with the honeypot filled', function () {

@@ -114,7 +114,7 @@ class RoleSeeder extends Seeder
     private function grant(string $roleName, array $patterns, array $deny = []): void
     {
         $role = Role::findOrCreate($roleName);
-        $all  = Permission::pluck('name');
+        $all = Permission::pluck('name');
 
         $granted = $all->filter(function (string $permission) use ($patterns): bool {
             foreach ($patterns as $pattern) {

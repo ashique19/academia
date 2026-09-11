@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace App\Domain\Catalogue\Models;
 
 use App\Domain\Content\Models\SeoMetadata;
+use Database\Factories\CourseCategoryFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -17,10 +19,11 @@ class CourseCategory extends Model
     use HasFactory;
 
     /** Factories live in Database\Factories, outside this model's namespace. */
-    protected static function newFactory(): \Illuminate\Database\Eloquent\Factories\Factory
+    protected static function newFactory(): Factory
     {
-        return \Database\Factories\CourseCategoryFactory::new();
+        return CourseCategoryFactory::new();
     }
+
     protected $fillable = [
         'name', 'slug', 'summary', 'description', 'icon', 'color_token',
         'sort_order', 'is_active',

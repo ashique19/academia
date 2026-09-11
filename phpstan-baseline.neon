@@ -1,0 +1,487 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$timezone\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Console/Commands/ImportCatalogue.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between non\-empty\-list\<string\|null\> and array\{\} will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: app/Console/Commands/ImportCatalogue.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>id" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 3
+			path: app/Console/Commands/ImportCatalogue.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>timezone" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Console/Commands/ImportCatalogue.php
+
+		-
+			message: '#^Parameter \#2 \$attributes of method App\\Console\\Commands\\PurgeExpiredLeads\:\:anonymise\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model\)\: array\<string, mixed\>, Closure\(App\\Domain\\Leads\\Models\\CorporateInquiry\)\: array\{contact_name\: ''Erased'', email\: string, phone\: null, job_title\: null, message\: null\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Console/Commands/PurgeExpiredLeads.php
+
+		-
+			message: '#^Parameter \#2 \$attributes of method App\\Console\\Commands\\PurgeExpiredLeads\:\:anonymise\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model\)\: array\<string, mixed\>, Closure\(App\\Domain\\Leads\\Models\\IndividualLead\)\: array\{name\: ''Erased'', email\: string, phone\: null, message\: null\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Console/Commands/PurgeExpiredLeads.php
+
+		-
+			message: '#^Parameter \#2 \$attributes of method App\\Console\\Commands\\PurgeExpiredLeads\:\:anonymise\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model\)\: array\<string, mixed\>, Closure\(App\\Domain\\Leads\\Models\\Registration\)\: array\{name\: ''Erased'', email\: string, phone\: null, company\: null, job_title\: null, message\: null, dietary_requirements\: null\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Console/Commands/PurgeExpiredLeads.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\>\:\:bookable\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Console/Commands/ScheduleAlerts.php
+
+		-
+			message: '#^Cannot call method isIndependent\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Catalogue/Models/CertificationScheme.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Catalogue/Models/Course.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\>\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Catalogue/Models/Course.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:reposition\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Catalogue/Models/Course.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Domain/Catalogue/Models/Course.php
+
+		-
+			message: '#^Cannot call method isPast\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Catalogue/Models/Course.php
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 2
+			path: app/Domain/Catalogue/Models/Course.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between string and App\\Domain\\Catalogue\\Enums\\CourseStatus\:\:Published will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: app/Domain/Catalogue/Models/Course.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\:\:published\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Catalogue/Models/CourseCategory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$category\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Catalogue/Services/PromotionService.php
+
+		-
+			message: '#^Cannot call method isFuture\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Content/Models/Promotion.php
+
+		-
+			message: '#^Cannot call method isPast\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Content/Models/Promotion.php
+
+		-
+			message: '#^Parameter \#2 \$haystack of function in_array expects array, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Domain/Content/Models/Promotion.php
+
+		-
+			message: '#^Access to an undefined property App\\Domain\\Catalogue\\Models\\Course\:\:\$display_title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Access to an undefined property App\\Domain\\Scheduling\\Models\\CourseSchedule\:\:\$duration_days\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Access to an undefined property App\\Domain\\Scheduling\\Models\\CourseSchedule\:\:\$seats_available\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$country\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$slug\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:isIndependent\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Cannot call method isPubliclyVisible\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Cannot call method toIso8601String\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 3
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:map\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: array, Closure\(App\\Domain\\Scheduling\\Models\\CourseSchedule\)\: array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:filter\(\) expects \(callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: bool\)\|null, Closure\(App\\Domain\\Scheduling\\Models\\CourseSchedule\)\: mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>name" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Domain/Content/Services/CourseSchemaBuilder.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$seo\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Content/Services/SeoService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$day_rate_cents\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Leads/Models/CorporateInquiry.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$duration_days\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Leads/Models/CorporateInquiry.php
+
+		-
+			message: '#^Cannot call method isOpen\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Leads/Models/CorporateInquiry.php
+
+		-
+			message: '#^Cannot call method isPast\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Leads/Models/CorporateInquiry.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>duration_days" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Domain/Leads/Models/CorporateInquiry.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between string and App\\Domain\\Leads\\Enums\\LeadStatus\:\:New will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: app/Domain/Leads/Services/CorporateInquiryService.php
+
+		-
+			message: '#^Cannot access property \$value on string\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Exceptions/SessionNotBookableException.php
+
+		-
+			message: '#^Access to an undefined property App\\Domain\\Scheduling\\Models\\CourseSchedule\:\:\$seats_available\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$price_cents\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$slug\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Cannot call method copy\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Cannot call method diffInDays\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Cannot call method isBookable\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Cannot call method isFuture\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Models/CourseSchedule.php
+
+		-
+			message: '#^Anonymous function should return App\\Domain\\Leads\\Models\\Registration but returns Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Domain/Scheduling/Services/RegistrationService.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany\:\:holdingSeat\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Scheduling/Services/RegistrationService.php
+
+		-
+			message: '#^Cannot call method holdsSeat\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Services/RegistrationService.php
+
+		-
+			message: '#^Cannot call method isBookable\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Services/RegistrationService.php
+
+		-
+			message: '#^Cannot call method isPast\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Services/RegistrationService.php
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 1
+			path: app/Domain/Scheduling/Services/RegistrationService.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between string and App\\Domain\\Scheduling\\Enums\\ScheduleStatus\:\:Full will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: app/Domain/Scheduling/Services/RegistrationService.php
+
+		-
+			message: '#^Cannot call method canTransitionTo\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Domain/Scheduling/Services/ScheduleStateService.php
+
+		-
+			message: '#^Parameter \#1 \$from of class App\\Domain\\Scheduling\\Exceptions\\InvalidStatusTransitionException constructor expects App\\Domain\\Scheduling\\Enums\\ScheduleStatus, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Domain/Scheduling/Services/ScheduleStateService.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between string and App\\Domain\\Scheduling\\Enums\\ScheduleStatus will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: app/Domain/Scheduling/Services/ScheduleStateService.php
+
+		-
+			message: '#^Access to an undefined property App\\Domain\\Shared\\Models\\City\:\:\$distance_km\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Domain/Shared/Models/City.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Shared/Models/City.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\>\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Shared/Models/City.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Shared/Models/City.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\>\:\:hasUpcomingSessions\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Domain/Shared/Models/Country.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Domain/Shared/Models/Venue.php
+
+		-
+			message: '#^Access to an undefined property App\\Domain\\Catalogue\\Models\\Course\:\:\$next_session\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/CourseController.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Http/Controllers/CourseController.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany\:\:active\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Http/Controllers/LocationController.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\HasMany\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Http/Controllers/LocationController.php
+
+		-
+			message: '#^Access to an undefined property App\\Livewire\\Public\\CourseCatalogue\:\:\$categories\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Livewire/Public/CourseCatalogue.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\:\:inCategory\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Livewire/Public/CourseCatalogue.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\:\:published\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Livewire/Public/CourseCatalogue.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\:\:withCardRelations\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Livewire/Public/CourseCatalogue.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\:\:withDeliveryMode\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Livewire/Public/CourseCatalogue.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\>\:\:upcoming\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Livewire/Public/CourseCatalogue.php
+
+		-
+			message: '#^Access to an undefined property App\\Domain\\Catalogue\\Models\\Course\:\:\$next_session\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Livewire/Public/RegistrationForm.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>id" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Livewire/Public/RegistrationForm.php
+
+		-
+			message: '#^Cannot call method format\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Livewire/Public/ScheduleBrowser.php
+
+		-
+			message: '#^Parameter \#1 \$groupBy of method Illuminate\\Support\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:groupBy\(\) expects \(callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: \(int\|string\|Stringable\|UnitEnum\)\)\|list\<Closure\|string\>\|string, Closure\(App\\Domain\\Scheduling\\Models\\CourseSchedule\)\: mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Livewire/Public/ScheduleBrowser.php
+
+		-
+			message: '#^Cannot call method isAfter\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Policies/CourseSchedulePolicy.php
+
+		-
+			message: '#^Cannot call method isBefore\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Policies/CourseSchedulePolicy.php

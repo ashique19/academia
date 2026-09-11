@@ -196,6 +196,7 @@ php artisan academia:validate [--strict]
 php artisan academia:refresh-next-sessions
 php artisan academia:record-prior-prices [--force]
 php artisan academia:schedule-alerts
+php artisan academia:purge-expired-leads [--dry-run]
 php artisan gdpr:export {email} [--json=path]
 php artisan gdpr:forget {email} [--confirm]
 ```

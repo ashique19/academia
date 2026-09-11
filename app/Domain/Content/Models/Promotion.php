@@ -25,9 +25,9 @@ class Promotion extends Model
     {
         return [
             'applies_to_category_slugs' => 'array',
-            'is_active'                 => 'boolean',
-            'starts_at'                 => 'datetime',
-            'ends_at'                   => 'datetime',
+            'is_active' => 'boolean',
+            'starts_at' => 'datetime',
+            'ends_at' => 'datetime',
         ];
     }
 

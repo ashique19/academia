@@ -40,6 +40,6 @@
 
     <x-site-footer />
 
-    @livewireScriptConfig
+    @livewireScripts
 </body>
 </html>

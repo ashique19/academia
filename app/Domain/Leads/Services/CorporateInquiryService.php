@@ -18,15 +18,15 @@ class CorporateInquiryService
         return DB::transaction(function () use ($attributes): CorporateInquiry {
             $inquiry = CorporateInquiry::create([
                 ...$attributes,
-                'status'                => LeadStatus::New,
+                'status' => LeadStatus::New,
                 'first_response_due_at' => $this->responseDueAt(),
             ]);
 
             $inquiry->statusChanges()->create([
                 'from_status' => null,
-                'to_status'   => LeadStatus::New,
-                'note'        => 'Enquiry received from the website.',
-                'created_at'  => now(),
+                'to_status' => LeadStatus::New,
+                'note' => 'Enquiry received from the website.',
+                'created_at' => now(),
             ]);
 
             return $inquiry;
@@ -43,17 +43,18 @@ class CorporateInquiryService
      */
     public function responseDueAt(?Carbon $from = null): Carbon
     {
-        $hours    = (int) config('academia.leads.sla_hours', 2);
-        $start    = (int) config('academia.leads.business_hours.start', 8);
-        $end      = (int) config('academia.leads.business_hours.end', 18);
+        $hours = (int) config('academia.leads.sla_hours', 2);
+        $start = (int) config('academia.leads.business_hours.start', 8);
+        $end = (int) config('academia.leads.business_hours.end', 18);
         $workDays = config('academia.leads.business_days', [1, 2, 3, 4, 5]);
 
-        $cursor    = ($from ?? now())->copy();
+        $cursor = ($from ?? now())->copy();
         $remaining = $hours;
 
         while ($remaining > 0) {
             if (! in_array($cursor->dayOfWeekIso, $workDays, true)) {
                 $cursor->addDay()->setTime($start, 0);
+
                 continue;
             }
 
@@ -63,11 +64,12 @@ class CorporateInquiryService
 
             if ($cursor->hour >= $end) {
                 $cursor->addDay()->setTime($start, 0);
+
                 continue;
             }
 
             $hoursLeftToday = $end - $cursor->hour;
-            $consume        = min($remaining, $hoursLeftToday);
+            $consume = min($remaining, $hoursLeftToday);
 
             $cursor->addHours($consume);
             $remaining -= $consume;
@@ -94,7 +96,7 @@ class CorporateInquiryService
         if ($to->requiresValue() && $valueCents === null && $inquiry->won_value_cents === null) {
             throw new InvalidArgumentException(
                 'Marking an inquiry Won requires the won value — otherwise conversion '
-                . 'reporting is a count rather than a number.'
+                .'reporting is a count rather than a number.'
             );
         }
 
@@ -108,17 +110,17 @@ class CorporateInquiryService
             $from = $inquiry->status;
 
             $inquiry->statusChanges()->create([
-                'user_id'     => $user?->id,
+                'user_id' => $user?->id,
                 'from_status' => $from,
-                'to_status'   => $to,
-                'note'        => $note,
-                'created_at'  => now(),
+                'to_status' => $to,
+                'note' => $note,
+                'created_at' => now(),
             ]);
 
             $inquiry->update(array_filter([
-                'status'          => $to,
+                'status' => $to,
                 'won_value_cents' => $valueCents,
-                'lost_reason'     => $lostReason,
+                'lost_reason' => $lostReason,
                 // The first move off New stops the SLA clock.
                 'first_responded_at' => $inquiry->first_responded_at
                     ?? ($from === LeadStatus::New ? now() : null),
@@ -133,11 +135,11 @@ class CorporateInquiryService
         $inquiry->update(['assigned_to' => $assignee->id]);
 
         $inquiry->statusChanges()->create([
-            'user_id'     => $by?->id,
+            'user_id' => $by?->id,
             'from_status' => $inquiry->status,
-            'to_status'   => $inquiry->status,
-            'note'        => "Assigned to {$assignee->name}.",
-            'created_at'  => now(),
+            'to_status' => $inquiry->status,
+            'note' => "Assigned to {$assignee->name}.",
+            'created_at' => now(),
         ]);
 
         return $inquiry->refresh();

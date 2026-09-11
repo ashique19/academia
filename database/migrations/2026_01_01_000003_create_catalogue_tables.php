@@ -74,7 +74,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('course_subcategory_id')->constrained()->restrictOnDelete();
             $table->foreignId('certification_scheme_id')->nullable()
-                  ->constrained()->nullOnDelete();
+                ->constrained()->nullOnDelete();
             $table->string('code', 16)->unique();
             $table->string('title', 200);
             // Immutable after publish. A change writes a 301 redirect row and
@@ -158,10 +158,10 @@ return new class extends Migration
         // Partial indexes and full-text search. Skipped on SQLite/MySQL,
         // where the plain indexes above are sufficient at this scale.
         if (DB::getDriverName() === 'pgsql') {
-            DB::statement("
+            DB::statement('
                 CREATE INDEX courses_published_idx ON courses (status, published_at DESC)
                 WHERE deleted_at IS NULL
-            ");
+            ');
             DB::statement("
                 CREATE INDEX courses_next_session_idx ON courses (next_session_at)
                 WHERE status = 'published' AND deleted_at IS NULL

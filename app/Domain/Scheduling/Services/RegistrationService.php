@@ -73,7 +73,7 @@ class RegistrationService
 
             $registration = $locked->registrations()->create([
                 ...$attributes,
-                'seats'  => $seats,
+                'seats' => $seats,
                 'status' => $attributes['status'] ?? RegistrationStatus::Interest,
             ]);
 
@@ -112,8 +112,8 @@ class RegistrationService
             }
 
             $registration->update([
-                'status'  => RegistrationStatus::Cancelled,
-                'message' => $reason ? trim(($registration->message ?? '') . "\n\nCancelled: " . $reason) : $registration->message,
+                'status' => RegistrationStatus::Cancelled,
+                'message' => $reason ? trim(($registration->message ?? '')."\n\nCancelled: ".$reason) : $registration->message,
             ]);
 
             return $registration->refresh();

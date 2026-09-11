@@ -6,23 +6,27 @@ namespace App\Domain\Shared\Models;
 
 use App\Domain\Content\Models\SeoMetadata;
 use App\Domain\Scheduling\Models\CourseSchedule;
+use Database\Factories\CityFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Support\Collection;
 
 class City extends Model
 {
     use HasFactory;
 
     /** Factories live in Database\Factories, outside this model's namespace. */
-    protected static function newFactory(): \Illuminate\Database\Eloquent\Factories\Factory
+    protected static function newFactory(): Factory
     {
-        return \Database\Factories\CityFactory::new();
+        return CityFactory::new();
     }
+
     protected $fillable = [
         'country_id', 'name', 'slug', 'intro', 'description',
         'latitude', 'longitude', 'image_path', 'is_active',
@@ -32,7 +36,7 @@ class City extends Model
     {
         return [
             'is_active' => 'boolean',
-            'latitude'  => 'decimal:7',
+            'latitude' => 'decimal:7',
             'longitude' => 'decimal:7',
         ];
     }
@@ -94,7 +98,7 @@ class City extends Model
     }
 
     /** Cities within roughly this many km — for the "nearby" block. */
-    public function nearby(int $limit = 4, int $km = 400): \Illuminate\Support\Collection
+    public function nearby(int $limit = 4, int $km = 400): Collection
     {
         if ($this->latitude === null || $this->longitude === null) {
             return collect();
@@ -124,8 +128,8 @@ class City extends Model
 
         $latFrom = deg2rad((float) $this->latitude);
         $lonFrom = deg2rad((float) $this->longitude);
-        $latTo   = deg2rad((float) $other->latitude);
-        $lonTo   = deg2rad((float) $other->longitude);
+        $latTo = deg2rad((float) $other->latitude);
+        $lonTo = deg2rad((float) $other->longitude);
 
         $angle = 2 * asin(sqrt(
             sin(($latTo - $latFrom) / 2) ** 2 +

@@ -64,13 +64,13 @@ class PromotionService
     /**
      * Compute the full price picture for a course.
      *
-     * @param  int          $seats     Basket quantity — drives the group tier.
+     * @param  int  $seats  Basket quantity — drives the group tier.
      * @param  Carbon|null  $startsAt  Session start — drives early booking.
      */
     public function priceFor(Course $course, int $seats = 1, ?Carbon $startsAt = null): PriceBreakdown
     {
         $list = $course->price_cents;
-        $cap  = (int) config('academia.promotions.max_stack_percent', 30);
+        $cap = (int) config('academia.promotions.max_stack_percent', 30);
 
         /** @var Collection<int, Discount> $components */
         $components = collect();
@@ -92,17 +92,17 @@ class PromotionService
         }
 
         $requested = (int) $components->sum('percentage');
-        $applied   = min($requested, $cap);
+        $applied = min($requested, $cap);
 
         return new PriceBreakdown(
-            listPriceCents:  $list,
+            listPriceCents: $list,
             priorPriceCents: $course->prior_price_cents,
             discountPercent: $applied,
             finalPriceCents: $list === null ? null : $this->applyPercentage($list, $applied),
-            components:      $components,
-            wasCapped:       $requested > $cap,
-            capPercent:      $cap,
-            currency:        $course->currency ?? 'EUR',
+            components: $components,
+            wasCapped: $requested > $cap,
+            capPercent: $cap,
+            currency: $course->currency ?? 'EUR',
         );
     }
 

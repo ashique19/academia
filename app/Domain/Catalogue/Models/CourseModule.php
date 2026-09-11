@@ -22,7 +22,7 @@ class CourseModule extends Model
     protected function casts(): array
     {
         return [
-            'bullets'        => 'array',
+            'bullets' => 'array',
             'duration_hours' => 'decimal:1',
         ];
     }

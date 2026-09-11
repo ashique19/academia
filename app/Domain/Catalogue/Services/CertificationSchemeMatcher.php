@@ -56,10 +56,10 @@ class CertificationSchemeMatcher
 
         // \b is only meaningful next to a word character. Applying it to a
         // needle that starts or ends with punctuation guarantees no match.
-        $left  = ctype_alnum($needle[0]) ? '\b' : '';
+        $left = ctype_alnum($needle[0]) ? '\b' : '';
         $right = ctype_alnum($needle[strlen($needle) - 1]) ? '\b' : '';
 
-        $pattern = '/' . $left . preg_quote($needle, '/') . $right . '/';
+        $pattern = '/'.$left.preg_quote($needle, '/').$right.'/';
 
         return preg_match($pattern, $title) === 1;
     }

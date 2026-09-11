@@ -58,6 +58,26 @@ return new class extends Migration
                 ALTER TABLE course_schedules
                 ADD CONSTRAINT ends_after_start CHECK (ends_at > starts_at)
             ');
+        } else {
+            // SQLite cannot ALTER TABLE ... ADD CONSTRAINT, so the same two
+            // invariants are enforced with BEFORE INSERT/UPDATE triggers that
+            // RAISE(ABORT). This keeps the database-level backstop real on the
+            // default local/dev/test driver, not only on Postgres and MySQL.
+            foreach (['INSERT', 'UPDATE'] as $event) {
+                $suffix = strtolower($event);
+                DB::statement("
+                    CREATE TRIGGER seats_not_oversold_{$suffix}
+                    BEFORE {$event} ON course_schedules
+                    FOR EACH ROW WHEN NEW.seats_taken > NEW.seat_limit
+                    BEGIN SELECT RAISE(ABORT, 'seats_taken exceeds seat_limit'); END
+                ");
+                DB::statement("
+                    CREATE TRIGGER ends_after_start_{$suffix}
+                    BEFORE {$event} ON course_schedules
+                    FOR EACH ROW WHEN NEW.ends_at <= NEW.starts_at
+                    BEGIN SELECT RAISE(ABORT, 'ends_at must be after starts_at'); END
+                ");
+            }
         }
 
         Schema::create('registrations', function (Blueprint $table) {

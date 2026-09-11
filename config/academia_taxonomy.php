@@ -29,8 +29,8 @@ return [
     'map' => [
 
         'Business & Management' => [
-            'icon'    => 'brief',
-            'color'   => 'orange',
+            'icon' => 'brief',
+            'color' => 'orange',
             'summary' => 'Strategy, planning and the administrative craft that keeps an organisation coherent.',
             'subcategories' => [
                 'Strategy & Business Development',
@@ -39,8 +39,8 @@ return [
         ],
 
         'Leadership & Soft Skills' => [
-            'icon'    => 'users',
-            'color'   => 'green',
+            'icon' => 'users',
+            'color' => 'green',
             'summary' => 'Leading people, influencing without authority, and working well under pressure.',
             'subcategories' => [
                 'Leadership Development',
@@ -50,8 +50,8 @@ return [
         ],
 
         'Finance & Accounting' => [
-            'icon'    => 'chart',
-            'color'   => 'gold',
+            'icon' => 'chart',
+            'color' => 'gold',
             'summary' => 'Reporting, control, modelling and the regulation around them.',
             'subcategories' => [
                 'Financial Accounting & Reporting',
@@ -64,8 +64,8 @@ return [
         ],
 
         'SAP & ERP' => [
-            'icon'    => 'building',
-            'color'   => 'orange',
+            'icon' => 'building',
+            'color' => 'orange',
             'summary' => 'SAP and enterprise systems taught in a sandbox that mirrors your own environment.',
             'subcategories' => [
                 'SAP & Enterprise Systems',
@@ -74,8 +74,8 @@ return [
         ],
 
         'Data Analytics & BI' => [
-            'icon'    => 'chart',
-            'color'   => 'green',
+            'icon' => 'chart',
+            'color' => 'green',
             'summary' => 'From spreadsheets to self-service analytics, with your own data on day one.',
             'subcategories' => [
                 'Data Analytics & BI',
@@ -84,8 +84,8 @@ return [
         ],
 
         'AI & Digital Transformation' => [
-            'icon'    => 'spark',
-            'color'   => 'gold',
+            'icon' => 'spark',
+            'color' => 'gold',
             'summary' => 'Where generative AI genuinely saves time, and where it is still theatre.',
             'subcategories' => [
                 'Artificial Intelligence',
@@ -94,8 +94,8 @@ return [
         ],
 
         'Project Management & Agile' => [
-            'icon'    => 'check',
-            'color'   => 'orange',
+            'icon' => 'check',
+            'color' => 'orange',
             'summary' => 'Delivery method, governance and the certifications that go with them.',
             'subcategories' => [
                 'Project Management',
@@ -104,8 +104,8 @@ return [
         ],
 
         'Supply Chain & Operations' => [
-            'icon'    => 'truck',
-            'color'   => 'green',
+            'icon' => 'truck',
+            'color' => 'green',
             'summary' => 'Planning, procurement, logistics and operational excellence.',
             'subcategories' => [
                 'Supply Chain Management',
@@ -119,8 +119,8 @@ return [
         ],
 
         'Human Resources' => [
-            'icon'    => 'people',
-            'color'   => 'gold',
+            'icon' => 'people',
+            'color' => 'gold',
             'summary' => 'Hiring, developing, rewarding and retaining people, and the law around it.',
             'subcategories' => [
                 'HR Management & Strategy',
@@ -134,8 +134,8 @@ return [
         ],
 
         'Compliance & Risk Management' => [
-            'icon'    => 'shield',
-            'color'   => 'orange',
+            'icon' => 'shield',
+            'color' => 'orange',
             'summary' => 'Privacy, risk, governance and the European regulation that drives them.',
             'subcategories' => [
                 'Data Protection & Privacy',
@@ -149,8 +149,8 @@ return [
         ],
 
         'Marketing & Sales' => [
-            'icon'    => 'spark',
-            'color'   => 'green',
+            'icon' => 'spark',
+            'color' => 'green',
             'summary' => 'Winning and keeping customers, in the channels that actually convert.',
             'subcategories' => [
                 'Customer & Sales Excellence',
@@ -159,8 +159,8 @@ return [
         ],
 
         'IT & Cybersecurity' => [
-            'icon'    => 'code',
-            'color'   => 'gold',
+            'icon' => 'code',
+            'color' => 'gold',
             'summary' => 'Building, running and defending the systems the business depends on.',
             'subcategories' => [
                 'Cybersecurity',

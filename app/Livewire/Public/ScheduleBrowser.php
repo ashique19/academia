@@ -126,7 +126,7 @@ class ScheduleBrowser extends Component
     public function calendar(): array
     {
         $start = $this->cursor();
-        $end   = $start->copy()->endOfMonth();
+        $end = $start->copy()->endOfMonth();
 
         $sessions = $this->baseQuery()
             ->reorder()
@@ -135,18 +135,18 @@ class ScheduleBrowser extends Component
             ->get()
             ->groupBy(fn (CourseSchedule $s) => $s->starts_at->format('Y-m-d'));
 
-        $days       = [];
-        $cursor     = $start->copy()->startOfWeek(Carbon::MONDAY);
-        $gridEnd    = $end->copy()->endOfWeek(Carbon::SUNDAY);
+        $days = [];
+        $cursor = $start->copy()->startOfWeek(Carbon::MONDAY);
+        $gridEnd = $end->copy()->endOfWeek(Carbon::SUNDAY);
 
         while ($cursor <= $gridEnd) {
             $key = $cursor->format('Y-m-d');
 
             $days[] = [
-                'date'         => $cursor->copy(),
-                'inMonth'      => $cursor->month === $start->month,
-                'isToday'      => $cursor->isToday(),
-                'sessions'     => $sessions->get($key, collect()),
+                'date' => $cursor->copy(),
+                'inMonth' => $cursor->month === $start->month,
+                'isToday' => $cursor->isToday(),
+                'sessions' => $sessions->get($key, collect()),
             ];
 
             $cursor->addDay();

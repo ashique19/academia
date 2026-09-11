@@ -6,25 +6,25 @@ namespace App\Domain\Catalogue\Enums;
 
 enum CourseStatus: string
 {
-    case Draft     = 'draft';
+    case Draft = 'draft';
     case Published = 'published';
-    case Archived  = 'archived';
+    case Archived = 'archived';
 
     public function label(): string
     {
         return match ($this) {
-            self::Draft     => 'Draft',
+            self::Draft => 'Draft',
             self::Published => 'Published',
-            self::Archived  => 'Archived',
+            self::Archived => 'Archived',
         };
     }
 
     public function badgeColor(): string
     {
         return match ($this) {
-            self::Draft     => 'neutral',
+            self::Draft => 'neutral',
             self::Published => 'green',
-            self::Archived  => 'orange',
+            self::Archived => 'orange',
         };
     }
 

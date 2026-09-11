@@ -45,9 +45,9 @@ class Testimonial extends Model
     protected function casts(): array
     {
         return [
-            'is_verified'     => 'boolean',
+            'is_verified' => 'boolean',
             'is_illustrative' => 'boolean',
-            'verified_at'     => 'datetime',
+            'verified_at' => 'datetime',
         ];
     }
 

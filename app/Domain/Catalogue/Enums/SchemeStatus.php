@@ -31,7 +31,7 @@ enum SchemeStatus: string
     {
         return match ($this) {
             self::Independent => 'Independent exam preparation',
-            self::Accredited  => 'Accredited training organisation',
+            self::Accredited => 'Accredited training organisation',
         };
     }
 }

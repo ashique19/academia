@@ -20,9 +20,9 @@ class CourseSubcategoryFactory extends Factory
 
         return [
             'course_category_id' => CourseCategory::factory(),
-            'name'               => $name,
-            'slug'               => Str::slug($name),
-            'is_active'          => true,
+            'name' => $name,
+            'slug' => Str::slug($name),
+            'is_active' => true,
         ];
     }
 }

@@ -11,8 +11,10 @@ use App\Domain\Content\Models\SeoMetadata;
 use App\Domain\Content\Models\Testimonial;
 use App\Domain\Scheduling\Models\CourseSchedule;
 use App\Domain\Shared\Models\City;
+use Database\Factories\CourseFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -29,9 +31,9 @@ class Course extends Model
     use SoftDeletes;
 
     /** Factories live in Database\Factories, outside this model's namespace. */
-    protected static function newFactory(): \Illuminate\Database\Eloquent\Factories\Factory
+    protected static function newFactory(): Factory
     {
-        return \Database\Factories\CourseFactory::new();
+        return CourseFactory::new();
     }
 
     protected $fillable = [
@@ -47,13 +49,13 @@ class Course extends Model
     {
         return [
             'learning_objectives' => 'array',
-            'includes'            => 'array',
-            'duration_days'       => 'decimal:1',
-            'level'               => CourseLevel::class,
-            'status'              => CourseStatus::class,
-            'is_featured'         => 'boolean',
-            'published_at'        => 'datetime',
-            'next_session_at'     => 'datetime',
+            'includes' => 'array',
+            'duration_days' => 'decimal:1',
+            'level' => CourseLevel::class,
+            'status' => CourseStatus::class,
+            'is_featured' => 'boolean',
+            'published_at' => 'datetime',
+            'next_session_at' => 'datetime',
         ];
     }
 
@@ -133,6 +135,7 @@ class Course extends Model
     public function scopeWithCardRelations(Builder $query): Builder
     {
         return $query->with([
+            'scheme',
             'subcategory:id,name,slug,course_category_id',
             'subcategory.category:id,name,slug,color_token',
             'deliveryModes:id,name,slug,icon',

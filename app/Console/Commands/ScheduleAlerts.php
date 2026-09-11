@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Console\Commands;
 
 use App\Domain\Catalogue\Models\CourseCategory;
-use App\Domain\Scheduling\Enums\ScheduleStatus;
 use App\Domain\Scheduling\Models\CourseSchedule;
 use App\Domain\Shared\Models\City;
 use Illuminate\Console\Command;
@@ -26,8 +25,8 @@ class ScheduleAlerts extends Command
 
     public function handle(): int
     {
-        $config  = config('academia.schedule.alerts');
-        $alerts  = [];
+        $config = config('academia.schedule.alerts');
+        $alerts = [];
 
         foreach (CourseCategory::active()->get() as $category) {
             $count = CourseSchedule::query()
@@ -62,7 +61,7 @@ class ScheduleAlerts extends Command
 
         if ($farHorizon < $config['min_sessions_beyond_90d']) {
             $alerts[] = "Only {$farHorizon} session(s) scheduled beyond 90 days — "
-                . 'buyers planning next quarter have nothing to book.';
+                .'buyers planning next quarter have nothing to book.';
         }
 
         if ($alerts === []) {
@@ -74,7 +73,7 @@ class ScheduleAlerts extends Command
         $this->warn('Schedule needs attention:');
 
         foreach ($alerts as $alert) {
-            $this->line('  • ' . $alert);
+            $this->line('  • '.$alert);
         }
 
         // Wired to a notification once the mail stack is configured; the

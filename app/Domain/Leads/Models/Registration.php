@@ -9,10 +9,10 @@ use App\Domain\Scheduling\Models\CourseSchedule;
 use App\Domain\Shared\Models\Country;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
 /**
  * The join between a person and a session.
@@ -35,7 +35,7 @@ class Registration extends Model
     protected function casts(): array
     {
         return [
-            'status'       => RegistrationStatus::class,
+            'status' => RegistrationStatus::class,
             'consented_at' => 'datetime',
         ];
     }
@@ -48,7 +48,7 @@ class Registration extends Model
     protected static function booted(): void
     {
         static::creating(function (Registration $registration): void {
-            $registration->uuid ??= (string) \Illuminate\Support\Str::uuid();
+            $registration->uuid ??= (string) Str::uuid();
         });
     }
 

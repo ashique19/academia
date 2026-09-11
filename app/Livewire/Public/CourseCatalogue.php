@@ -62,7 +62,7 @@ class CourseCatalogue extends Component
 
     public function mount(?string $category = null, ?string $subcategory = null): void
     {
-        $this->category    = $category ?? $this->category;
+        $this->category = $category ?? $this->category;
         $this->subcategory = $subcategory ?? $this->subcategory;
     }
 
@@ -97,11 +97,11 @@ class CourseCatalogue extends Component
     public function clearFacet(string $facet, ?string $value = null): void
     {
         match ($facet) {
-            'search'      => $this->search = '',
-            'category'    => $this->category = '',
+            'search' => $this->search = '',
+            'category' => $this->category = '',
             'subcategory' => $this->subcategory = '',
-            'all'         => $this->resetFilters(),
-            default       => $this->{$facet} = $value === null
+            'all' => $this->resetFilters(),
+            default => $this->{$facet} = $value === null
                 ? []
                 : array_values(array_diff($this->{$facet}, [$value])),
         };
@@ -150,12 +150,12 @@ class CourseCatalogue extends Component
         return match ($this->sort) {
             // next_session_at is denormalised precisely so this is an indexed
             // ORDER BY rather than a correlated subquery per row.
-            'soonest'    => $query->whereNotNull('next_session_at')->orderBy('next_session_at'),
-            'price-asc'  => $query->orderByRaw('price_cents IS NULL, price_cents ASC'),
+            'soonest' => $query->whereNotNull('next_session_at')->orderBy('next_session_at'),
+            'price-asc' => $query->orderByRaw('price_cents IS NULL, price_cents ASC'),
             'price-desc' => $query->orderByRaw('price_cents IS NULL, price_cents DESC'),
-            'az'         => $query->orderBy('title'),
-            'newest'     => $query->orderByDesc('published_at'),
-            default      => $query->orderByDesc('booking_count')->orderByDesc('view_count'),
+            'az' => $query->orderBy('title'),
+            'newest' => $query->orderByDesc('published_at'),
+            default => $query->orderByDesc('booking_count')->orderByDesc('view_count'),
         };
     }
 
@@ -169,7 +169,7 @@ class CourseCatalogue extends Component
     #[Computed]
     public function facetCounts(): array
     {
-        $key = 'facets:' . md5(serialize($this->activeFilters()));
+        $key = 'facets:'.md5(serialize($this->activeFilters()));
 
         return Cache::remember(
             $key,
@@ -219,12 +219,12 @@ class CourseCatalogue extends Component
     public function activeFilters(): array
     {
         return array_filter([
-            'search'      => $this->search,
-            'category'    => $this->category,
+            'search' => $this->search,
+            'category' => $this->category,
             'subcategory' => $this->subcategory,
-            'modes'       => $this->modes,
-            'levels'      => $this->levels,
-            'cities'      => $this->cities,
+            'modes' => $this->modes,
+            'levels' => $this->levels,
+            'cities' => $this->cities,
         ]);
     }
 

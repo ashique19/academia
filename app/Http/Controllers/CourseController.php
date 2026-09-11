@@ -10,7 +10,6 @@ use App\Domain\Catalogue\Models\CourseSubcategory;
 use App\Domain\Catalogue\Services\PromotionService;
 use App\Domain\Shared\Models\City;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
@@ -19,7 +18,7 @@ class CourseController extends Controller
         $course->load([
             'subcategory.category', 'deliveryModes', 'modules', 'scheme', 'faqs',
             'schedules' => fn ($q) => $q->upcoming()->publiclyVisible()
-                ->with(['city.country', 'venue', 'deliveryMode'])->orderBy('starts_at')->take(12),
+                ->with(['course.scheme', 'city.country', 'venue', 'deliveryMode'])->orderBy('starts_at')->take(12),
         ]);
 
         // Fire-and-forget popularity counter. No model events, no updated_at
@@ -27,8 +26,8 @@ class CourseController extends Controller
         $course->newQuery()->whereKey($course->id)->increment('view_count');
 
         return view('pages.course', [
-            'course'  => $course,
-            'price'   => $promotions->priceFor($course, 1, $course->next_session?->starts_at),
+            'course' => $course,
+            'price' => $promotions->priceFor($course, 1, $course->next_session?->starts_at),
             'related' => Course::published()
                 ->where('course_subcategory_id', $course->course_subcategory_id)
                 ->whereKeyNot($course->id)
@@ -57,10 +56,10 @@ class CourseController extends Controller
         abort_if($sessions->isEmpty(), 404);
 
         return view('pages.course-city', [
-            'course'   => $course->load(['subcategory.category', 'modules', 'scheme']),
-            'city'     => $city->load('country', 'venues'),
+            'course' => $course->load(['subcategory.category', 'modules', 'scheme']),
+            'city' => $city->load('country', 'venues'),
             'sessions' => $sessions,
-            'price'    => $promotions->priceFor($course, 1, $sessions->first()?->starts_at),
+            'price' => $promotions->priceFor($course, 1, $sessions->first()?->starts_at),
         ]);
     }
 
@@ -69,7 +68,7 @@ class CourseController extends Controller
         abort_unless($category->is_active, 404);
 
         return view('pages.category', [
-            'category'      => $category->load('subcategories'),
+            'category' => $category->load('subcategories'),
             'subcategories' => $category->subcategories()
                 ->withCount(['courses as published_courses_count' => fn ($q) => $q->published()])
                 ->get(),

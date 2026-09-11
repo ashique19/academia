@@ -18,11 +18,11 @@ class CountryFactory extends Factory
         $name = $this->faker->unique()->country();
 
         return [
-            'name'      => $name,
-            'iso2'      => strtoupper($this->faker->unique()->lexify('??')),
-            'slug'      => Str::slug($name) . '-' . $this->faker->unique()->randomNumber(4),
-            'currency'  => 'EUR',
-            'timezone'  => 'Europe/Amsterdam',
+            'name' => $name,
+            'iso2' => strtoupper($this->faker->unique()->lexify('??')),
+            'slug' => Str::slug($name).'-'.$this->faker->unique()->randomNumber(4),
+            'currency' => 'EUR',
+            'timezone' => 'Europe/Amsterdam',
             'is_active' => true,
         ];
     }

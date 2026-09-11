@@ -20,7 +20,9 @@ use Livewire\Component;
 class CourseSearch extends Component
 {
     public string $query = '';
+
     public string $category = '';
+
     public string $city = '';
 
     public function search(): void
@@ -28,24 +30,22 @@ class CourseSearch extends Component
         $this->validate(['query' => ['nullable', 'string', 'max:120']]);
 
         $this->redirectRoute('courses.index', array_filter([
-            'q'        => trim($this->query),
+            'q' => trim($this->query),
             'category' => $this->category,
-            'city'     => $this->city ? [$this->city] : null,
+            'city' => $this->city ? [$this->city] : null,
         ]), navigate: true);
     }
 
     #[Computed]
     public function categories()
     {
-        return cache()->remember('search.categories', now()->addHour(), fn () =>
-            CourseCategory::active()->ordered()->get(['id', 'name', 'slug']));
+        return cache()->remember('search.categories', now()->addHour(), fn () => CourseCategory::active()->ordered()->get(['id', 'name', 'slug']));
     }
 
     #[Computed]
     public function cities()
     {
-        return cache()->remember('search.cities', now()->addHours(6), fn () =>
-            City::active()->hasUpcomingSessions()->orderBy('name')->get(['id', 'name', 'slug']));
+        return cache()->remember('search.cities', now()->addHours(6), fn () => City::active()->hasUpcomingSessions()->orderBy('name')->get(['id', 'name', 'slug']));
     }
 
     public function render(): View

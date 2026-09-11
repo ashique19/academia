@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Domain\Content\Services;
 
 use App\Domain\Catalogue\Models\Course;
+use App\Domain\Catalogue\Services\PromotionService;
 use App\Domain\Scheduling\Models\CourseSchedule;
 use App\Domain\Shared\ValueObjects\PriceBreakdown;
 
@@ -28,18 +29,18 @@ class CourseSchemaBuilder
     public function build(Course $course, PriceBreakdown $price): array
     {
         $schema = [
-            '@context'    => 'https://schema.org',
-            '@type'       => 'Course',
-            '@id'         => route('courses.show', $course) . '#course',
-            'name'        => $course->display_title,
+            '@context' => 'https://schema.org',
+            '@type' => 'Course',
+            '@id' => route('courses.show', $course).'#course',
+            'name' => $course->display_title,
             'description' => $course->summary,
-            'url'         => route('courses.show', $course),
-            'provider'    => [
+            'url' => route('courses.show', $course),
+            'provider' => [
                 '@type' => 'EducationalOrganization',
-                'name'  => config('academia.trade_name'),
-                'url'   => url('/'),
+                'name' => config('academia.trade_name'),
+                'url' => url('/'),
             ],
-            'timeRequired'                 => 'P' . max(1, (int) ceil((float) $course->duration_days)) . 'D',
+            'timeRequired' => 'P'.max(1, (int) ceil((float) $course->duration_days)).'D',
             'educationalCredentialAwarded' => $this->credential($course),
         ];
 
@@ -59,15 +60,15 @@ class CourseSchemaBuilder
 
         if (! $price->requiresQuote()) {
             $schema['offers'] = array_filter([
-                '@type'         => 'Offer',
-                'category'      => 'Paid',
-                'price'         => number_format(($price->finalPriceCents ?? 0) / 100, 2, '.', ''),
+                '@type' => 'Offer',
+                'category' => 'Paid',
+                'price' => number_format(($price->finalPriceCents ?? 0) / 100, 2, '.', ''),
                 'priceCurrency' => $price->currency,
-                'url'           => route('courses.show', $course),
+                'url' => route('courses.show', $course),
                 // validThrough ties the discounted price to the campaign that
                 // justifies it, so the markup expires with the offer.
-                'validThrough'  => $price->hasDiscount()
-                    ? app(\App\Domain\Catalogue\Services\PromotionService::class)
+                'validThrough' => $price->hasDiscount()
+                    ? app(PromotionService::class)
                         ->activeFor($course)?->ends_at?->toIso8601String()
                     : null,
             ], fn ($value) => $value !== null);
@@ -85,28 +86,28 @@ class CourseSchemaBuilder
         $isOnline = $session->deliveryMode?->slug === 'online';
 
         return array_filter([
-            '@type'          => 'CourseInstance',
-            'courseMode'     => $isOnline ? 'online' : 'onsite',
-            'startDate'      => $session->starts_at->toIso8601String(),
-            'endDate'        => $session->ends_at->toIso8601String(),
-            'courseWorkload' => 'P' . max(1, $session->duration_days) . 'D',
-            'inLanguage'     => $session->language,
-            'location'       => $isOnline
+            '@type' => 'CourseInstance',
+            'courseMode' => $isOnline ? 'online' : 'onsite',
+            'startDate' => $session->starts_at->toIso8601String(),
+            'endDate' => $session->ends_at->toIso8601String(),
+            'courseWorkload' => 'P'.max(1, $session->duration_days).'D',
+            'inLanguage' => $session->language,
+            'location' => $isOnline
                 ? ['@type' => 'VirtualLocation', 'url' => route('courses.show', $session->course)]
                 : array_filter([
-                    '@type'   => 'Place',
-                    'name'    => $session->venue?->name ?? $session->city?->name,
+                    '@type' => 'Place',
+                    'name' => $session->venue?->name ?? $session->city?->name,
                     'address' => $session->city ? [
-                        '@type'           => 'PostalAddress',
+                        '@type' => 'PostalAddress',
                         'addressLocality' => $session->city->name,
-                        'addressCountry'  => $session->city->country?->iso2,
+                        'addressCountry' => $session->city->country?->iso2,
                     ] : null,
                 ], fn ($v) => $v !== null),
             'offers' => [
-                '@type'         => 'Offer',
-                'price'         => number_format(($session->effectivePriceCents() ?? 0) / 100, 2, '.', ''),
+                '@type' => 'Offer',
+                'price' => number_format(($session->effectivePriceCents() ?? 0) / 100, 2, '.', ''),
                 'priceCurrency' => $price->currency,
-                'availability'  => $session->seats_available > 0
+                'availability' => $session->seats_available > 0
                     ? 'https://schema.org/InStock'
                     : 'https://schema.org/SoldOut',
             ],
@@ -138,10 +139,10 @@ class CourseSchemaBuilder
         }
 
         return [
-            '@type'       => 'AggregateRating',
+            '@type' => 'AggregateRating',
             'ratingValue' => (string) $score,
             'reviewCount' => (string) $count,
-            'bestRating'  => '5',
+            'bestRating' => '5',
         ];
     }
 }

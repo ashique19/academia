@@ -32,13 +32,13 @@ class GdprExport extends Command
         $email = strtolower(trim($this->argument('email')));
 
         $data = [
-            'subject'      => $email,
+            'subject' => $email,
             'generated_at' => now()->toIso8601String(),
-            'records'      => [
-                'user'                => User::where('email', $email)->get()->toArray(),
-                'registrations'       => Registration::where('email', $email)->withTrashed()->get()->toArray(),
+            'records' => [
+                'user' => User::where('email', $email)->get()->toArray(),
+                'registrations' => Registration::where('email', $email)->withTrashed()->get()->toArray(),
                 'corporate_inquiries' => CorporateInquiry::where('email', $email)->withTrashed()->get()->toArray(),
-                'individual_leads'    => IndividualLead::where('email', $email)->withTrashed()->get()->toArray(),
+                'individual_leads' => IndividualLead::where('email', $email)->withTrashed()->get()->toArray(),
             ],
         ];
 

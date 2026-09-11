@@ -49,6 +49,7 @@ class ImportCatalogue extends Command
     private const MODULE_SEPARATOR = "\u{00A7}";
 
     private string $path;
+
     private bool $dryRun;
 
     /** @var array<int, string> */
@@ -58,9 +59,9 @@ class ImportCatalogue extends Command
 
     public function handle(): int
     {
-        $this->path   = rtrim($this->option('path') ?: database_path('data'), '/');
+        $this->path = rtrim($this->option('path') ?: database_path('data'), '/');
         $this->dryRun = (bool) $this->option('dry-run');
-        $only         = $this->option('only');
+        $only = $this->option('only');
 
         if (! is_dir($this->path)) {
             $this->error("CSV directory not found: {$this->path}");
@@ -74,10 +75,10 @@ class ImportCatalogue extends Command
 
         $sections = [
             'reference' => fn () => $this->importReference(),
-            'trainers'  => fn () => $this->importTrainers(),
-            'courses'   => fn () => $this->importCourses(),
-            'sessions'  => fn () => $this->importSessions(),
-            'glossary'  => fn () => $this->importGlossary(),
+            'trainers' => fn () => $this->importTrainers(),
+            'courses' => fn () => $this->importCourses(),
+            'sessions' => fn () => $this->importSessions(),
+            'glossary' => fn () => $this->importGlossary(),
         ];
 
         foreach ($sections as $name => $importer) {
@@ -99,12 +100,12 @@ class ImportCatalogue extends Command
 
         if ($this->problems !== []) {
             $this->newLine();
-            $this->error(count($this->problems) . ' problem(s) found:');
+            $this->error(count($this->problems).' problem(s) found:');
             foreach (array_slice($this->problems, 0, 25) as $problem) {
-                $this->line('  • ' . $problem);
+                $this->line('  • '.$problem);
             }
             if (count($this->problems) > 25) {
-                $this->line('  … and ' . (count($this->problems) - 25) . ' more.');
+                $this->line('  … and '.(count($this->problems) - 25).' more.');
             }
 
             return self::FAILURE;
@@ -141,18 +142,19 @@ class ImportCatalogue extends Command
 
         foreach ($rows as $row) {
             $countryName = trim($row['country'] ?? '');
-            $cityName    = trim($row['city'] ?? '');
+            $cityName = trim($row['city'] ?? '');
 
             if ($countryName === '' || $cityName === '') {
-                $this->problem("locations.csv: row missing city or country");
+                $this->problem('locations.csv: row missing city or country');
+
                 continue;
             }
 
             $country = $this->write(fn () => Country::updateOrCreate(
                 ['iso2' => strtoupper(trim($row['country_code'] ?: substr($countryName, 0, 2)))],
                 [
-                    'name'     => $countryName,
-                    'slug'     => Str::slug($countryName),
+                    'name' => $countryName,
+                    'slug' => Str::slug($countryName),
                     'currency' => 'EUR',
                 ]
             ));
@@ -161,15 +163,15 @@ class ImportCatalogue extends Command
             $city = $this->write(fn () => City::updateOrCreate(
                 [
                     'country_id' => $country?->id ?? 0,
-                    'slug'       => Str::slug($cityName),
+                    'slug' => Str::slug($cityName),
                 ],
                 [
-                    'name'        => $cityName,
-                    'intro'       => $row['intro'] ?: null,
+                    'name' => $cityName,
+                    'intro' => $row['intro'] ?: null,
                     'description' => $row['description'] ?: null,
-                    'latitude'    => is_numeric($row['lat'] ?? null) ? (float) $row['lat'] : null,
-                    'longitude'   => is_numeric($row['lng'] ?? null) ? (float) $row['lng'] : null,
-                    'is_active'   => true,
+                    'latitude' => is_numeric($row['lat'] ?? null) ? (float) $row['lat'] : null,
+                    'longitude' => is_numeric($row['lng'] ?? null) ? (float) $row['lng'] : null,
+                    'is_active' => true,
                 ]
             ));
             $cities++;
@@ -178,10 +180,10 @@ class ImportCatalogue extends Command
                 $this->write(fn () => Venue::updateOrCreate(
                     ['city_id' => $city?->id ?? 0, 'name' => $row['venue_name']],
                     [
-                        'address_line1'   => Str::before($row['address'] ?? '', "\n") ?: null,
+                        'address_line1' => Str::before($row['address'] ?? '', "\n") ?: null,
                         'transport_notes' => $row['transport'] ?: null,
-                        'capacity'        => 14,
-                        'is_active'       => true,
+                        'capacity' => 14,
+                        'is_active' => true,
                     ]
                 ));
                 $venues++;
@@ -189,8 +191,8 @@ class ImportCatalogue extends Command
         }
 
         $this->counts['countries'] = $countries;
-        $this->counts['cities']    = $cities;
-        $this->counts['venues']    = $venues;
+        $this->counts['cities'] = $cities;
+        $this->counts['venues'] = $venues;
 
         $this->importTaxonomy();
     }
@@ -204,7 +206,7 @@ class ImportCatalogue extends Command
      */
     private function importTaxonomy(): void
     {
-        $map  = config('academia_taxonomy.map', []);
+        $map = config('academia_taxonomy.map', []);
         $rows = $this->readCsv('courses.csv');
 
         $seen = [];
@@ -221,12 +223,12 @@ class ImportCatalogue extends Command
             $category = $this->write(fn () => CourseCategory::updateOrCreate(
                 ['slug' => Str::slug($categoryName)],
                 [
-                    'name'        => $categoryName,
-                    'summary'     => $definition['summary'] ?? null,
-                    'icon'        => $definition['icon'] ?? null,
+                    'name' => $categoryName,
+                    'summary' => $definition['summary'] ?? null,
+                    'icon' => $definition['icon'] ?? null,
                     'color_token' => $definition['color'] ?? null,
-                    'sort_order'  => $order++,
-                    'is_active'   => true,
+                    'sort_order' => $order++,
+                    'is_active' => true,
                 ]
             ));
 
@@ -235,7 +237,7 @@ class ImportCatalogue extends Command
                 $this->write(fn () => CourseSubcategory::updateOrCreate(
                     [
                         'course_category_id' => $category?->id ?? 0,
-                        'slug'               => Str::slug($subName),
+                        'slug' => Str::slug($subName),
                     ],
                     ['name' => $subName, 'sort_order' => $subOrder++, 'is_active' => true]
                 ));
@@ -249,13 +251,13 @@ class ImportCatalogue extends Command
             $this->problem("Subcategory '{$orphan}' ({$count} courses) is not mapped to any category.");
         }
 
-        $this->counts['categories']    = count($map);
+        $this->counts['categories'] = count($map);
         $this->counts['subcategories'] = collect($map)->sum(fn ($d) => count($d['subcategories'] ?? []));
     }
 
     private function importTrainers(): void
     {
-        $rows  = $this->readCsv('trainers.csv');
+        $rows = $this->readCsv('trainers.csv');
         $count = 0;
 
         foreach ($rows as $row) {
@@ -264,25 +266,25 @@ class ImportCatalogue extends Command
             $this->write(fn () => Trainer::updateOrCreate(
                 ['reference' => $row['trainer_ref']],
                 [
-                    'name'             => $row['name'],
-                    'slug'             => Str::slug($row['name']),
-                    'headline'         => $row['role'] ?: null,
-                    'bio_short'        => $row['bio'] ?: null,
-                    'bio_full'         => $row['bio_long'] ?: null,
+                    'name' => $row['name'],
+                    'slug' => Str::slug($row['name']),
+                    'headline' => $row['role'] ?: null,
+                    'bio_short' => $row['bio'] ?: null,
+                    'bio_full' => $row['bio_long'] ?: null,
                     'years_experience' => (int) ($row['years'] ?? 0) ?: null,
-                    'certifications'   => $this->splitList($row['certifications'] ?? '', ','),
-                    'languages'        => $this->splitList($row['languages'] ?? '', ','),
-                    'linkedin_url'     => $row['linkedin'] ?: null,
-                    'city_id'          => $city?->id,
-                    'days_delivered'   => (int) ($row['days_delivered'] ?? 0),
+                    'certifications' => $this->splitList($row['certifications'] ?? '', ','),
+                    'languages' => $this->splitList($row['languages'] ?? '', ','),
+                    'linkedin_url' => $row['linkedin'] ?: null,
+                    'city_id' => $city?->id,
+                    'days_delivered' => (int) ($row['days_delivered'] ?? 0),
                     // ---------------------------------------------------------
                     // NOT PUBLIC. See spec §3.1 — trainer visibility is an open
                     // business decision, and the safe default is the one that
                     // cannot leak. Flip is_public per trainer, deliberately.
                     // ---------------------------------------------------------
-                    'is_public'        => false,
-                    'published_at'     => null,
-                    'status'           => 'active',
+                    'is_public' => false,
+                    'published_at' => null,
+                    'status' => 'active',
                 ]
             ));
             $count++;
@@ -293,20 +295,21 @@ class ImportCatalogue extends Command
 
     private function importCourses(): void
     {
-        $rows          = $this->readCsv('courses.csv');
+        $rows = $this->readCsv('courses.csv');
         $subcategories = CourseSubcategory::pluck('id', 'name');
-        $modes         = DeliveryMode::pluck('id', 'name');
-        $trainers      = Trainer::pluck('id', 'reference');
-        $schemes       = [];
-        $count         = 0;
-        $moduleCount   = 0;
+        $modes = DeliveryMode::pluck('id', 'name');
+        $trainers = Trainer::pluck('id', 'reference');
+        $schemes = [];
+        $count = 0;
+        $moduleCount = 0;
 
         foreach ($rows as $row) {
             $subName = trim($row['subcategory'] ?? '');
-            $subId   = $subcategories[$subName] ?? null;
+            $subId = $subcategories[$subName] ?? null;
 
             if ($subId === null) {
                 $this->problem("Course {$row['course_code']}: unknown subcategory '{$subName}'.");
+
                 continue;
             }
 
@@ -319,17 +322,17 @@ class ImportCatalogue extends Command
                     $scheme = $this->write(fn () => CertificationScheme::updateOrCreate(
                         ['slug' => Str::slug($key)],
                         [
-                            'name'           => $key,
-                            'owner'          => $row['scheme_owner'] ?: 'the scheme owner',
-                            'status'         => SchemeStatus::tryFrom($row['scheme_status'] ?? '')
+                            'name' => $key,
+                            'owner' => $row['scheme_owner'] ?: 'the scheme owner',
+                            'status' => SchemeStatus::tryFrom($row['scheme_status'] ?? '')
                                                 ?? SchemeStatus::Independent,
-                            'match_needle'   => $key,
+                            'match_needle' => $key,
                             'exam_questions' => $row['exam_questions'] ?: null,
-                            'exam_format'    => $row['exam_format'] ?: null,
+                            'exam_format' => $row['exam_format'] ?: null,
                             'exam_pass_mark' => $row['exam_pass_mark'] ?: null,
-                            'exam_duration'  => $row['exam_duration'] ?: null,
-                            'exam_book'      => $row['exam_book'] ?: null,
-                            'pathway'        => $row['certification_pathway'] ?: null,
+                            'exam_duration' => $row['exam_duration'] ?: null,
+                            'exam_book' => $row['exam_book'] ?: null,
+                            'pathway' => $row['certification_pathway'] ?: null,
                         ]
                     ));
                     $schemes[$key] = $scheme?->id;
@@ -342,40 +345,42 @@ class ImportCatalogue extends Command
 
             if ($level === null) {
                 $this->problem("Course {$row['course_code']}: unknown level '{$row['level']}'.");
+
                 continue;
             }
 
             $course = $this->write(fn () => Course::updateOrCreate(
                 ['code' => $row['course_code']],
                 [
-                    'course_subcategory_id'   => $subId,
+                    'course_subcategory_id' => $subId,
                     'certification_scheme_id' => $schemeId,
-                    'title'                   => $row['title'],
-                    'slug'                    => $row['slug'] ?: Str::slug($row['title']),
-                    'summary'                 => Str::limit($row['summary'] ?? '', 310),
-                    'description'             => $row['description'] ?? '',
-                    'learning_objectives'     => $this->splitList($row['objectives'] ?? ''),
-                    'target_audience'         => $row['audience'] ?: null,
-                    'prerequisites'           => $row['prerequisites'] ?: null,
-                    'includes'                => $this->splitList($row['includes'] ?? ''),
-                    'duration_days'           => (float) ($row['days'] ?? 1),
-                    'duration_hours'          => (int) ($row['hours'] ?? 0) ?: null,
-                    'level'                   => $level,
-                    'max_participants'        => 14,
-                    'price_cents'             => $this->toCents($row['price'] ?? null),
-                    'self_paced_price_cents'  => ($row['self_paced'] ?? '') === 'yes'
+                    'title' => $row['title'],
+                    'slug' => $row['slug'] ?: Str::slug($row['title']),
+                    'summary' => Str::limit($row['summary'] ?? '', 310),
+                    'description' => $row['description'] ?? '',
+                    'learning_objectives' => $this->splitList($row['objectives'] ?? ''),
+                    'target_audience' => $row['audience'] ?: null,
+                    'prerequisites' => $row['prerequisites'] ?: null,
+                    'includes' => $this->splitList($row['includes'] ?? ''),
+                    'duration_days' => (float) ($row['days'] ?? 1),
+                    'duration_hours' => (int) ($row['hours'] ?? 0) ?: null,
+                    'level' => $level,
+                    'max_participants' => 14,
+                    'price_cents' => $this->toCents($row['price'] ?? null),
+                    'self_paced_price_cents' => ($row['self_paced'] ?? '') === 'yes'
                                                     ? $this->toCents($row['self_paced_price'] ?? null)
                                                     : null,
-                    'day_rate_cents'          => $this->toCents($row['day_rate'] ?? null),
-                    'currency'                => 'EUR',
-                    'certificate'             => $row['certificate'] ?: null,
-                    'status'                  => CourseStatus::Published,
-                    'published_at'            => now(),
+                    'day_rate_cents' => $this->toCents($row['day_rate'] ?? null),
+                    'currency' => 'EUR',
+                    'certificate' => $row['certificate'] ?: null,
+                    'status' => CourseStatus::Published,
+                    'published_at' => now(),
                 ]
             ));
 
             if ($course === null) {
                 $count++;
+
                 continue;
             }
 
@@ -403,9 +408,9 @@ class ImportCatalogue extends Command
 
                 foreach ($modules as $i => $module) {
                     CourseModule::create([
-                        'course_id'  => $course->id,
-                        'title'      => $module['title'],
-                        'bullets'    => $module['bullets'],
+                        'course_id' => $course->id,
+                        'title' => $module['title'],
+                        'bullets' => $module['bullets'],
                         'sort_order' => $i,
                     ]);
                     $moduleCount++;
@@ -415,33 +420,35 @@ class ImportCatalogue extends Command
             $count++;
         }
 
-        $this->counts['courses']        = $count;
+        $this->counts['courses'] = $count;
         $this->counts['course_modules'] = $moduleCount;
-        $this->counts['schemes']        = count($schemes);
+        $this->counts['schemes'] = count($schemes);
     }
 
     private function importSessions(): void
     {
-        $rows    = $this->readCsv('sessions.csv');
+        $rows = $this->readCsv('sessions.csv');
         $courses = Course::pluck('id', 'code');
-        $cities  = City::with('country')->get()->keyBy('name');
-        $modes   = DeliveryMode::pluck('id', 'name');
-        $venues  = Venue::pluck('id', 'name');
-        $count   = 0;
+        $cities = City::with('country')->get()->keyBy('name');
+        $modes = DeliveryMode::pluck('id', 'name');
+        $venues = Venue::pluck('id', 'name');
+        $count = 0;
 
         foreach ($rows as $row) {
             $courseId = $courses[$row['course_code']] ?? null;
 
             if ($courseId === null) {
                 $this->problem("Session {$row['session_ref']}: unknown course {$row['course_code']}.");
+
                 continue;
             }
 
             $modeName = trim($row['mode'] ?? '');
-            $modeId   = $modes[$modeName] ?? null;
+            $modeId = $modes[$modeName] ?? null;
 
             if ($modeId === null) {
                 $this->problem("Session {$row['session_ref']}: unknown delivery mode '{$modeName}'.");
+
                 continue;
             }
 
@@ -449,25 +456,27 @@ class ImportCatalogue extends Command
             // *classroom* session without one is a data error, because it
             // would never appear on any city page.
             $cityName = trim($row['city'] ?? '');
-            $city     = $cityName !== '' ? ($cities[$cityName] ?? null) : null;
+            $city = $cityName !== '' ? ($cities[$cityName] ?? null) : null;
 
             if ($cityName !== '' && $city === null) {
                 $this->problem("Session {$row['session_ref']}: unknown city '{$cityName}'.");
+
                 continue;
             }
 
             if ($modeName === 'Classroom' && $city === null) {
                 $this->problem("Session {$row['session_ref']}: classroom session with no city.");
+
                 continue;
             }
 
             $timezone = $city?->country?->timezone ?? 'Europe/Amsterdam';
-            $time     = $row['start_time'] ?: '09:00';
+            $time = $row['start_time'] ?: '09:00';
 
             // Stored UTC; the IANA zone is kept alongside so display can
             // convert. A session shown in the wrong zone is a refund.
             $startsAt = Carbon::parse("{$row['start_date']} {$time}", $timezone)->utc();
-            $endsAt   = Carbon::parse("{$row['end_date']} 17:00", $timezone)->utc();
+            $endsAt = Carbon::parse("{$row['end_date']} 17:00", $timezone)->utc();
 
             if ($endsAt->lte($startsAt)) {
                 $endsAt = $startsAt->copy()->addHours(8);
@@ -475,32 +484,32 @@ class ImportCatalogue extends Command
 
             $seatLimit = (int) ($row['seats_total'] ?? 12);
             $seatsLeft = (int) ($row['seats_left'] ?? 0);
-            $taken     = max(0, min($seatLimit, $seatLimit - $seatsLeft));
+            $taken = max(0, min($seatLimit, $seatLimit - $seatsLeft));
 
             $status = match (strtolower($row['status'] ?? '')) {
-                'full'      => ScheduleStatus::Full,
+                'full' => ScheduleStatus::Full,
                 'cancelled' => ScheduleStatus::Cancelled,
                 'completed' => ScheduleStatus::Completed,
-                default     => ScheduleStatus::Open,
+                default => ScheduleStatus::Open,
             };
 
             $this->write(fn () => CourseSchedule::updateOrCreate(
                 ['reference' => $row['session_ref']],
                 [
-                    'course_id'        => $courseId,
+                    'course_id' => $courseId,
                     'delivery_mode_id' => $modeId,
-                    'country_id'       => $city?->country_id,
-                    'city_id'          => $city?->id,
-                    'venue_id'         => $venues[$row['venue'] ?? ''] ?? null,
-                    'starts_at'        => $startsAt,
-                    'ends_at'          => $endsAt,
-                    'timezone'         => $timezone,
-                    'seat_limit'       => $seatLimit,
-                    'seats_taken'      => $taken,
-                    'price_cents'      => $this->toCents($row['price'] ?? null),
-                    'currency'         => 'EUR',
-                    'status'           => $status,
-                    'language'         => 'en',
+                    'country_id' => $city?->country_id,
+                    'city_id' => $city?->id,
+                    'venue_id' => $venues[$row['venue'] ?? ''] ?? null,
+                    'starts_at' => $startsAt,
+                    'ends_at' => $endsAt,
+                    'timezone' => $timezone,
+                    'seat_limit' => $seatLimit,
+                    'seats_taken' => $taken,
+                    'price_cents' => $this->toCents($row['price'] ?? null),
+                    'currency' => 'EUR',
+                    'status' => $status,
+                    'language' => 'en',
                 ]
             ));
 
@@ -516,15 +525,15 @@ class ImportCatalogue extends Command
 
     private function importGlossary(): void
     {
-        $file = $this->path . '/glossary.csv';
+        $file = $this->path.'/glossary.csv';
 
         if (! file_exists($file)) {
             return;
         }
 
-        $rows          = $this->readCsv('glossary.csv');
+        $rows = $this->readCsv('glossary.csv');
         $subcategories = CourseSubcategory::pluck('id', 'name');
-        $count         = 0;
+        $count = 0;
 
         foreach ($rows as $row) {
             $term = $row['term'] ?? $row['title'] ?? null;
@@ -536,11 +545,11 @@ class ImportCatalogue extends Command
             $this->write(fn () => GlossaryTerm::updateOrCreate(
                 ['slug' => $row['slug'] ?: Str::slug(Str::before($term, ' ('))],
                 [
-                    'term'                  => $term,
-                    'definition'            => $row['definition'] ?? $row['short'] ?? '',
-                    'body'                  => $row['body'] ?? null,
+                    'term' => $term,
+                    'definition' => $row['definition'] ?? $row['short'] ?? '',
+                    'body' => $row['body'] ?? null,
                     'course_subcategory_id' => $subcategories[$row['subcategory'] ?? ''] ?? null,
-                    'is_active'             => true,
+                    'is_active' => true,
                 ]
             ));
             $count++;
@@ -581,7 +590,7 @@ class ImportCatalogue extends Command
     /** @return array<int, array<string, string>> */
     private function readCsv(string $filename): array
     {
-        $file = $this->path . '/' . $filename;
+        $file = $this->path.'/'.$filename;
 
         if (! file_exists($file)) {
             $this->problem("Missing file: {$filename}");
@@ -589,9 +598,9 @@ class ImportCatalogue extends Command
             return [];
         }
 
-        $handle  = fopen($file, 'r');
+        $handle = fopen($file, 'r');
         $headers = fgetcsv($handle);
-        $rows    = [];
+        $rows = [];
 
         while (($data = fgetcsv($handle)) !== false) {
             if ($data === [null] || $data === []) {
@@ -646,7 +655,7 @@ class ImportCatalogue extends Command
                 }
 
                 return [
-                    'title'   => trim($title),
+                    'title' => trim($title),
                     'bullets' => $this->splitList($bullets, ';'),
                 ];
             })

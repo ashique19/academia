@@ -66,7 +66,7 @@ class CertificationScheme extends Model
             return str_ireplace(' Preparation', ' — Exam Preparation', $title);
         }
 
-        return $title . ' — Exam Preparation';
+        return $title.' — Exam Preparation';
     }
 
     /** The notice rendered on every course page carrying this scheme. */
@@ -74,10 +74,10 @@ class CertificationScheme extends Model
     {
         return sprintf(
             'This is an independent preparation course. It is not accredited by, '
-            . 'affiliated with or endorsed by %1$s, and Academia does not issue the '
-            . '%2$s certificate. You book and sit the official exam with %1$s or an '
-            . 'accredited examination centre — we will tell you exactly how, and our '
-            . 'fee does not include the exam.',
+            .'affiliated with or endorsed by %1$s, and Academia does not issue the '
+            .'%2$s certificate. You book and sit the official exam with %1$s or an '
+            .'accredited examination centre — we will tell you exactly how, and our '
+            .'fee does not include the exam.',
             $this->owner,
             $this->name
         );

@@ -26,22 +26,22 @@ class TestimonialSeeder extends Seeder
     {
         $illustrative = [
             [
-                'role'   => 'Data & BI',
+                'role' => 'Data & BI',
                 'sector' => 'Classroom',
-                'quote'  => 'Built something with our own company data on day one, and it was still in '
-                          . 'use two weeks later.',
+                'quote' => 'Built something with our own company data on day one, and it was still in '
+                          .'use two weeks later.',
             ],
             [
-                'role'   => 'Leadership',
+                'role' => 'Leadership',
                 'sector' => 'Multi-country in-company',
-                'quote'  => 'Case studies adapted per market, and one consistent report on capability '
-                          . 'gaps across every site.',
+                'quote' => 'Case studies adapted per market, and one consistent report on capability '
+                          .'gaps across every site.',
             ],
             [
-                'role'   => 'Systems training',
+                'role' => 'Systems training',
                 'sector' => 'Live online',
-                'quote'  => 'Recordings and a real lab environment, so practising around a full-time '
-                          . 'job was actually possible.',
+                'quote' => 'Recordings and a real lab environment, so practising around a full-time '
+                          .'job was actually possible.',
             ],
         ];
 
@@ -49,12 +49,12 @@ class TestimonialSeeder extends Seeder
             Testimonial::updateOrCreate(
                 ['quote' => $row['quote']],
                 [
-                    'author_role'     => $row['role'],
-                    'author_sector'   => $row['sector'],
+                    'author_role' => $row['role'],
+                    'author_sector' => $row['sector'],
                     'is_illustrative' => true,
-                    'is_verified'     => false,
-                    'status'          => 'published',
-                    'sort_order'      => $order,
+                    'is_verified' => false,
+                    'status' => 'published',
+                    'sort_order' => $order,
                 ]
             );
         }

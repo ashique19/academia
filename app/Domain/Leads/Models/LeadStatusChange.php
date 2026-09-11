@@ -28,8 +28,8 @@ class LeadStatusChange extends Model
     {
         return [
             'from_status' => LeadStatus::class,
-            'to_status'   => LeadStatus::class,
-            'created_at'  => 'datetime',
+            'to_status' => LeadStatus::class,
+            'created_at' => 'datetime',
         ];
     }
 
