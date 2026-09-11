@@ -1,0 +1,195 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../../app/Livewire';
+
+/* ==========================================================================
+   ACADEMIA DESIGN SYSTEM
+
+   Five brand colours are not a UI palette. Every real interface also needs
+   disabled states, hover states, borders, dividers, three levels of text
+   emphasis and semantic success/warning/error. The tint ramps below exist
+   so a developer never has to invent a hex value in a Blade file — that is
+   how a design system drifts inside a fortnight.
+   ========================================================================== */
+
+@theme {
+  /* --- brand ------------------------------------------------------------ */
+  --color-brand-orange: #B14705;
+  --color-brand-cream:  #F2F0E3;
+  --color-brand-gold:   #E0A526;
+  --color-brand-green:  #2E6B4F;
+  --color-brand-brown:  #241C15;
+
+  /* --- orange ramp (primary action) ------------------------------------- */
+  --color-orange-50:  #FDF2EC;
+  --color-orange-100: #FBE1D2;
+  --color-orange-200: #F5C3A6;
+  --color-orange-300: #E89A69;
+  --color-orange-400: #CE7038;
+  --color-orange-500: #B14705;
+  --color-orange-600: #963C04;
+  --color-orange-700: #7A3103;
+  --color-orange-800: #5C2502;
+
+  /* --- gold ramp (highlight, offers) ------------------------------------ */
+  --color-gold-50:  #FDF7E7;
+  --color-gold-100: #FAEDC6;
+  --color-gold-200: #F3D992;
+  --color-gold-300: #EAC45E;
+  --color-gold-400: #E0A526;
+  --color-gold-500: #C48C15;
+  /* Darkened from #9C6E0F so .chip-gold clears WCAG AA (4.5:1) for small
+     text on gold-50. Gold is a background and an accent colour in this
+     system — as text it only works on a dark ground or a gold tint. */
+  --color-gold-600: #93690E;
+
+  /* --- green ramp (availability, confirmation) -------------------------- */
+  --color-green-50:  #EDF5F1;
+  --color-green-100: #D4E8DE;
+  --color-green-200: #A9D1BD;
+  --color-green-300: #6FAF91;
+  --color-green-400: #43886A;
+  --color-green-500: #2E6B4F;
+  --color-green-600: #245640;
+  --color-green-700: #1B4030;
+
+  /* --- neutral ramp ----------------------------------------------------- */
+  --color-sand-50:  #FAF9F4;
+  --color-sand-100: #F2F0E3;
+  --color-sand-200: #E4E0CF;
+  --color-sand-300: #CFC9B4;
+  --color-sand-400: #A9A18A;
+  --color-sand-500: #7E7663;
+  --color-sand-600: #5C5647;
+  --color-sand-700: #3D382D;
+  --color-sand-800: #2C271E;
+  --color-sand-900: #241C15;
+
+  /* --- semantic --------------------------------------------------------- */
+  --color-danger:  #A32C1B;
+  --color-warning: #C48C15;
+  --color-success: #2E6B4F;
+
+  /* --- type ------------------------------------------------------------- */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  --shadow-card:  0 1px 2px rgb(36 28 21 / 0.05), 0 4px 14px rgb(36 28 21 / 0.06);
+  --shadow-lift:  0 8px 30px rgb(36 28 21 / 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  /* No horizontal overflow, ever. An earlier build of this product shipped a
+     nowrap headline that broke this at 390px. */
+  html, body { overflow-x: clip; }
+
+  body {
+    @apply bg-white text-sand-900 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight text-balance;
+  }
+
+  h1 { @apply text-4xl md:text-5xl leading-[1.08]; }
+  h2 { @apply text-3xl md:text-4xl leading-[1.15]; }
+  h3 { @apply text-xl md:text-2xl; }
+
+  p { @apply leading-relaxed; }
+
+  /* Never remove a focus ring without replacing it. */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-orange-500;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Components
+
+   Colour is semantic here, not decorative. A user learns the colour grammar
+   in about four seconds and is confused for the rest of the session if it
+   shifts — so orange is always "primary action", gold is always "offer or
+   highlight", green is always "available / confirmed".
+   -------------------------------------------------------------------------- */
+@layer components {
+
+  .wrap { @apply mx-auto w-full max-w-[1240px] px-5 sm:px-6; }
+
+  /* Buttons.
+     In Tailwind 4 a component class cannot @apply another component class in
+     the same layer, so the shared base is declared once across the selector
+     list and each variant adds only its colour. */
+  .btn, .btn-primary, .btn-gold, .btn-green, .btn-ghost, .btn-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill
+           px-5 py-2.5 text-sm font-semibold transition
+           focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+  .btn-primary { @apply bg-orange-500 text-white hover:bg-orange-600; }
+  .btn-gold    { @apply bg-gold-400 text-sand-900 hover:bg-gold-500; }
+  .btn-green   { @apply bg-green-500 text-white hover:bg-green-600; }
+  .btn-ghost   { @apply border border-sand-300 bg-white text-sand-900 hover:bg-sand-50; }
+  .btn-light   { @apply border border-white/40 text-white hover:bg-white/10; }
+  .btn-lg      { @apply px-7 py-3.5 text-base; }
+
+  .card {
+    @apply rounded-card border border-sand-200 bg-white shadow-card;
+  }
+  .card-hover { @apply transition hover:-translate-y-1 hover:shadow-lift; }
+  .card-pad   { @apply p-6; }
+
+  .chip, .chip-green, .chip-gold, .chip-orange {
+    @apply inline-flex items-center gap-1.5 rounded-pill px-2.5 py-1 text-xs font-semibold;
+  }
+  .chip        { @apply bg-sand-100 text-sand-700; }
+  .chip-green  { @apply bg-green-50 text-green-700; }
+  .chip-gold   { @apply bg-gold-50 text-gold-600; }
+  .chip-orange { @apply bg-orange-50 text-orange-600; }
+
+  .eyebrow {
+    @apply flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-orange-500;
+  }
+  .eyebrow::before { content: ''; @apply h-px w-6 bg-orange-500; }
+
+  .lede { @apply text-lg leading-relaxed text-sand-600; }
+
+  .field-label { @apply mb-1.5 block text-sm font-semibold text-sand-800; }
+
+  .input, .select, .textarea {
+    @apply w-full rounded-lg border border-sand-300 bg-white px-3.5 py-2.5 text-sm
+           text-sand-900 placeholder:text-sand-400
+           focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20;
+  }
+
+  .field-error { @apply mt-1.5 text-sm text-danger; }
+
+  /* Sample-content marker.
+
+     Load-bearing, not decoration: this is what distinguishes an illustrative
+     quote (a claim about programme design, which is substantiable) from a
+     customer testimonial. Never render an illustrative quote without it. */
+  .sample-flag {
+    @apply inline-flex items-center gap-1.5 rounded-pill
+           border border-dashed border-sand-400 bg-sand-100
+           px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-sand-600;
+  }
+
+  .price-was { @apply text-sm font-semibold text-sand-400 line-through; }
+  .price-now { @apply text-2xl font-bold text-orange-600; }
+}

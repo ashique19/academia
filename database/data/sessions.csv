@@ -1,0 +1,1562 @@
+session_ref,course_code,start_date,end_date,start_time,mode,city,venue,seats_total,seats_left,price,language,status
+S00001,C0001,2026-10-05,2026-10-05,09:00,Online,,Virtual classroom,12,0,645,English,full
+S00002,C0001,2027-01-18,2027-01-18,09:00,Onsite,,Client premises,12,9,695,English,guaranteed
+S00003,C0001,2027-06-07,2027-06-07,09:00,Online,,Virtual classroom,12,2,645,English,scheduled
+S00004,C0001,2027-06-10,2027-06-10,09:00,Online,,Virtual classroom,12,2,645,English,guaranteed
+S00005,C0002,2026-09-14,2026-09-16,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S00006,C0002,2026-09-21,2026-09-23,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,2,2645,English,guaranteed
+S00007,C0002,2027-01-18,2027-01-20,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00008,C0003,2026-09-28,2026-09-30,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S00009,C0003,2027-01-07,2027-01-11,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S00010,C0003,2027-03-17,2027-03-19,09:00,Onsite,,Client premises,12,1,2345,English,guaranteed
+S00011,C0003,2027-05-10,2027-05-12,09:00,Online,,Virtual classroom,12,2,2095,English,guaranteed
+S00012,C0004,2026-09-08,2026-09-10,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,14,2345,English,scheduled
+S00013,C0004,2026-10-12,2026-10-14,09:00,Online,,Virtual classroom,12,9,2095,English,guaranteed
+S00014,C0004,2027-03-15,2027-03-17,09:00,Onsite,,Client premises,12,7,2345,English,guaranteed
+S00015,C0004,2027-06-14,2027-06-16,09:00,Onsite,,Client premises,12,2,2345,English,guaranteed
+S00016,C0005,2026-11-09,2026-11-11,09:00,Onsite,,Client premises,12,2,2645,English,guaranteed
+S00017,C0005,2027-02-01,2027-02-03,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00018,C0005,2027-03-22,2027-03-24,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00019,C0005,2027-04-19,2027-04-21,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S00020,C0006,2027-04-19,2027-04-21,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S00021,C0006,2027-05-03,2027-05-05,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,2,2345,English,scheduled
+S00022,C0006,2027-05-12,2027-05-14,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,8,2345,English,scheduled
+S00023,C0007,2026-11-23,2026-11-25,09:00,Onsite,,Client premises,12,9,2345,English,scheduled
+S00024,C0007,2026-11-25,2026-11-27,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,11,2345,English,guaranteed
+S00025,C0007,2027-01-18,2027-01-20,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,9,2345,English,scheduled
+S00026,C0008,2026-09-21,2026-09-23,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S00027,C0008,2026-11-04,2026-11-06,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,13,2345,English,scheduled
+S00028,C0008,2026-12-14,2026-12-16,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,1,2345,English,guaranteed
+S00029,C0009,2027-04-26,2027-04-27,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00030,C0009,2027-05-17,2027-05-18,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,8,1595,English,scheduled
+S00031,C0010,2027-03-04,2027-03-05,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00032,C0010,2027-06-01,2027-06-02,09:00,Online,,Virtual classroom,12,3,1445,English,scheduled
+S00033,C0011,2026-09-16,2026-09-18,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,14,2345,English,scheduled
+S00034,C0011,2026-11-16,2026-11-18,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S00035,C0012,2026-12-31,2027-01-04,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,11,2645,English,scheduled
+S00036,C0012,2027-02-22,2027-02-24,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00037,C0012,2027-06-14,2027-06-16,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,13,2645,English,scheduled
+S00038,C0013,2026-11-26,2026-11-30,09:00,Onsite,,Client premises,12,9,2345,English,scheduled
+S00039,C0013,2027-03-29,2027-03-31,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,1,2345,English,scheduled
+S00040,C0014,2027-01-27,2027-01-29,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S00041,C0014,2027-05-03,2027-05-05,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,11,2345,English,scheduled
+S00042,C0015,2027-03-04,2027-03-08,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,0,2345,English,full
+S00043,C0015,2027-03-08,2027-03-10,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S00044,C0016,2026-10-29,2026-11-02,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S00045,C0016,2027-02-15,2027-02-17,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00046,C0016,2027-03-15,2027-03-17,09:00,Onsite,,Client premises,12,1,2345,English,guaranteed
+S00047,C0016,2027-04-07,2027-04-09,09:00,Online,,Virtual classroom,12,3,2095,English,scheduled
+S00048,C0017,2027-05-20,2027-05-24,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S00049,C0017,2027-05-26,2027-05-28,09:00,Classroom,Rome,Academia Training Centre Rome,14,11,2345,English,scheduled
+S00050,C0017,2027-05-31,2027-06-02,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,7,2345,English,scheduled
+S00051,C0018,2027-02-22,2027-02-24,09:00,Onsite,,Client premises,12,1,2645,English,scheduled
+S00052,C0018,2027-05-24,2027-05-26,09:00,Onsite,,Client premises,12,7,2645,English,guaranteed
+S00053,C0019,2026-10-19,2026-10-19,09:00,Online,,Virtual classroom,12,2,645,English,scheduled
+S00054,C0019,2026-12-22,2026-12-22,09:00,Onsite,,Client premises,12,11,695,English,guaranteed
+S00055,C0020,2026-09-14,2026-09-14,09:00,Onsite,,Client premises,12,2,695,English,scheduled
+S00056,C0020,2027-01-06,2027-01-06,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,12,695,English,guaranteed
+S00057,C0020,2027-02-16,2027-02-16,09:00,Online,,Virtual classroom,12,1,645,English,scheduled
+S00058,C0021,2026-09-23,2026-09-28,09:00,Onsite,,Client premises,12,10,4445,English,guaranteed
+S00059,C0021,2026-11-23,2026-11-27,09:00,Onsite,,Client premises,12,12,4445,English,guaranteed
+S00060,C0021,2027-01-11,2027-01-15,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,13,4445,English,guaranteed
+S00061,C0021,2027-02-01,2027-02-05,09:00,Onsite,,Client premises,12,10,4445,English,scheduled
+S00062,C0022,2026-12-21,2026-12-25,09:00,Onsite,,Client premises,12,9,3945,English,scheduled
+S00063,C0022,2027-01-11,2027-01-15,09:00,Onsite,,Client premises,12,7,3945,English,scheduled
+S00064,C0022,2027-02-15,2027-02-19,09:00,Online,,Virtual classroom,12,7,3545,English,scheduled
+S00065,C0023,2026-11-23,2026-11-24,09:00,Online,,Virtual classroom,12,9,1245,English,scheduled
+S00066,C0023,2027-02-25,2027-02-26,09:00,Classroom,Paris,Academia Training Centre Paris,14,3,1395,English,scheduled
+S00067,C0024,2026-09-23,2026-09-25,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00068,C0024,2026-12-17,2026-12-21,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S00069,C0024,2026-12-31,2027-01-04,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,12,2345,English,scheduled
+S00070,C0025,2026-12-10,2026-12-14,09:00,Online,,Virtual classroom,12,2,2095,English,guaranteed
+S00071,C0025,2027-01-25,2027-01-27,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S00072,C0025,2027-06-28,2027-06-30,09:00,Onsite,,Client premises,12,2,2345,English,guaranteed
+S00073,C0026,2026-09-17,2026-09-21,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,0,2345,English,full
+S00074,C0026,2027-01-05,2027-01-07,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S00075,C0026,2027-05-18,2027-05-20,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00076,C0027,2026-09-07,2026-09-09,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,1,2345,English,scheduled
+S00077,C0027,2026-11-16,2026-11-18,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00078,C0027,2026-12-07,2026-12-09,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,10,2345,English,guaranteed
+S00079,C0027,2027-04-05,2027-04-07,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00080,C0028,2026-10-14,2026-10-15,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,8,1595,English,scheduled
+S00081,C0028,2027-03-18,2027-03-19,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00082,C0028,2027-04-12,2027-04-13,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,13,1595,English,scheduled
+S00083,C0028,2027-06-24,2027-06-25,09:00,Classroom,Milan,Academia Training Centre Milan,14,3,1595,English,scheduled
+S00084,C0029,2026-11-04,2026-11-05,09:00,Onsite,,Client premises,12,3,1595,English,scheduled
+S00085,C0029,2027-01-19,2027-01-20,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,0,1595,English,full
+S00086,C0029,2027-06-23,2027-06-24,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00087,C0030,2026-11-03,2026-11-05,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,0,2345,English,full
+S00088,C0030,2027-04-28,2027-04-30,09:00,Classroom,Munich,Academia Training Centre Munich,14,14,2345,English,scheduled
+S00089,C0031,2026-11-16,2026-11-18,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00090,C0031,2027-02-01,2027-02-03,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00091,C0031,2027-03-30,2027-04-01,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,2,2345,English,scheduled
+S00092,C0032,2026-10-19,2026-10-20,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,13,1595,English,guaranteed
+S00093,C0032,2026-12-14,2026-12-15,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S00094,C0032,2027-04-01,2027-04-02,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,11,1595,English,scheduled
+S00095,C0033,2026-10-20,2026-10-22,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00096,C0033,2027-03-08,2027-03-10,09:00,Online,,Virtual classroom,12,10,2095,English,guaranteed
+S00097,C0033,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00098,C0034,2026-09-07,2026-09-09,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,12,2345,English,scheduled
+S00099,C0034,2027-03-30,2027-04-01,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S00100,C0034,2027-04-07,2027-04-09,09:00,Online,,Virtual classroom,12,8,2095,English,guaranteed
+S00101,C0035,2027-02-17,2027-02-18,09:00,Onsite,,Client premises,12,8,1395,English,guaranteed
+S00102,C0035,2027-03-08,2027-03-09,09:00,Onsite,,Client premises,12,12,1395,English,guaranteed
+S00103,C0035,2027-05-12,2027-05-13,09:00,Onsite,,Client premises,12,12,1395,English,scheduled
+S00104,C0036,2026-11-23,2026-11-25,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,3,2345,English,guaranteed
+S00105,C0036,2026-11-26,2026-11-30,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,9,2345,English,scheduled
+S00106,C0036,2027-04-15,2027-04-19,09:00,Onsite,,Client premises,12,9,2345,English,scheduled
+S00107,C0037,2026-09-07,2026-09-09,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S00108,C0037,2026-10-20,2026-10-22,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00109,C0037,2027-04-22,2027-04-26,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00110,C0037,2027-05-03,2027-05-05,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,12,2345,English,scheduled
+S00111,C0038,2026-11-23,2026-11-25,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,0,2345,English,full
+S00112,C0038,2026-12-07,2026-12-09,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00113,C0038,2027-04-26,2027-04-28,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S00114,C0039,2026-10-12,2026-10-14,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,1,2345,English,scheduled
+S00115,C0039,2027-03-24,2027-03-26,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,11,2345,English,scheduled
+S00116,C0039,2027-03-24,2027-03-26,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00117,C0039,2027-05-05,2027-05-07,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,7,2345,English,scheduled
+S00118,C0040,2026-10-26,2026-10-28,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S00119,C0040,2027-02-22,2027-02-24,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,7,2345,English,scheduled
+S00120,C0040,2027-03-08,2027-03-10,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S00121,C0040,2027-05-24,2027-05-26,09:00,Online,,Virtual classroom,12,9,2095,English,guaranteed
+S00122,C0041,2026-12-10,2026-12-14,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00123,C0041,2027-01-13,2027-01-15,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S00124,C0041,2027-02-22,2027-02-24,09:00,Onsite,,Client premises,12,12,2345,English,guaranteed
+S00125,C0042,2026-09-30,2026-10-01,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S00126,C0042,2026-12-21,2026-12-22,09:00,Classroom,Milan,Academia Training Centre Milan,14,2,1595,English,scheduled
+S00127,C0042,2026-12-30,2026-12-31,09:00,Onsite,,Client premises,12,7,1595,English,scheduled
+S00128,C0042,2027-03-11,2027-03-12,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S00129,C0043,2027-01-25,2027-01-27,09:00,Classroom,Rome,Academia Training Centre Rome,14,2,2345,English,scheduled
+S00130,C0043,2027-01-25,2027-01-27,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,0,2345,English,full
+S00131,C0044,2026-11-16,2026-11-18,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,11,2345,English,scheduled
+S00132,C0044,2027-05-13,2027-05-17,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,14,2345,English,scheduled
+S00133,C0044,2027-06-01,2027-06-03,09:00,Onsite,,Client premises,12,10,2345,English,guaranteed
+S00134,C0045,2026-10-29,2026-10-30,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00135,C0045,2027-02-15,2027-02-16,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S00136,C0045,2027-04-21,2027-04-22,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,0,1595,English,full
+S00137,C0046,2026-10-05,2026-10-07,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00138,C0046,2027-03-17,2027-03-19,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00139,C0046,2027-06-21,2027-06-23,09:00,Online,,Virtual classroom,12,3,2095,English,guaranteed
+S00140,C0047,2026-09-14,2026-09-15,09:00,Onsite,,Client premises,12,2,1595,English,guaranteed
+S00141,C0047,2026-11-23,2026-11-24,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,14,1595,English,guaranteed
+S00142,C0047,2027-02-25,2027-02-26,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00143,C0048,2026-09-15,2026-09-17,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00144,C0048,2026-10-07,2026-10-09,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S00145,C0048,2027-01-19,2027-01-21,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,1,2345,English,scheduled
+S00146,C0048,2027-04-19,2027-04-21,09:00,Onsite,,Client premises,12,1,2345,English,guaranteed
+S00147,C0049,2026-10-07,2026-10-09,09:00,Online,,Virtual classroom,12,9,2095,English,guaranteed
+S00148,C0049,2027-03-01,2027-03-03,09:00,Online,,Virtual classroom,12,1,2095,English,guaranteed
+S00149,C0049,2027-05-24,2027-05-26,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00150,C0049,2027-06-14,2027-06-16,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00151,C0050,2026-11-18,2026-11-20,09:00,Onsite,,Client premises,12,2,2645,English,guaranteed
+S00152,C0050,2027-03-11,2027-03-15,09:00,Online,,Virtual classroom,12,2,2395,English,scheduled
+S00153,C0050,2027-03-22,2027-03-24,09:00,Online,,Virtual classroom,12,2,2395,English,guaranteed
+S00154,C0050,2027-05-10,2027-05-12,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,0,2645,English,full
+S00155,C0051,2026-10-29,2026-11-02,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00156,C0051,2027-02-23,2027-02-25,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,0,2345,English,full
+S00157,C0051,2027-03-11,2027-03-15,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00158,C0052,2026-11-30,2026-12-02,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S00159,C0052,2027-02-16,2027-02-18,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S00160,C0052,2027-05-17,2027-05-19,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00161,C0053,2026-09-16,2026-09-18,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00162,C0053,2026-10-13,2026-10-15,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00163,C0053,2027-03-30,2027-04-01,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00164,C0053,2027-04-20,2027-04-22,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00165,C0054,2026-09-08,2026-09-09,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,9,1595,English,guaranteed
+S00166,C0054,2026-09-15,2026-09-16,09:00,Onsite,,Client premises,12,10,1595,English,guaranteed
+S00167,C0054,2027-02-23,2027-02-24,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S00168,C0054,2027-04-15,2027-04-16,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,8,1595,English,guaranteed
+S00169,C0055,2026-10-05,2026-10-06,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,13,1395,English,scheduled
+S00170,C0055,2027-01-14,2027-01-15,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,7,1395,English,guaranteed
+S00171,C0055,2027-01-28,2027-01-29,09:00,Onsite,,Client premises,12,3,1395,English,scheduled
+S00172,C0055,2027-06-07,2027-06-08,09:00,Classroom,Prague,Academia Training Centre Prague,14,12,1395,English,guaranteed
+S00173,C0056,2027-01-19,2027-01-21,09:00,Onsite,,Client premises,12,8,2645,English,guaranteed
+S00174,C0056,2027-06-09,2027-06-11,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00175,C0056,2027-06-21,2027-06-23,09:00,Onsite,,Client premises,12,3,2645,English,scheduled
+S00176,C0057,2026-09-07,2026-09-08,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,11,1595,English,scheduled
+S00177,C0057,2027-01-11,2027-01-12,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S00178,C0057,2027-03-08,2027-03-09,09:00,Onsite,,Client premises,12,3,1595,English,guaranteed
+S00179,C0057,2027-04-29,2027-04-30,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,8,1595,English,scheduled
+S00180,C0058,2026-12-21,2026-12-22,09:00,Online,,Virtual classroom,12,1,1445,English,scheduled
+S00181,C0058,2027-01-11,2027-01-12,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00182,C0058,2027-06-14,2027-06-15,09:00,Online,,Virtual classroom,12,3,1445,English,scheduled
+S00183,C0059,2026-12-09,2026-12-10,09:00,Onsite,,Client premises,12,2,1595,English,scheduled
+S00184,C0059,2027-02-25,2027-02-26,09:00,Onsite,,Client premises,12,12,1595,English,guaranteed
+S00185,C0060,2026-12-14,2026-12-18,09:00,Onsite,,Client premises,12,11,4445,English,guaranteed
+S00186,C0060,2027-01-26,2027-02-01,09:00,Onsite,,Client premises,12,0,4445,English,full
+S00187,C0060,2027-05-03,2027-05-07,09:00,Online,,Virtual classroom,12,0,3995,English,full
+S00188,C0061,2026-10-26,2026-10-30,09:00,Classroom,Milan,Academia Training Centre Milan,14,12,4445,English,scheduled
+S00189,C0061,2027-03-23,2027-03-29,09:00,Onsite,,Client premises,12,7,4445,English,guaranteed
+S00190,C0062,2026-11-16,2026-11-18,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S00191,C0062,2026-11-16,2026-11-18,09:00,Classroom,Prague,Academia Training Centre Prague,14,13,2345,English,scheduled
+S00192,C0062,2026-12-22,2026-12-24,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00193,C0062,2027-02-09,2027-02-11,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S00194,C0063,2026-10-14,2026-10-19,09:00,Online,,Virtual classroom,12,8,3995,English,scheduled
+S00195,C0063,2027-05-03,2027-05-07,09:00,Onsite,,Client premises,12,0,4445,English,full
+S00196,C0064,2026-12-01,2026-12-02,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,2,1595,English,guaranteed
+S00197,C0064,2027-02-10,2027-02-11,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,9,1595,English,scheduled
+S00198,C0065,2026-09-28,2026-09-28,09:00,Onsite,,Client premises,12,12,695,English,scheduled
+S00199,C0065,2027-01-04,2027-01-04,09:00,Onsite,,Client premises,12,0,695,English,full
+S00200,C0065,2027-01-11,2027-01-11,09:00,Onsite,,Client premises,12,8,695,English,scheduled
+S00201,C0065,2027-02-03,2027-02-03,09:00,Onsite,,Client premises,12,12,695,English,scheduled
+S00202,C0066,2026-10-15,2026-10-19,09:00,Onsite,,Client premises,12,10,3545,English,guaranteed
+S00203,C0066,2027-01-18,2027-01-21,09:00,Onsite,,Client premises,12,7,3545,English,scheduled
+S00204,C0066,2027-02-22,2027-02-25,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,3,3545,English,guaranteed
+S00205,C0066,2027-04-08,2027-04-12,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,1,3545,English,guaranteed
+S00206,C0067,2026-11-04,2026-11-06,09:00,Online,,Virtual classroom,12,9,2095,English,guaranteed
+S00207,C0067,2027-06-01,2027-06-03,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,14,2345,English,scheduled
+S00208,C0068,2027-01-26,2027-01-27,09:00,Classroom,Milan,Academia Training Centre Milan,14,3,1595,English,guaranteed
+S00209,C0068,2027-05-05,2027-05-06,09:00,Online,,Virtual classroom,12,8,1445,English,guaranteed
+S00210,C0068,2027-06-07,2027-06-08,09:00,Classroom,Paris,Academia Training Centre Paris,14,0,1595,English,full
+S00211,C0068,2027-06-28,2027-06-29,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,11,1595,English,scheduled
+S00212,C0069,2026-11-18,2026-11-20,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,2,2345,English,scheduled
+S00213,C0069,2026-12-28,2026-12-30,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,8,2345,English,scheduled
+S00214,C0069,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,9,2345,English,guaranteed
+S00215,C0070,2026-10-07,2026-10-09,09:00,Onsite,,Client premises,12,2,2345,English,guaranteed
+S00216,C0070,2026-11-04,2026-11-06,09:00,Onsite,,Client premises,12,1,2345,English,guaranteed
+S00217,C0070,2027-05-03,2027-05-05,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,8,2345,English,scheduled
+S00218,C0071,2026-10-19,2026-10-21,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00219,C0071,2027-05-10,2027-05-12,09:00,Online,,Virtual classroom,12,11,2095,English,guaranteed
+S00220,C0071,2027-05-11,2027-05-13,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S00221,C0072,2027-01-25,2027-01-26,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,2,1595,English,guaranteed
+S00222,C0072,2027-04-19,2027-04-20,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,7,1595,English,guaranteed
+S00223,C0072,2027-05-31,2027-06-01,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,12,1595,English,guaranteed
+S00224,C0072,2027-06-02,2027-06-03,09:00,Online,,Virtual classroom,12,10,1445,English,guaranteed
+S00225,C0073,2027-03-08,2027-03-10,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00226,C0073,2027-04-05,2027-04-07,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00227,C0074,2026-10-12,2026-10-16,09:00,Onsite,,Client premises,12,7,4445,English,scheduled
+S00228,C0074,2026-11-16,2026-11-20,09:00,Onsite,,Client premises,12,12,4445,English,guaranteed
+S00229,C0074,2027-03-29,2027-04-02,09:00,Online,,Virtual classroom,12,8,3995,English,scheduled
+S00230,C0075,2026-09-09,2026-09-11,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00231,C0075,2026-11-05,2026-11-09,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S00232,C0075,2027-01-04,2027-01-06,09:00,Onsite,,Client premises,12,9,2345,English,guaranteed
+S00233,C0076,2026-11-16,2026-11-18,09:00,Classroom,Rome,Academia Training Centre Rome,14,8,2345,English,scheduled
+S00234,C0076,2027-01-25,2027-01-27,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S00235,C0076,2027-06-14,2027-06-16,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,8,2345,English,guaranteed
+S00236,C0077,2026-10-19,2026-10-20,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,3,1595,English,guaranteed
+S00237,C0077,2026-12-24,2026-12-25,09:00,Onsite,,Client premises,12,7,1595,English,guaranteed
+S00238,C0077,2026-12-30,2026-12-31,09:00,Online,,Virtual classroom,12,9,1445,English,scheduled
+S00239,C0077,2027-01-20,2027-01-21,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,8,1595,English,scheduled
+S00240,C0078,2026-11-26,2026-11-30,09:00,Online,,Virtual classroom,12,7,2095,English,guaranteed
+S00241,C0078,2026-12-31,2027-01-04,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,2,2345,English,scheduled
+S00242,C0078,2027-05-20,2027-05-24,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00243,C0079,2026-12-24,2026-12-28,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,8,2345,English,scheduled
+S00244,C0079,2026-12-28,2026-12-30,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00245,C0079,2027-03-22,2027-03-24,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S00246,C0080,2026-09-17,2026-09-21,09:00,Onsite,,Client premises,12,9,2345,English,scheduled
+S00247,C0080,2026-11-24,2026-11-26,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00248,C0080,2026-12-21,2026-12-23,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S00249,C0081,2027-01-25,2027-01-27,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S00250,C0081,2027-02-17,2027-02-19,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S00251,C0081,2027-03-29,2027-03-31,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,3,2345,English,scheduled
+S00252,C0082,2026-10-26,2026-10-28,09:00,Classroom,Munich,Academia Training Centre Munich,14,0,2345,English,full
+S00253,C0082,2026-11-05,2026-11-09,09:00,Onsite,,Client premises,12,3,2345,English,guaranteed
+S00254,C0082,2027-01-18,2027-01-20,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S00255,C0083,2026-10-19,2026-10-21,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S00256,C0083,2027-06-16,2027-06-18,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S00257,C0084,2026-10-20,2026-10-22,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S00258,C0084,2026-11-02,2026-11-04,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,14,2345,English,scheduled
+S00259,C0084,2026-11-09,2026-11-11,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S00260,C0084,2027-03-08,2027-03-10,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00261,C0085,2026-12-28,2026-12-30,09:00,Online,,Virtual classroom,12,11,2095,English,guaranteed
+S00262,C0085,2027-02-15,2027-02-17,09:00,Online,,Virtual classroom,12,10,2095,English,guaranteed
+S00263,C0085,2027-04-20,2027-04-22,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,14,2345,English,scheduled
+S00264,C0086,2026-09-14,2026-09-14,09:00,Onsite,,Client premises,12,10,695,English,scheduled
+S00265,C0086,2027-03-29,2027-03-29,09:00,Onsite,,Client premises,12,8,695,English,scheduled
+S00266,C0087,2027-01-25,2027-01-28,09:00,Onsite,,Client premises,12,10,3545,English,scheduled
+S00267,C0087,2027-03-29,2027-04-01,09:00,Onsite,,Client premises,12,3,3545,English,scheduled
+S00268,C0088,2027-03-15,2027-03-16,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,3,1595,English,scheduled
+S00269,C0088,2027-06-10,2027-06-11,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S00270,C0089,2026-09-21,2026-09-23,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S00271,C0089,2027-05-24,2027-05-26,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S00272,C0089,2027-06-07,2027-06-09,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S00273,C0090,2026-12-01,2026-12-03,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S00274,C0090,2027-01-11,2027-01-13,09:00,Onsite,,Client premises,12,8,2345,English,guaranteed
+S00275,C0090,2027-05-04,2027-05-06,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,13,2345,English,scheduled
+S00276,C0091,2027-01-28,2027-01-29,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S00277,C0091,2027-03-09,2027-03-10,09:00,Onsite,,Client premises,12,7,1595,English,scheduled
+S00278,C0092,2026-10-12,2026-10-13,09:00,Online,,Virtual classroom,12,3,1445,English,scheduled
+S00279,C0092,2027-03-08,2027-03-09,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00280,C0092,2027-04-15,2027-04-16,09:00,Online,,Virtual classroom,12,12,1445,English,guaranteed
+S00281,C0093,2027-04-26,2027-04-27,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,0,1595,English,full
+S00282,C0093,2027-05-03,2027-05-04,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00283,C0093,2027-06-21,2027-06-22,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S00284,C0094,2026-11-30,2026-12-02,09:00,Classroom,Paris,Academia Training Centre Paris,14,7,2345,English,scheduled
+S00285,C0094,2027-02-24,2027-02-26,09:00,Onsite,,Client premises,12,11,2345,English,guaranteed
+S00286,C0095,2026-09-21,2026-09-23,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S00287,C0095,2026-12-07,2026-12-09,09:00,Classroom,Rome,Academia Training Centre Rome,14,0,2345,English,full
+S00288,C0095,2027-06-02,2027-06-04,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00289,C0096,2026-09-07,2026-09-08,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,7,1595,English,scheduled
+S00290,C0096,2027-01-04,2027-01-05,09:00,Classroom,Munich,Academia Training Centre Munich,14,0,1595,English,full
+S00291,C0096,2027-04-21,2027-04-22,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,2,1595,English,scheduled
+S00292,C0096,2027-05-04,2027-05-05,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,0,1595,English,full
+S00293,C0097,2026-12-14,2026-12-15,09:00,Onsite,,Client premises,12,3,1595,English,guaranteed
+S00294,C0097,2027-03-08,2027-03-09,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S00295,C0097,2027-03-29,2027-03-30,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00296,C0098,2026-09-28,2026-09-29,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,8,1395,English,guaranteed
+S00297,C0098,2027-04-08,2027-04-09,09:00,Onsite,,Client premises,12,11,1395,English,scheduled
+S00298,C0098,2027-05-31,2027-06-01,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,13,1395,English,scheduled
+S00299,C0098,2027-06-15,2027-06-16,09:00,Onsite,,Client premises,12,8,1395,English,scheduled
+S00300,C0099,2026-09-21,2026-09-23,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S00301,C0099,2026-12-07,2026-12-09,09:00,Onsite,,Client premises,12,1,2645,English,scheduled
+S00302,C0099,2027-01-11,2027-01-13,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S00303,C0100,2027-02-08,2027-02-09,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,9,1395,English,scheduled
+S00304,C0100,2027-05-31,2027-06-01,09:00,Online,,Virtual classroom,12,2,1245,English,guaranteed
+S00305,C0101,2026-10-05,2026-10-07,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00306,C0101,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S00307,C0101,2027-05-18,2027-05-20,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S00308,C0102,2027-02-22,2027-02-23,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S00309,C0102,2027-05-03,2027-05-04,09:00,Classroom,Rome,Academia Training Centre Rome,14,13,1595,English,guaranteed
+S00310,C0103,2026-09-21,2026-09-23,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,12,2345,English,scheduled
+S00311,C0103,2027-03-22,2027-03-24,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,2,2345,English,guaranteed
+S00312,C0103,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00313,C0103,2027-04-21,2027-04-23,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00314,C0104,2026-11-17,2026-11-19,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S00315,C0104,2027-03-29,2027-03-31,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,14,2345,English,scheduled
+S00316,C0104,2027-05-17,2027-05-19,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S00317,C0105,2026-10-14,2026-10-14,09:00,Online,,Virtual classroom,12,8,645,English,scheduled
+S00318,C0105,2026-12-08,2026-12-08,09:00,Onsite,,Client premises,12,10,695,English,scheduled
+S00319,C0105,2027-03-15,2027-03-15,09:00,Onsite,,Client premises,12,0,695,English,full
+S00320,C0105,2027-06-03,2027-06-03,09:00,Online,,Virtual classroom,12,11,645,English,guaranteed
+S00321,C0106,2026-09-07,2026-09-09,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,0,2345,English,full
+S00322,C0106,2027-05-31,2027-06-02,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00323,C0106,2027-06-14,2027-06-16,09:00,Classroom,Milan,Academia Training Centre Milan,14,0,2345,English,full
+S00324,C0107,2026-10-22,2026-10-26,09:00,Onsite,,Client premises,12,8,2345,English,guaranteed
+S00325,C0107,2027-02-22,2027-02-24,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00326,C0107,2027-06-17,2027-06-21,09:00,Classroom,Prague,Academia Training Centre Prague,14,14,2345,English,scheduled
+S00327,C0108,2026-11-18,2026-11-19,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,13,1595,English,scheduled
+S00328,C0108,2027-05-31,2027-06-01,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00329,C0108,2027-06-24,2027-06-25,09:00,Classroom,Paris,Academia Training Centre Paris,14,0,1595,English,full
+S00330,C0109,2026-09-09,2026-09-10,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,9,1795,English,guaranteed
+S00331,C0109,2026-11-18,2026-11-19,09:00,Online,,Virtual classroom,12,12,1595,English,scheduled
+S00332,C0109,2026-11-23,2026-11-24,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,10,1795,English,scheduled
+S00333,C0109,2027-02-16,2027-02-17,09:00,Onsite,,Client premises,12,10,1795,English,scheduled
+S00334,C0110,2027-04-05,2027-04-05,09:00,Online,,Virtual classroom,12,3,695,English,scheduled
+S00335,C0110,2027-05-17,2027-05-17,09:00,Online,,Virtual classroom,12,11,695,English,scheduled
+S00336,C0111,2027-02-15,2027-02-17,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,0,2645,English,full
+S00337,C0111,2027-03-18,2027-03-22,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,0,2645,English,full
+S00338,C0111,2027-04-28,2027-04-30,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,9,2645,English,guaranteed
+S00339,C0112,2026-11-16,2026-11-18,09:00,Online,,Virtual classroom,12,2,2395,English,scheduled
+S00340,C0112,2027-03-22,2027-03-24,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,12,2645,English,guaranteed
+S00341,C0112,2027-04-26,2027-04-28,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,2645,English,full
+S00342,C0113,2026-09-14,2026-09-16,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00343,C0113,2026-10-12,2026-10-14,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00344,C0113,2027-05-27,2027-05-31,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00345,C0114,2026-12-16,2026-12-18,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00346,C0114,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,11,2645,English,guaranteed
+S00347,C0114,2027-04-06,2027-04-08,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,7,2645,English,scheduled
+S00348,C0115,2027-01-11,2027-01-13,09:00,Classroom,Munich,Academia Training Centre Munich,14,0,2645,English,full
+S00349,C0115,2027-04-07,2027-04-09,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00350,C0115,2027-05-05,2027-05-07,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00351,C0116,2026-09-28,2026-09-30,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,0,2945,English,full
+S00352,C0116,2027-01-14,2027-01-18,09:00,Onsite,,Client premises,12,1,2945,English,scheduled
+S00353,C0116,2027-02-01,2027-02-03,09:00,Online,,Virtual classroom,12,3,2645,English,scheduled
+S00354,C0116,2027-03-15,2027-03-17,09:00,Onsite,,Client premises,12,11,2945,English,scheduled
+S00355,C0117,2026-10-20,2026-10-22,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,0,2645,English,full
+S00356,C0117,2027-01-18,2027-01-20,09:00,Onsite,,Client premises,12,7,2645,English,scheduled
+S00357,C0118,2026-12-14,2026-12-16,09:00,Onsite,,Client premises,12,12,2645,English,scheduled
+S00358,C0118,2027-01-27,2027-01-29,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00359,C0118,2027-05-31,2027-06-02,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00360,C0119,2026-12-07,2026-12-09,09:00,Onsite,,Client premises,12,9,2645,English,guaranteed
+S00361,C0119,2027-04-21,2027-04-23,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00362,C0120,2026-09-22,2026-09-24,09:00,Classroom,Milan,Academia Training Centre Milan,14,9,2645,English,scheduled
+S00363,C0120,2027-01-20,2027-01-22,09:00,Onsite,,Client premises,12,11,2645,English,guaranteed
+S00364,C0120,2027-03-25,2027-03-29,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,10,2645,English,guaranteed
+S00365,C0121,2026-09-14,2026-09-15,09:00,Onsite,,Client premises,12,2,1795,English,scheduled
+S00366,C0121,2026-12-28,2026-12-29,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,3,1795,English,guaranteed
+S00367,C0121,2027-01-11,2027-01-12,09:00,Onsite,,Client premises,12,0,1795,English,full
+S00368,C0122,2026-10-26,2026-10-27,09:00,Online,,Virtual classroom,12,11,1595,English,scheduled
+S00369,C0122,2027-06-08,2027-06-09,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,1,1795,English,guaranteed
+S00370,C0123,2026-10-07,2026-10-09,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S00371,C0123,2026-12-29,2026-12-31,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00372,C0123,2027-02-09,2027-02-11,09:00,Onsite,,Client premises,12,9,2645,English,guaranteed
+S00373,C0123,2027-06-14,2027-06-16,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00374,C0124,2026-11-16,2026-11-18,09:00,Onsite,,Client premises,12,7,2645,English,scheduled
+S00375,C0124,2027-03-22,2027-03-24,09:00,Onsite,,Client premises,12,2,2645,English,scheduled
+S00376,C0124,2027-04-12,2027-04-14,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,0,2645,English,full
+S00377,C0125,2026-09-21,2026-09-21,09:00,Online,,Virtual classroom,12,3,695,English,scheduled
+S00378,C0125,2026-11-24,2026-11-24,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,8,795,English,guaranteed
+S00379,C0125,2027-02-15,2027-02-15,09:00,Online,,Virtual classroom,12,0,695,English,full
+S00380,C0125,2027-06-24,2027-06-24,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,14,795,English,scheduled
+S00381,C0126,2026-12-03,2026-12-07,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,8,2645,English,scheduled
+S00382,C0126,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,7,2645,English,guaranteed
+S00383,C0127,2027-03-22,2027-03-24,09:00,Onsite,,Client premises,12,10,2645,English,guaranteed
+S00384,C0127,2027-04-26,2027-04-28,09:00,Onsite,,Client premises,12,12,2645,English,scheduled
+S00385,C0127,2027-05-11,2027-05-13,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00386,C0128,2026-11-30,2026-12-02,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00387,C0128,2027-03-15,2027-03-17,09:00,Online,,Virtual classroom,12,7,2395,English,guaranteed
+S00388,C0129,2026-09-21,2026-09-23,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00389,C0129,2027-02-08,2027-02-10,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,0,2645,English,full
+S00390,C0129,2027-05-17,2027-05-19,09:00,Online,,Virtual classroom,12,2,2395,English,scheduled
+S00391,C0130,2026-10-05,2026-10-07,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,14,2645,English,scheduled
+S00392,C0130,2026-10-14,2026-10-16,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,8,2645,English,scheduled
+S00393,C0130,2026-11-16,2026-11-18,09:00,Onsite,,Client premises,12,11,2645,English,guaranteed
+S00394,C0131,2027-04-26,2027-04-28,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00395,C0131,2027-06-07,2027-06-09,09:00,Online,,Virtual classroom,12,3,2395,English,scheduled
+S00396,C0132,2026-10-21,2026-10-22,09:00,Classroom,Milan,Academia Training Centre Milan,14,9,1795,English,scheduled
+S00397,C0132,2027-03-01,2027-03-02,09:00,Onsite,,Client premises,12,9,1795,English,guaranteed
+S00398,C0132,2027-03-25,2027-03-26,09:00,Onsite,,Client premises,12,7,1795,English,scheduled
+S00399,C0133,2026-11-16,2026-11-17,09:00,Onsite,,Client premises,12,9,1795,English,scheduled
+S00400,C0133,2026-11-23,2026-11-24,09:00,Onsite,,Client premises,12,9,1795,English,scheduled
+S00401,C0133,2026-12-21,2026-12-22,09:00,Online,,Virtual classroom,12,0,1595,English,full
+S00402,C0134,2027-01-14,2027-01-18,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S00403,C0134,2027-01-18,2027-01-20,09:00,Online,,Virtual classroom,12,12,2395,English,guaranteed
+S00404,C0135,2026-12-28,2026-12-30,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,10,2645,English,scheduled
+S00405,C0135,2027-01-11,2027-01-13,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,8,2645,English,scheduled
+S00406,C0135,2027-01-27,2027-01-29,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00407,C0136,2026-11-30,2026-12-02,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00408,C0136,2027-05-06,2027-05-10,09:00,Online,,Virtual classroom,12,12,2395,English,scheduled
+S00409,C0137,2026-11-30,2026-12-02,09:00,Online,,Virtual classroom,12,7,2395,English,guaranteed
+S00410,C0137,2027-02-01,2027-02-03,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S00411,C0137,2027-05-19,2027-05-21,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00412,C0138,2026-10-29,2026-11-02,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,14,2945,English,guaranteed
+S00413,C0138,2026-11-19,2026-11-23,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,14,2945,English,scheduled
+S00414,C0138,2027-05-13,2027-05-17,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,7,2945,English,scheduled
+S00415,C0138,2027-06-07,2027-06-09,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,14,2945,English,scheduled
+S00416,C0139,2026-09-07,2026-09-09,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00417,C0139,2026-09-14,2026-09-16,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00418,C0139,2027-05-31,2027-06-02,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,7,2645,English,guaranteed
+S00419,C0139,2027-06-22,2027-06-24,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,7,2645,English,scheduled
+S00420,C0140,2026-10-22,2026-10-23,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,11,1595,English,scheduled
+S00421,C0140,2026-11-09,2026-11-10,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S00422,C0140,2027-03-08,2027-03-09,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,7,1595,English,guaranteed
+S00423,C0140,2027-03-24,2027-03-25,09:00,Classroom,Prague,Academia Training Centre Prague,14,10,1595,English,scheduled
+S00424,C0141,2027-03-22,2027-03-24,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00425,C0141,2027-05-31,2027-06-02,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00426,C0141,2027-06-14,2027-06-16,09:00,Online,,Virtual classroom,12,12,2395,English,guaranteed
+S00427,C0142,2027-01-04,2027-01-06,09:00,Onsite,,Client premises,12,7,2645,English,guaranteed
+S00428,C0142,2027-01-20,2027-01-22,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S00429,C0142,2027-05-04,2027-05-06,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,8,2645,English,scheduled
+S00430,C0142,2027-06-07,2027-06-09,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00431,C0143,2026-10-12,2026-10-12,09:00,Onsite,,Client premises,12,12,795,English,scheduled
+S00432,C0143,2026-11-09,2026-11-09,09:00,Onsite,,Client premises,12,12,795,English,guaranteed
+S00433,C0143,2026-11-23,2026-11-23,09:00,Onsite,,Client premises,12,8,795,English,scheduled
+S00434,C0144,2026-12-02,2026-12-04,09:00,Onsite,,Client premises,12,7,2645,English,scheduled
+S00435,C0144,2027-02-02,2027-02-04,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,0,2645,English,full
+S00436,C0144,2027-04-19,2027-04-21,09:00,Onsite,,Client premises,12,3,2645,English,scheduled
+S00437,C0145,2026-11-02,2026-11-03,09:00,Onsite,,Client premises,12,0,1795,English,full
+S00438,C0145,2026-12-28,2026-12-29,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,13,1795,English,guaranteed
+S00439,C0145,2027-06-14,2027-06-15,09:00,Online,,Virtual classroom,12,12,1595,English,scheduled
+S00440,C0146,2026-12-15,2026-12-16,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,8,1595,English,guaranteed
+S00441,C0146,2026-12-29,2026-12-30,09:00,Online,,Virtual classroom,12,9,1445,English,scheduled
+S00442,C0146,2027-01-25,2027-01-26,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00443,C0147,2026-09-14,2026-09-16,09:00,Onsite,,Client premises,12,8,2645,English,scheduled
+S00444,C0147,2026-10-26,2026-10-28,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00445,C0148,2027-02-08,2027-02-10,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,0,2645,English,full
+S00446,C0148,2027-04-06,2027-04-08,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00447,C0148,2027-05-03,2027-05-05,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S00448,C0149,2027-02-08,2027-02-10,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,12,2645,English,scheduled
+S00449,C0149,2027-02-15,2027-02-17,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,10,2645,English,guaranteed
+S00450,C0149,2027-03-15,2027-03-17,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,0,2645,English,full
+S00451,C0149,2027-06-07,2027-06-09,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00452,C0150,2027-03-15,2027-03-16,09:00,Onsite,,Client premises,12,7,1795,English,scheduled
+S00453,C0150,2027-06-28,2027-06-29,09:00,Online,,Virtual classroom,12,11,1595,English,guaranteed
+S00454,C0151,2027-01-04,2027-01-05,09:00,Online,,Virtual classroom,12,12,1445,English,scheduled
+S00455,C0151,2027-01-26,2027-01-27,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,0,1595,English,full
+S00456,C0152,2026-10-26,2026-10-28,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00457,C0152,2027-01-11,2027-01-13,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,7,2645,English,scheduled
+S00458,C0152,2027-06-02,2027-06-04,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,0,2645,English,full
+S00459,C0153,2026-10-12,2026-10-13,09:00,Onsite,,Client premises,12,7,1795,English,guaranteed
+S00460,C0153,2027-02-15,2027-02-16,09:00,Classroom,Paris,Academia Training Centre Paris,14,11,1795,English,guaranteed
+S00461,C0154,2026-09-21,2026-09-22,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00462,C0154,2026-09-28,2026-09-29,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00463,C0154,2027-03-01,2027-03-02,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00464,C0155,2026-10-13,2026-10-15,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,3,2945,English,scheduled
+S00465,C0155,2027-05-11,2027-05-13,09:00,Onsite,,Client premises,12,7,2945,English,scheduled
+S00466,C0156,2026-11-18,2026-11-20,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00467,C0156,2027-01-11,2027-01-13,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S00468,C0156,2027-06-23,2027-06-25,09:00,Onsite,,Client premises,12,8,2645,English,scheduled
+S00469,C0157,2027-05-10,2027-05-11,09:00,Online,,Virtual classroom,12,8,1595,English,scheduled
+S00470,C0157,2027-05-13,2027-05-14,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,3,1795,English,scheduled
+S00471,C0157,2027-05-27,2027-05-28,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,13,1795,English,guaranteed
+S00472,C0158,2026-09-28,2026-09-29,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,14,1595,English,scheduled
+S00473,C0158,2026-12-23,2026-12-24,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S00474,C0158,2027-03-16,2027-03-17,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S00475,C0159,2027-03-22,2027-03-22,09:00,Classroom,Prague,Academia Training Centre Prague,14,0,795,English,full
+S00476,C0159,2027-06-21,2027-06-21,09:00,Onsite,,Client premises,12,0,795,English,full
+S00477,C0160,2026-11-03,2026-11-05,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,14,2645,English,scheduled
+S00478,C0160,2027-05-13,2027-05-17,09:00,Classroom,Munich,Academia Training Centre Munich,14,3,2645,English,scheduled
+S00479,C0161,2026-11-23,2026-11-25,09:00,Online,,Virtual classroom,12,2,2395,English,guaranteed
+S00480,C0161,2027-04-01,2027-04-05,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,0,2645,English,full
+S00481,C0161,2027-04-28,2027-04-30,09:00,Classroom,Rome,Academia Training Centre Rome,14,2,2645,English,scheduled
+S00482,C0161,2027-06-24,2027-06-28,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00483,C0162,2027-02-24,2027-02-24,09:00,Online,,Virtual classroom,12,11,695,English,guaranteed
+S00484,C0162,2027-03-15,2027-03-15,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,9,795,English,guaranteed
+S00485,C0162,2027-03-22,2027-03-22,09:00,Online,,Virtual classroom,12,9,695,English,scheduled
+S00486,C0163,2026-09-21,2026-09-22,09:00,Online,,Virtual classroom,12,1,1595,English,scheduled
+S00487,C0163,2026-12-02,2026-12-03,09:00,Onsite,,Client premises,12,10,1795,English,scheduled
+S00488,C0163,2026-12-21,2026-12-22,09:00,Onsite,,Client premises,12,12,1795,English,guaranteed
+S00489,C0164,2026-10-12,2026-10-13,09:00,Onsite,,Client premises,12,12,1595,English,scheduled
+S00490,C0164,2026-11-18,2026-11-19,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S00491,C0165,2026-10-05,2026-10-06,09:00,Online,,Virtual classroom,12,7,1595,English,guaranteed
+S00492,C0165,2026-10-26,2026-10-27,09:00,Classroom,Milan,Academia Training Centre Milan,14,10,1795,English,guaranteed
+S00493,C0165,2027-03-15,2027-03-16,09:00,Online,,Virtual classroom,12,3,1595,English,scheduled
+S00494,C0166,2026-10-27,2026-10-27,09:00,Online,,Virtual classroom,12,12,695,English,scheduled
+S00495,C0166,2027-03-22,2027-03-22,09:00,Onsite,,Client premises,12,11,795,English,guaranteed
+S00496,C0167,2026-09-07,2026-09-08,09:00,Online,,Virtual classroom,12,0,1595,English,full
+S00497,C0167,2026-11-30,2026-12-01,09:00,Onsite,,Client premises,12,9,1795,English,scheduled
+S00498,C0168,2026-10-27,2026-10-29,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,0,2645,English,full
+S00499,C0168,2026-12-28,2026-12-30,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00500,C0168,2027-03-04,2027-03-08,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00501,C0169,2026-11-16,2026-11-17,09:00,Online,,Virtual classroom,12,11,1595,English,scheduled
+S00502,C0169,2026-11-30,2026-12-01,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,7,1795,English,scheduled
+S00503,C0170,2026-09-29,2026-09-30,09:00,Onsite,,Client premises,12,9,1795,English,scheduled
+S00504,C0170,2026-11-23,2026-11-24,09:00,Online,,Virtual classroom,12,7,1595,English,scheduled
+S00505,C0170,2026-11-26,2026-11-27,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,9,1795,English,scheduled
+S00506,C0170,2027-03-22,2027-03-23,09:00,Online,,Virtual classroom,12,0,1595,English,full
+S00507,C0171,2026-11-02,2026-11-04,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00508,C0171,2027-03-01,2027-03-03,09:00,Onsite,,Client premises,12,9,2645,English,scheduled
+S00509,C0171,2027-04-21,2027-04-23,09:00,Onsite,,Client premises,12,1,2645,English,scheduled
+S00510,C0172,2026-12-07,2026-12-08,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00511,C0172,2027-04-27,2027-04-28,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00512,C0172,2027-06-07,2027-06-08,09:00,Online,,Virtual classroom,12,11,1445,English,guaranteed
+S00513,C0173,2026-10-20,2026-10-21,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,0,1595,English,full
+S00514,C0173,2027-06-07,2027-06-08,09:00,Onsite,,Client premises,12,1,1595,English,guaranteed
+S00515,C0174,2026-10-08,2026-10-08,09:00,Online,,Virtual classroom,12,3,695,English,guaranteed
+S00516,C0174,2026-10-19,2026-10-19,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,14,795,English,scheduled
+S00517,C0174,2026-11-23,2026-11-23,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,0,795,English,full
+S00518,C0174,2027-05-10,2027-05-10,09:00,Online,,Virtual classroom,12,8,695,English,scheduled
+S00519,C0175,2026-12-03,2026-12-07,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00520,C0175,2027-03-22,2027-03-24,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00521,C0176,2026-11-09,2026-11-10,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00522,C0176,2027-04-20,2027-04-21,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00523,C0176,2027-04-22,2027-04-23,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00524,C0177,2026-10-13,2026-10-14,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,0,1595,English,full
+S00525,C0177,2026-12-16,2026-12-17,09:00,Onsite,,Client premises,12,10,1595,English,guaranteed
+S00526,C0177,2027-03-15,2027-03-16,09:00,Online,,Virtual classroom,12,9,1445,English,guaranteed
+S00527,C0177,2027-03-29,2027-03-30,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,0,1595,English,full
+S00528,C0178,2026-10-12,2026-10-12,09:00,Classroom,Prague,Academia Training Centre Prague,14,0,795,English,full
+S00529,C0178,2026-11-09,2026-11-09,09:00,Onsite,,Client premises,12,0,795,English,full
+S00530,C0178,2027-03-31,2027-03-31,09:00,Onsite,,Client premises,12,3,795,English,guaranteed
+S00531,C0179,2026-10-21,2026-10-23,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,3,2645,English,scheduled
+S00532,C0179,2027-03-16,2027-03-18,09:00,Online,,Virtual classroom,12,8,2395,English,guaranteed
+S00533,C0179,2027-04-19,2027-04-21,09:00,Classroom,Paris,Academia Training Centre Paris,14,1,2645,English,scheduled
+S00534,C0180,2027-05-03,2027-05-05,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00535,C0180,2027-06-02,2027-06-04,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,8,2645,English,scheduled
+S00536,C0181,2026-09-14,2026-09-14,09:00,Onsite,,Client premises,12,0,795,English,full
+S00537,C0181,2027-04-01,2027-04-01,09:00,Onsite,,Client premises,12,10,795,English,scheduled
+S00538,C0182,2026-10-12,2026-10-13,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00539,C0182,2026-10-27,2026-10-28,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S00540,C0182,2026-12-17,2026-12-18,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S00541,C0183,2026-09-28,2026-09-29,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,9,1795,English,scheduled
+S00542,C0183,2026-11-04,2026-11-05,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,12,1795,English,scheduled
+S00543,C0183,2027-02-22,2027-02-23,09:00,Online,,Virtual classroom,12,11,1595,English,scheduled
+S00544,C0183,2027-04-12,2027-04-13,09:00,Onsite,,Client premises,12,7,1795,English,scheduled
+S00545,C0184,2026-10-19,2026-10-20,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S00546,C0184,2027-03-01,2027-03-02,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S00547,C0184,2027-06-03,2027-06-04,09:00,Classroom,Milan,Academia Training Centre Milan,14,11,1595,English,scheduled
+S00548,C0185,2026-11-02,2026-11-04,09:00,Classroom,Prague,Academia Training Centre Prague,14,9,2645,English,scheduled
+S00549,C0185,2026-12-14,2026-12-16,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,8,2645,English,scheduled
+S00550,C0186,2027-02-24,2027-02-26,09:00,Onsite,,Client premises,12,3,2645,English,scheduled
+S00551,C0186,2027-04-26,2027-04-28,09:00,Classroom,Munich,Academia Training Centre Munich,14,13,2645,English,guaranteed
+S00552,C0187,2027-03-11,2027-03-15,09:00,Onsite,,Client premises,12,9,2645,English,scheduled
+S00553,C0187,2027-03-25,2027-03-29,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00554,C0187,2027-04-26,2027-04-28,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,0,2645,English,full
+S00555,C0188,2027-01-25,2027-01-26,09:00,Onsite,,Client premises,12,8,1595,English,scheduled
+S00556,C0188,2027-05-06,2027-05-07,09:00,Online,,Virtual classroom,12,8,1445,English,guaranteed
+S00557,C0189,2026-10-12,2026-10-13,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,14,1795,English,scheduled
+S00558,C0189,2026-12-23,2026-12-24,09:00,Onsite,,Client premises,12,2,1795,English,scheduled
+S00559,C0189,2027-03-23,2027-03-24,09:00,Online,,Virtual classroom,12,9,1595,English,scheduled
+S00560,C0189,2027-06-16,2027-06-17,09:00,Online,,Virtual classroom,12,7,1595,English,scheduled
+S00561,C0190,2026-09-30,2026-10-02,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,0,2645,English,full
+S00562,C0190,2027-01-04,2027-01-06,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00563,C0190,2027-05-31,2027-06-02,09:00,Onsite,,Client premises,12,11,2645,English,guaranteed
+S00564,C0191,2027-02-08,2027-02-10,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,11,2645,English,scheduled
+S00565,C0191,2027-05-31,2027-06-02,09:00,Onsite,,Client premises,12,12,2645,English,guaranteed
+S00566,C0192,2026-10-19,2026-10-21,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,8,2645,English,guaranteed
+S00567,C0192,2027-02-18,2027-02-22,09:00,Online,,Virtual classroom,12,10,2395,English,guaranteed
+S00568,C0193,2026-10-26,2026-10-27,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00569,C0193,2026-12-01,2026-12-02,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S00570,C0193,2027-02-03,2027-02-04,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00571,C0193,2027-02-22,2027-02-23,09:00,Onsite,,Client premises,12,2,1595,English,scheduled
+S00572,C0194,2027-01-11,2027-01-12,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S00573,C0194,2027-02-04,2027-02-05,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,14,1595,English,guaranteed
+S00574,C0194,2027-03-22,2027-03-23,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S00575,C0195,2026-10-05,2026-10-07,09:00,Online,,Virtual classroom,12,0,2645,English,full
+S00576,C0195,2026-10-14,2026-10-16,09:00,Online,,Virtual classroom,12,0,2645,English,full
+S00577,C0195,2026-12-10,2026-12-14,09:00,Online,,Virtual classroom,12,11,2645,English,guaranteed
+S00578,C0195,2027-05-26,2027-05-28,09:00,Onsite,,Client premises,12,8,2945,English,scheduled
+S00579,C0196,2026-09-28,2026-09-30,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00580,C0196,2026-10-29,2026-11-02,09:00,Online,,Virtual classroom,12,3,2395,English,scheduled
+S00581,C0196,2027-02-24,2027-02-26,09:00,Onsite,,Client premises,12,9,2645,English,scheduled
+S00582,C0197,2027-02-01,2027-02-03,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,2645,English,full
+S00583,C0197,2027-05-17,2027-05-19,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,1,2645,English,scheduled
+S00584,C0197,2027-05-31,2027-06-02,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00585,C0198,2027-03-17,2027-03-18,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00586,C0198,2027-06-02,2027-06-03,09:00,Classroom,Paris,Academia Training Centre Paris,14,10,1595,English,scheduled
+S00587,C0199,2026-09-22,2026-09-28,09:00,Onsite,,Client premises,12,0,4945,English,full
+S00588,C0199,2027-04-26,2027-04-30,09:00,Online,,Virtual classroom,12,7,4445,English,scheduled
+S00589,C0199,2027-05-31,2027-06-04,09:00,Online,,Virtual classroom,12,12,4445,English,scheduled
+S00590,C0200,2026-09-28,2026-09-29,09:00,Onsite,,Client premises,12,12,1795,English,guaranteed
+S00591,C0200,2026-12-07,2026-12-08,09:00,Onsite,,Client premises,12,12,1795,English,guaranteed
+S00592,C0200,2027-02-15,2027-02-16,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,0,1795,English,full
+S00593,C0201,2026-09-14,2026-09-15,09:00,Onsite,,Client premises,12,10,1795,English,guaranteed
+S00594,C0201,2027-01-20,2027-01-21,09:00,Onsite,,Client premises,12,11,1795,English,scheduled
+S00595,C0202,2027-01-04,2027-01-06,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,1,2645,English,guaranteed
+S00596,C0202,2027-01-06,2027-01-08,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00597,C0202,2027-02-08,2027-02-10,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S00598,C0202,2027-05-12,2027-05-14,09:00,Online,,Virtual classroom,12,9,2395,English,guaranteed
+S00599,C0203,2027-01-26,2027-01-28,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,1,2645,English,scheduled
+S00600,C0203,2027-03-01,2027-03-03,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00601,C0203,2027-04-05,2027-04-07,09:00,Onsite,,Client premises,12,9,2645,English,guaranteed
+S00602,C0203,2027-05-17,2027-05-19,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,14,2645,English,scheduled
+S00603,C0204,2026-09-08,2026-09-10,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00604,C0204,2027-02-11,2027-02-15,09:00,Classroom,Prague,Academia Training Centre Prague,14,0,2645,English,full
+S00605,C0204,2027-02-15,2027-02-17,09:00,Online,,Virtual classroom,12,10,2395,English,guaranteed
+S00606,C0204,2027-06-14,2027-06-16,09:00,Onsite,,Client premises,12,1,2645,English,scheduled
+S00607,C0205,2026-11-09,2026-11-10,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,11,1795,English,guaranteed
+S00608,C0205,2026-12-21,2026-12-22,09:00,Classroom,Paris,Academia Training Centre Paris,14,11,1795,English,guaranteed
+S00609,C0205,2027-04-19,2027-04-20,09:00,Onsite,,Client premises,12,8,1795,English,scheduled
+S00610,C0206,2026-12-17,2026-12-21,09:00,Onsite,,Client premises,12,8,2645,English,guaranteed
+S00611,C0206,2027-03-23,2027-03-25,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00612,C0207,2027-02-03,2027-02-04,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,0,1795,English,full
+S00613,C0207,2027-02-15,2027-02-16,09:00,Online,,Virtual classroom,12,2,1595,English,scheduled
+S00614,C0207,2027-03-16,2027-03-17,09:00,Onsite,,Client premises,12,10,1795,English,scheduled
+S00615,C0207,2027-04-06,2027-04-07,09:00,Online,,Virtual classroom,12,9,1595,English,scheduled
+S00616,C0208,2027-03-18,2027-03-18,09:00,Onsite,,Client premises,12,11,795,English,guaranteed
+S00617,C0208,2027-04-05,2027-04-05,09:00,Online,,Virtual classroom,12,12,695,English,guaranteed
+S00618,C0208,2027-04-26,2027-04-26,09:00,Onsite,,Client premises,12,7,795,English,scheduled
+S00619,C0209,2026-10-19,2026-10-20,09:00,Onsite,,Client premises,12,2,1795,English,guaranteed
+S00620,C0209,2027-04-19,2027-04-20,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,10,1795,English,scheduled
+S00621,C0210,2026-09-16,2026-09-21,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,8,4945,English,scheduled
+S00622,C0210,2026-10-28,2026-11-02,09:00,Onsite,,Client premises,12,0,4945,English,full
+S00623,C0210,2027-01-25,2027-01-29,09:00,Online,,Virtual classroom,12,8,4445,English,scheduled
+S00624,C0211,2026-10-05,2026-10-08,09:00,Classroom,Prague,Academia Training Centre Prague,14,3,3945,English,scheduled
+S00625,C0211,2027-02-16,2027-02-19,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,14,3945,English,scheduled
+S00626,C0212,2027-03-01,2027-03-05,09:00,Classroom,Munich,Academia Training Centre Munich,14,13,4945,English,guaranteed
+S00627,C0212,2027-06-15,2027-06-21,09:00,Online,,Virtual classroom,12,8,4445,English,guaranteed
+S00628,C0213,2027-03-22,2027-03-24,09:00,Onsite,,Client premises,12,7,2645,English,guaranteed
+S00629,C0213,2027-06-07,2027-06-09,09:00,Online,,Virtual classroom,12,2,2395,English,scheduled
+S00630,C0213,2027-06-14,2027-06-16,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S00631,C0213,2027-06-21,2027-06-23,09:00,Online,,Virtual classroom,12,3,2395,English,guaranteed
+S00632,C0214,2027-02-24,2027-02-26,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,0,2645,English,full
+S00633,C0214,2027-04-01,2027-04-05,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,7,2645,English,guaranteed
+S00634,C0215,2026-11-02,2026-11-04,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,9,2645,English,scheduled
+S00635,C0215,2027-03-11,2027-03-15,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,0,2645,English,full
+S00636,C0215,2027-04-12,2027-04-14,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00637,C0216,2027-01-19,2027-01-21,09:00,Online,,Virtual classroom,12,3,2395,English,scheduled
+S00638,C0216,2027-03-01,2027-03-03,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00639,C0217,2026-11-09,2026-11-11,09:00,Classroom,Milan,Academia Training Centre Milan,14,10,2645,English,scheduled
+S00640,C0217,2027-01-04,2027-01-06,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S00641,C0217,2027-01-25,2027-01-27,09:00,Online,,Virtual classroom,12,12,2395,English,scheduled
+S00642,C0218,2027-03-11,2027-03-12,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,11,1595,English,scheduled
+S00643,C0218,2027-04-12,2027-04-13,09:00,Online,,Virtual classroom,12,12,1445,English,scheduled
+S00644,C0219,2026-12-10,2026-12-14,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,1,2645,English,scheduled
+S00645,C0219,2027-04-26,2027-04-28,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S00646,C0219,2027-05-06,2027-05-10,09:00,Onsite,,Client premises,12,12,2645,English,scheduled
+S00647,C0220,2026-11-12,2026-11-16,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00648,C0220,2027-03-08,2027-03-10,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00649,C0220,2027-06-03,2027-06-07,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,13,2645,English,scheduled
+S00650,C0221,2026-10-05,2026-10-07,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,9,2945,English,scheduled
+S00651,C0221,2027-02-25,2027-03-01,09:00,Online,,Virtual classroom,12,0,2645,English,full
+S00652,C0222,2026-10-12,2026-10-13,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00653,C0222,2026-12-21,2026-12-22,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,3,1595,English,scheduled
+S00654,C0222,2027-01-18,2027-01-19,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00655,C0222,2027-05-20,2027-05-21,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00656,C0223,2026-11-23,2026-11-27,09:00,Online,,Virtual classroom,12,11,4445,English,guaranteed
+S00657,C0223,2027-03-22,2027-03-26,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,0,4945,English,full
+S00658,C0223,2027-04-19,2027-04-23,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,0,4945,English,full
+S00659,C0223,2027-04-29,2027-05-03,09:00,Online,,Virtual classroom,12,12,4445,English,scheduled
+S00660,C0224,2026-10-01,2026-10-05,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00661,C0224,2027-06-28,2027-06-30,09:00,Classroom,Paris,Academia Training Centre Paris,14,14,2645,English,scheduled
+S00662,C0225,2027-02-24,2027-02-25,09:00,Classroom,Rome,Academia Training Centre Rome,14,3,1595,English,scheduled
+S00663,C0225,2027-05-24,2027-05-25,09:00,Onsite,,Client premises,12,11,1595,English,guaranteed
+S00664,C0225,2027-06-14,2027-06-15,09:00,Online,,Virtual classroom,12,12,1445,English,guaranteed
+S00665,C0226,2027-01-04,2027-01-06,09:00,Online,,Virtual classroom,12,10,2395,English,guaranteed
+S00666,C0226,2027-02-08,2027-02-10,09:00,Onsite,,Client premises,12,8,2645,English,scheduled
+S00667,C0226,2027-03-16,2027-03-18,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00668,C0227,2026-09-07,2026-09-08,09:00,Online,,Virtual classroom,12,3,1445,English,scheduled
+S00669,C0227,2026-11-09,2026-11-10,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S00670,C0227,2026-12-28,2026-12-29,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00671,C0228,2026-09-16,2026-09-18,09:00,Online,,Virtual classroom,12,12,2395,English,scheduled
+S00672,C0228,2026-12-22,2026-12-24,09:00,Onsite,,Client premises,12,7,2645,English,scheduled
+S00673,C0229,2027-01-18,2027-01-20,09:00,Onsite,,Client premises,12,7,2645,English,guaranteed
+S00674,C0229,2027-02-03,2027-02-05,09:00,Onsite,,Client premises,12,7,2645,English,scheduled
+S00675,C0229,2027-05-03,2027-05-05,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,3,2645,English,scheduled
+S00676,C0230,2026-10-12,2026-10-13,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S00677,C0230,2026-12-14,2026-12-15,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00678,C0230,2027-02-18,2027-02-19,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S00679,C0230,2027-06-21,2027-06-22,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,7,1595,English,scheduled
+S00680,C0231,2026-10-26,2026-10-28,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,0,2645,English,full
+S00681,C0231,2027-03-03,2027-03-05,09:00,Onsite,,Client premises,12,2,2645,English,guaranteed
+S00682,C0231,2027-03-29,2027-03-31,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00683,C0231,2027-05-24,2027-05-26,09:00,Classroom,Milan,Academia Training Centre Milan,14,1,2645,English,scheduled
+S00684,C0232,2026-09-28,2026-09-30,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00685,C0232,2026-12-17,2026-12-21,09:00,Classroom,Rome,Academia Training Centre Rome,14,14,2645,English,scheduled
+S00686,C0232,2026-12-29,2026-12-31,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00687,C0232,2027-05-03,2027-05-05,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00688,C0233,2026-09-14,2026-09-15,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,0,1795,English,full
+S00689,C0233,2026-11-26,2026-11-27,09:00,Online,,Virtual classroom,12,2,1595,English,scheduled
+S00690,C0233,2026-12-02,2026-12-03,09:00,Onsite,,Client premises,12,3,1795,English,scheduled
+S00691,C0233,2027-03-08,2027-03-09,09:00,Online,,Virtual classroom,12,12,1595,English,scheduled
+S00692,C0234,2027-01-12,2027-01-14,09:00,Online,,Virtual classroom,12,3,2395,English,scheduled
+S00693,C0234,2027-03-01,2027-03-03,09:00,Online,,Virtual classroom,12,8,2395,English,guaranteed
+S00694,C0234,2027-03-25,2027-03-29,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,14,2645,English,guaranteed
+S00695,C0234,2027-06-24,2027-06-28,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00696,C0235,2027-03-22,2027-03-24,09:00,Online,,Virtual classroom,12,9,2645,English,guaranteed
+S00697,C0235,2027-03-29,2027-03-31,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,2945,English,full
+S00698,C0235,2027-03-30,2027-04-01,09:00,Onsite,,Client premises,12,2,2945,English,scheduled
+S00699,C0236,2026-11-30,2026-11-30,09:00,Online,,Virtual classroom,12,3,695,English,scheduled
+S00700,C0236,2027-05-18,2027-05-18,09:00,Onsite,,Client premises,12,9,795,English,guaranteed
+S00701,C0237,2027-02-10,2027-02-11,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S00702,C0237,2027-03-22,2027-03-23,09:00,Onsite,,Client premises,12,0,1595,English,full
+S00703,C0237,2027-05-31,2027-06-01,09:00,Onsite,,Client premises,12,12,1595,English,scheduled
+S00704,C0238,2026-10-01,2026-10-02,09:00,Onsite,,Client premises,12,7,1795,English,guaranteed
+S00705,C0238,2027-02-24,2027-02-25,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,0,1795,English,full
+S00706,C0238,2027-04-15,2027-04-16,09:00,Onsite,,Client premises,12,1,1795,English,guaranteed
+S00707,C0239,2026-12-07,2026-12-08,09:00,Onsite,,Client premises,12,7,1795,English,scheduled
+S00708,C0239,2026-12-14,2026-12-15,09:00,Online,,Virtual classroom,12,1,1595,English,guaranteed
+S00709,C0239,2027-04-26,2027-04-27,09:00,Online,,Virtual classroom,12,12,1595,English,guaranteed
+S00710,C0240,2027-02-08,2027-02-10,09:00,Onsite,,Client premises,12,3,2645,English,scheduled
+S00711,C0240,2027-04-19,2027-04-21,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00712,C0240,2027-04-26,2027-04-28,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,14,2645,English,scheduled
+S00713,C0240,2027-05-17,2027-05-19,09:00,Online,,Virtual classroom,12,10,2395,English,scheduled
+S00714,C0241,2027-03-15,2027-03-16,09:00,Onsite,,Client premises,12,9,1795,English,scheduled
+S00715,C0241,2027-05-10,2027-05-11,09:00,Onsite,,Client premises,12,0,1795,English,full
+S00716,C0242,2026-09-07,2026-09-09,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00717,C0242,2027-01-04,2027-01-06,09:00,Onsite,,Client premises,12,0,2645,English,full
+S00718,C0243,2026-09-24,2026-09-25,09:00,Classroom,Milan,Academia Training Centre Milan,14,2,1595,English,scheduled
+S00719,C0243,2026-11-10,2026-11-11,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,13,1595,English,scheduled
+S00720,C0243,2027-02-08,2027-02-09,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,10,1595,English,scheduled
+S00721,C0243,2027-05-11,2027-05-12,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,10,1595,English,guaranteed
+S00722,C0244,2027-02-22,2027-02-23,09:00,Onsite,,Client premises,12,2,1595,English,scheduled
+S00723,C0244,2027-03-01,2027-03-02,09:00,Online,,Virtual classroom,12,2,1445,English,guaranteed
+S00724,C0244,2027-03-22,2027-03-23,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S00725,C0245,2026-10-29,2026-11-02,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,7,2645,English,scheduled
+S00726,C0245,2026-12-24,2026-12-28,09:00,Onsite,,Client premises,12,9,2645,English,guaranteed
+S00727,C0245,2027-06-07,2027-06-09,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00728,C0246,2026-09-21,2026-09-24,09:00,Online,,Virtual classroom,12,0,3545,English,full
+S00729,C0246,2026-10-26,2026-10-29,09:00,Online,,Virtual classroom,12,2,3545,English,scheduled
+S00730,C0246,2027-03-16,2027-03-19,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,0,3945,English,full
+S00731,C0247,2027-01-21,2027-01-22,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,14,1595,English,scheduled
+S00732,C0247,2027-03-31,2027-04-01,09:00,Onsite,,Client premises,12,7,1595,English,guaranteed
+S00733,C0248,2026-12-03,2026-12-03,09:00,Onsite,,Client premises,12,11,795,English,scheduled
+S00734,C0248,2027-04-13,2027-04-13,09:00,Online,,Virtual classroom,12,11,695,English,scheduled
+S00735,C0248,2027-05-17,2027-05-17,09:00,Online,,Virtual classroom,12,1,695,English,scheduled
+S00736,C0249,2027-03-11,2027-03-15,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,0,2945,English,full
+S00737,C0249,2027-05-17,2027-05-19,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,8,2945,English,scheduled
+S00738,C0249,2027-05-24,2027-05-26,09:00,Onsite,,Client premises,12,8,2945,English,scheduled
+S00739,C0250,2026-09-24,2026-09-24,09:00,Online,,Virtual classroom,12,2,695,English,scheduled
+S00740,C0250,2026-11-30,2026-11-30,09:00,Classroom,Paris,Academia Training Centre Paris,14,0,795,English,full
+S00741,C0250,2027-02-22,2027-02-22,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,0,795,English,full
+S00742,C0250,2027-05-27,2027-05-27,09:00,Online,,Virtual classroom,12,12,695,English,guaranteed
+S00743,C0251,2026-10-22,2026-10-22,09:00,Onsite,,Client premises,12,8,795,English,scheduled
+S00744,C0251,2026-11-19,2026-11-19,09:00,Online,,Virtual classroom,12,2,695,English,scheduled
+S00745,C0251,2027-03-08,2027-03-08,09:00,Online,,Virtual classroom,12,1,695,English,scheduled
+S00746,C0251,2027-05-06,2027-05-06,09:00,Onsite,,Client premises,12,11,795,English,guaranteed
+S00747,C0252,2026-09-14,2026-09-14,09:00,Online,,Virtual classroom,12,0,695,English,full
+S00748,C0252,2026-12-07,2026-12-07,09:00,Online,,Virtual classroom,12,0,695,English,full
+S00749,C0252,2027-04-28,2027-04-28,09:00,Classroom,Munich,Academia Training Centre Munich,14,13,795,English,guaranteed
+S00750,C0252,2027-05-04,2027-05-04,09:00,Onsite,,Client premises,12,12,795,English,scheduled
+S00751,C0253,2027-01-21,2027-01-25,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,9,2645,English,guaranteed
+S00752,C0253,2027-04-26,2027-04-28,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00753,C0254,2027-02-09,2027-02-10,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,3,1595,English,scheduled
+S00754,C0254,2027-06-08,2027-06-09,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,8,1595,English,scheduled
+S00755,C0255,2026-09-29,2026-10-01,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00756,C0255,2026-12-14,2026-12-16,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,10,2645,English,scheduled
+S00757,C0255,2027-02-04,2027-02-08,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00758,C0255,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00759,C0256,2026-11-02,2026-11-04,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00760,C0256,2026-12-01,2026-12-03,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00761,C0256,2027-05-04,2027-05-06,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,0,2645,English,full
+S00762,C0257,2027-03-25,2027-03-29,09:00,Online,,Virtual classroom,12,12,2395,English,scheduled
+S00763,C0257,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,7,2645,English,scheduled
+S00764,C0258,2027-01-18,2027-01-18,09:00,Online,,Virtual classroom,12,11,695,English,guaranteed
+S00765,C0258,2027-03-16,2027-03-16,09:00,Online,,Virtual classroom,12,11,695,English,guaranteed
+S00766,C0258,2027-05-24,2027-05-24,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,10,795,English,scheduled
+S00767,C0259,2026-12-17,2026-12-17,09:00,Onsite,,Client premises,12,0,795,English,full
+S00768,C0259,2027-05-10,2027-05-10,09:00,Online,,Virtual classroom,12,1,695,English,scheduled
+S00769,C0259,2027-05-31,2027-05-31,09:00,Online,,Virtual classroom,12,2,695,English,guaranteed
+S00770,C0260,2026-10-19,2026-10-20,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,0,1595,English,full
+S00771,C0260,2026-11-10,2026-11-11,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,1,1595,English,scheduled
+S00772,C0260,2026-12-23,2026-12-24,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,0,1595,English,full
+S00773,C0261,2026-09-29,2026-09-29,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,7,795,English,guaranteed
+S00774,C0261,2026-11-02,2026-11-02,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,12,795,English,scheduled
+S00775,C0261,2027-03-08,2027-03-08,09:00,Onsite,,Client premises,12,10,795,English,scheduled
+S00776,C0261,2027-03-23,2027-03-23,09:00,Onsite,,Client premises,12,2,795,English,scheduled
+S00777,C0262,2026-10-21,2026-10-26,09:00,Online,,Virtual classroom,12,7,4445,English,scheduled
+S00778,C0262,2027-01-05,2027-01-11,09:00,Classroom,Milan,Academia Training Centre Milan,14,13,4945,English,scheduled
+S00779,C0262,2027-01-18,2027-01-22,09:00,Online,,Virtual classroom,12,7,4445,English,scheduled
+S00780,C0263,2027-04-12,2027-04-16,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,12,4945,English,scheduled
+S00781,C0263,2027-04-12,2027-04-16,09:00,Online,,Virtual classroom,12,8,4445,English,scheduled
+S00782,C0264,2026-09-21,2026-09-22,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,7,1595,English,scheduled
+S00783,C0264,2026-12-09,2026-12-10,09:00,Classroom,Munich,Academia Training Centre Munich,14,12,1595,English,scheduled
+S00784,C0264,2026-12-21,2026-12-22,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S00785,C0264,2027-02-16,2027-02-17,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S00786,C0265,2027-01-20,2027-01-21,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,7,1795,English,scheduled
+S00787,C0265,2027-03-08,2027-03-09,09:00,Onsite,,Client premises,12,8,1795,English,scheduled
+S00788,C0266,2026-11-30,2026-11-30,09:00,Online,,Virtual classroom,12,8,695,English,guaranteed
+S00789,C0266,2027-02-16,2027-02-16,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,0,795,English,full
+S00790,C0266,2027-02-22,2027-02-22,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,8,795,English,scheduled
+S00791,C0267,2026-09-16,2026-09-18,09:00,Onsite,,Client premises,12,8,2645,English,scheduled
+S00792,C0267,2026-10-22,2026-10-26,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S00793,C0267,2026-12-28,2026-12-30,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,0,2645,English,full
+S00794,C0267,2027-05-31,2027-06-02,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00795,C0268,2026-09-21,2026-09-21,09:00,Onsite,,Client premises,12,7,795,English,scheduled
+S00796,C0268,2027-02-23,2027-02-23,09:00,Online,,Virtual classroom,12,0,695,English,full
+S00797,C0268,2027-04-12,2027-04-12,09:00,Onsite,,Client premises,12,11,795,English,scheduled
+S00798,C0268,2027-06-28,2027-06-28,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,0,795,English,full
+S00799,C0269,2026-10-26,2026-10-28,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S00800,C0269,2027-03-16,2027-03-18,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,9,2645,English,scheduled
+S00801,C0269,2027-04-29,2027-05-03,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,0,2645,English,full
+S00802,C0269,2027-05-05,2027-05-07,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00803,C0270,2026-10-12,2026-10-14,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,1,2645,English,guaranteed
+S00804,C0270,2026-12-16,2026-12-18,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,1,2645,English,scheduled
+S00805,C0270,2027-04-12,2027-04-14,09:00,Classroom,Prague,Academia Training Centre Prague,14,1,2645,English,scheduled
+S00806,C0271,2027-04-05,2027-04-07,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,9,2645,English,guaranteed
+S00807,C0271,2027-06-14,2027-06-16,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,7,2645,English,scheduled
+S00808,C0272,2027-01-27,2027-01-29,09:00,Onsite,,Client premises,12,2,2645,English,guaranteed
+S00809,C0272,2027-02-11,2027-02-15,09:00,Onsite,,Client premises,12,2,2645,English,scheduled
+S00810,C0272,2027-03-15,2027-03-17,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,0,2645,English,full
+S00811,C0273,2026-10-19,2026-10-20,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,14,1595,English,scheduled
+S00812,C0273,2026-12-10,2026-12-11,09:00,Online,,Virtual classroom,12,9,1445,English,guaranteed
+S00813,C0273,2026-12-14,2026-12-15,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00814,C0274,2026-09-22,2026-09-23,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,0,1595,English,full
+S00815,C0274,2026-10-12,2026-10-13,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S00816,C0274,2027-01-12,2027-01-13,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00817,C0274,2027-06-08,2027-06-09,09:00,Onsite,,Client premises,12,10,1595,English,guaranteed
+S00818,C0275,2026-12-24,2026-12-25,09:00,Online,,Virtual classroom,12,9,1595,English,scheduled
+S00819,C0275,2027-01-25,2027-01-26,09:00,Online,,Virtual classroom,12,0,1595,English,full
+S00820,C0275,2027-03-02,2027-03-03,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,1795,English,full
+S00821,C0276,2026-10-19,2026-10-21,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00822,C0276,2026-11-23,2026-11-25,09:00,Online,,Virtual classroom,12,1,2395,English,guaranteed
+S00823,C0276,2026-12-30,2027-01-01,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S00824,C0276,2027-05-17,2027-05-19,09:00,Classroom,Paris,Academia Training Centre Paris,14,14,2645,English,scheduled
+S00825,C0277,2026-12-02,2026-12-04,09:00,Online,,Virtual classroom,12,10,2395,English,guaranteed
+S00826,C0277,2027-01-18,2027-01-20,09:00,Onsite,,Client premises,12,8,2645,English,guaranteed
+S00827,C0277,2027-03-08,2027-03-10,09:00,Classroom,Rome,Academia Training Centre Rome,14,1,2645,English,scheduled
+S00828,C0278,2026-10-12,2026-10-13,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,14,1595,English,scheduled
+S00829,C0278,2027-06-14,2027-06-15,09:00,Online,,Virtual classroom,12,9,1445,English,scheduled
+S00830,C0279,2027-03-15,2027-03-17,09:00,Onsite,,Client premises,12,11,2645,English,scheduled
+S00831,C0279,2027-04-08,2027-04-12,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,12,2645,English,scheduled
+S00832,C0279,2027-05-13,2027-05-17,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,8,2645,English,guaranteed
+S00833,C0280,2027-04-05,2027-04-05,09:00,Online,,Virtual classroom,12,11,695,English,guaranteed
+S00834,C0280,2027-05-10,2027-05-10,09:00,Online,,Virtual classroom,12,8,695,English,guaranteed
+S00835,C0280,2027-06-14,2027-06-14,09:00,Onsite,,Client premises,12,1,795,English,scheduled
+S00836,C0281,2026-09-07,2026-09-08,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00837,C0281,2027-03-09,2027-03-10,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,8,1595,English,scheduled
+S00838,C0282,2027-01-25,2027-01-26,09:00,Onsite,,Client premises,12,3,1595,English,guaranteed
+S00839,C0282,2027-03-15,2027-03-16,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S00840,C0282,2027-06-28,2027-06-29,09:00,Onsite,,Client premises,12,10,1595,English,guaranteed
+S00841,C0283,2026-10-19,2026-10-21,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00842,C0283,2026-11-04,2026-11-06,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00843,C0283,2027-04-26,2027-04-28,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00844,C0284,2026-09-07,2026-09-07,09:00,Online,,Virtual classroom,12,0,695,English,full
+S00845,C0284,2027-03-31,2027-03-31,09:00,Online,,Virtual classroom,12,0,695,English,full
+S00846,C0285,2026-12-30,2026-12-31,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,0,1595,English,full
+S00847,C0285,2027-03-08,2027-03-09,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,0,1595,English,full
+S00848,C0285,2027-06-08,2027-06-09,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00849,C0286,2027-02-04,2027-02-08,09:00,Online,,Virtual classroom,12,1,2645,English,guaranteed
+S00850,C0286,2027-05-27,2027-05-31,09:00,Onsite,,Client premises,12,11,2945,English,scheduled
+S00851,C0286,2027-06-07,2027-06-09,09:00,Onsite,,Client premises,12,10,2945,English,scheduled
+S00852,C0287,2026-10-05,2026-10-05,09:00,Online,,Virtual classroom,12,9,695,English,scheduled
+S00853,C0287,2026-12-31,2026-12-31,09:00,Online,,Virtual classroom,12,8,695,English,scheduled
+S00854,C0287,2027-03-22,2027-03-22,09:00,Onsite,,Client premises,12,8,795,English,scheduled
+S00855,C0288,2026-12-22,2026-12-24,09:00,Classroom,Milan,Academia Training Centre Milan,14,3,2945,English,scheduled
+S00856,C0288,2027-01-07,2027-01-11,09:00,Onsite,,Client premises,12,7,2945,English,scheduled
+S00857,C0288,2027-01-18,2027-01-20,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,7,2945,English,guaranteed
+S00858,C0289,2026-11-23,2026-11-25,09:00,Onsite,,Client premises,12,9,2645,English,scheduled
+S00859,C0289,2026-12-17,2026-12-21,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00860,C0289,2027-06-21,2027-06-23,09:00,Onsite,,Client premises,12,11,2645,English,guaranteed
+S00861,C0290,2026-09-24,2026-09-28,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,9,2645,English,scheduled
+S00862,C0290,2026-10-26,2026-10-28,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S00863,C0290,2026-10-27,2026-10-29,09:00,Classroom,Paris,Academia Training Centre Paris,14,3,2645,English,guaranteed
+S00864,C0290,2026-12-07,2026-12-09,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00865,C0291,2027-03-15,2027-03-16,09:00,Online,,Virtual classroom,12,1,1595,English,guaranteed
+S00866,C0291,2027-03-18,2027-03-19,09:00,Classroom,Rome,Academia Training Centre Rome,14,14,1795,English,scheduled
+S00867,C0291,2027-03-30,2027-03-31,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,14,1795,English,scheduled
+S00868,C0292,2026-11-04,2026-11-06,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,9,2645,English,guaranteed
+S00869,C0292,2027-01-07,2027-01-11,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,7,2645,English,scheduled
+S00870,C0292,2027-02-09,2027-02-11,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,13,2645,English,guaranteed
+S00871,C0293,2026-10-19,2026-10-20,09:00,Online,,Virtual classroom,12,0,1595,English,full
+S00872,C0293,2027-02-01,2027-02-02,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,9,1795,English,scheduled
+S00873,C0293,2027-02-08,2027-02-09,09:00,Online,,Virtual classroom,12,12,1595,English,scheduled
+S00874,C0294,2026-10-15,2026-10-15,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,2,795,English,scheduled
+S00875,C0294,2027-01-28,2027-01-28,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,7,795,English,scheduled
+S00876,C0294,2027-03-29,2027-03-29,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,2,795,English,guaranteed
+S00877,C0294,2027-06-28,2027-06-28,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,14,795,English,scheduled
+S00878,C0295,2026-11-04,2026-11-06,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,0,2645,English,full
+S00879,C0295,2026-12-21,2026-12-23,09:00,Onsite,,Client premises,12,3,2645,English,scheduled
+S00880,C0295,2027-01-26,2027-01-28,09:00,Onsite,,Client premises,12,10,2645,English,guaranteed
+S00881,C0295,2027-03-29,2027-03-31,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,13,2645,English,scheduled
+S00882,C0296,2027-04-12,2027-04-14,09:00,Onsite,,Client premises,12,1,2645,English,guaranteed
+S00883,C0296,2027-04-12,2027-04-14,09:00,Onsite,,Client premises,12,12,2645,English,guaranteed
+S00884,C0296,2027-05-03,2027-05-05,09:00,Onsite,,Client premises,12,9,2645,English,guaranteed
+S00885,C0297,2026-11-23,2026-11-24,09:00,Onsite,,Client premises,12,8,1595,English,guaranteed
+S00886,C0297,2027-01-20,2027-01-21,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,3,1595,English,guaranteed
+S00887,C0297,2027-06-14,2027-06-15,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S00888,C0298,2026-09-09,2026-09-11,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,1,2645,English,scheduled
+S00889,C0298,2026-09-14,2026-09-16,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,0,2645,English,full
+S00890,C0298,2027-01-25,2027-01-27,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00891,C0298,2027-02-15,2027-02-17,09:00,Online,,Virtual classroom,12,9,2395,English,scheduled
+S00892,C0299,2026-10-07,2026-10-08,09:00,Online,,Virtual classroom,12,12,1595,English,guaranteed
+S00893,C0299,2027-04-19,2027-04-20,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,0,1795,English,full
+S00894,C0299,2027-05-10,2027-05-11,09:00,Onsite,,Client premises,12,10,1795,English,scheduled
+S00895,C0300,2026-09-21,2026-09-23,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00896,C0300,2026-11-09,2026-11-11,09:00,Onsite,,Client premises,12,10,2645,English,scheduled
+S00897,C0300,2027-04-07,2027-04-09,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00898,C0300,2027-05-27,2027-05-31,09:00,Onsite,,Client premises,12,1,2645,English,scheduled
+S00899,C0301,2026-10-12,2026-10-14,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,9,2645,English,scheduled
+S00900,C0301,2026-11-16,2026-11-18,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,2645,English,full
+S00901,C0301,2027-06-03,2027-06-07,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S00902,C0302,2026-10-20,2026-10-20,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,7,795,English,guaranteed
+S00903,C0302,2026-12-21,2026-12-21,09:00,Classroom,Paris,Academia Training Centre Paris,14,8,795,English,guaranteed
+S00904,C0303,2026-11-25,2026-11-27,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,3,2645,English,scheduled
+S00905,C0303,2027-04-19,2027-04-21,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,0,2645,English,full
+S00906,C0303,2027-06-28,2027-06-30,09:00,Online,,Virtual classroom,12,3,2395,English,scheduled
+S00907,C0304,2026-12-07,2026-12-08,09:00,Onsite,,Client premises,12,9,1595,English,guaranteed
+S00908,C0304,2027-01-18,2027-01-19,09:00,Onsite,,Client premises,12,8,1595,English,scheduled
+S00909,C0304,2027-05-17,2027-05-18,09:00,Onsite,,Client premises,12,7,1595,English,scheduled
+S00910,C0304,2027-06-08,2027-06-09,09:00,Onsite,,Client premises,12,12,1595,English,scheduled
+S00911,C0305,2026-09-14,2026-09-16,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00912,C0305,2026-09-28,2026-09-30,09:00,Online,,Virtual classroom,12,7,2395,English,scheduled
+S00913,C0305,2027-04-12,2027-04-14,09:00,Online,,Virtual classroom,12,2,2395,English,scheduled
+S00914,C0306,2027-01-11,2027-01-12,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S00915,C0306,2027-03-02,2027-03-03,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,3,1595,English,scheduled
+S00916,C0306,2027-03-15,2027-03-16,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S00917,C0307,2026-09-15,2026-09-17,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S00918,C0307,2027-02-08,2027-02-10,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00919,C0307,2027-06-28,2027-06-30,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,2,2645,English,guaranteed
+S00920,C0308,2026-10-27,2026-10-29,09:00,Online,,Virtual classroom,12,8,2395,English,scheduled
+S00921,C0308,2027-01-05,2027-01-07,09:00,Online,,Virtual classroom,12,12,2395,English,scheduled
+S00922,C0308,2027-03-29,2027-03-31,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S00923,C0309,2026-09-30,2026-10-01,09:00,Onsite,,Client premises,12,12,1795,English,scheduled
+S00924,C0309,2027-04-01,2027-04-02,09:00,Online,,Virtual classroom,12,10,1595,English,scheduled
+S00925,C0310,2026-09-28,2026-09-28,09:00,Online,,Virtual classroom,12,7,695,English,scheduled
+S00926,C0310,2026-12-21,2026-12-21,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,14,795,English,scheduled
+S00927,C0311,2026-10-26,2026-10-27,09:00,Onsite,,Client premises,12,12,1795,English,guaranteed
+S00928,C0311,2026-12-08,2026-12-09,09:00,Online,,Virtual classroom,12,9,1595,English,guaranteed
+S00929,C0311,2027-02-04,2027-02-05,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,2,1795,English,scheduled
+S00930,C0311,2027-03-17,2027-03-18,09:00,Online,,Virtual classroom,12,0,1595,English,full
+S00931,C0312,2026-11-30,2026-12-01,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,10,1395,English,scheduled
+S00932,C0312,2027-05-03,2027-05-04,09:00,Online,,Virtual classroom,12,10,1245,English,scheduled
+S00933,C0312,2027-06-14,2027-06-15,09:00,Onsite,,Client premises,12,11,1395,English,scheduled
+S00934,C0313,2026-12-14,2026-12-18,09:00,Online,,Virtual classroom,12,12,3995,English,guaranteed
+S00935,C0313,2027-02-04,2027-02-08,09:00,Online,,Virtual classroom,12,12,3995,English,scheduled
+S00936,C0313,2027-02-08,2027-02-12,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,10,4445,English,scheduled
+S00937,C0314,2026-12-21,2026-12-23,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S00938,C0314,2026-12-21,2026-12-23,09:00,Online,,Virtual classroom,12,12,2095,English,guaranteed
+S00939,C0314,2027-02-22,2027-02-24,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,0,2345,English,full
+S00940,C0314,2027-03-01,2027-03-03,09:00,Classroom,Milan,Academia Training Centre Milan,14,3,2345,English,scheduled
+S00941,C0315,2027-04-05,2027-04-07,09:00,Onsite,,Client premises,12,1,2345,English,guaranteed
+S00942,C0315,2027-04-26,2027-04-28,09:00,Classroom,Prague,Academia Training Centre Prague,14,9,2345,English,scheduled
+S00943,C0316,2026-10-27,2026-10-29,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00944,C0316,2026-11-02,2026-11-04,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S00945,C0316,2027-04-05,2027-04-07,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S00946,C0316,2027-06-16,2027-06-18,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S00947,C0317,2026-11-17,2026-11-19,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,11,2345,English,scheduled
+S00948,C0317,2026-11-30,2026-12-02,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,7,2345,English,scheduled
+S00949,C0317,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S00950,C0318,2026-09-10,2026-09-14,09:00,Onsite,,Client premises,12,11,2345,English,guaranteed
+S00951,C0318,2027-02-25,2027-03-01,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,14,2345,English,scheduled
+S00952,C0318,2027-05-10,2027-05-12,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,0,2345,English,full
+S00953,C0318,2027-06-07,2027-06-09,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S00954,C0319,2026-11-09,2026-11-10,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,7,1595,English,scheduled
+S00955,C0319,2027-03-01,2027-03-02,09:00,Online,,Virtual classroom,12,1,1445,English,scheduled
+S00956,C0319,2027-04-29,2027-04-30,09:00,Online,,Virtual classroom,12,8,1445,English,guaranteed
+S00957,C0320,2026-09-09,2026-09-10,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,1595,English,full
+S00958,C0320,2026-12-16,2026-12-17,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,1,1595,English,guaranteed
+S00959,C0320,2027-04-05,2027-04-06,09:00,Online,,Virtual classroom,12,2,1445,English,guaranteed
+S00960,C0321,2026-09-23,2026-09-23,09:00,Onsite,,Client premises,12,12,695,English,scheduled
+S00961,C0321,2026-11-30,2026-11-30,09:00,Onsite,,Client premises,12,9,695,English,guaranteed
+S00962,C0321,2027-02-01,2027-02-01,09:00,Onsite,,Client premises,12,9,695,English,scheduled
+S00963,C0321,2027-05-10,2027-05-10,09:00,Onsite,,Client premises,12,2,695,English,scheduled
+S00964,C0322,2026-12-30,2027-01-01,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00965,C0322,2027-01-19,2027-01-21,09:00,Onsite,,Client premises,12,1,2345,English,guaranteed
+S00966,C0322,2027-04-12,2027-04-14,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S00967,C0323,2026-11-10,2026-11-12,09:00,Online,,Virtual classroom,12,7,2095,English,guaranteed
+S00968,C0323,2027-03-15,2027-03-17,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S00969,C0324,2027-02-01,2027-02-02,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,10,1395,English,scheduled
+S00970,C0324,2027-05-31,2027-06-01,09:00,Online,,Virtual classroom,12,1,1245,English,guaranteed
+S00971,C0325,2026-10-26,2026-10-28,09:00,Onsite,,Client premises,12,9,2645,English,scheduled
+S00972,C0325,2026-11-16,2026-11-18,09:00,Online,,Virtual classroom,12,3,2395,English,scheduled
+S00973,C0325,2027-04-21,2027-04-23,09:00,Onsite,,Client premises,12,7,2645,English,guaranteed
+S00974,C0325,2027-05-03,2027-05-05,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,2,2645,English,scheduled
+S00975,C0326,2026-11-24,2026-11-26,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S00976,C0326,2027-01-20,2027-01-22,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S00977,C0327,2026-10-26,2026-10-27,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S00978,C0327,2027-02-23,2027-02-24,09:00,Onsite,,Client premises,12,7,1595,English,guaranteed
+S00979,C0327,2027-05-31,2027-06-01,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S00980,C0328,2026-09-28,2026-09-29,09:00,Classroom,Milan,Academia Training Centre Milan,14,2,1595,English,scheduled
+S00981,C0328,2026-12-07,2026-12-08,09:00,Onsite,,Client premises,12,12,1595,English,scheduled
+S00982,C0328,2027-02-01,2027-02-02,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00983,C0328,2027-03-08,2027-03-09,09:00,Online,,Virtual classroom,12,7,1445,English,guaranteed
+S00984,C0329,2026-10-26,2026-10-28,09:00,Online,,Virtual classroom,12,2,2095,English,guaranteed
+S00985,C0329,2026-10-28,2026-10-30,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S00986,C0329,2026-11-25,2026-11-27,09:00,Online,,Virtual classroom,12,12,2095,English,guaranteed
+S00987,C0329,2027-03-08,2027-03-10,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S00988,C0330,2026-10-29,2026-11-02,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S00989,C0330,2026-12-21,2026-12-23,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S00990,C0330,2027-03-10,2027-03-12,09:00,Onsite,,Client premises,12,12,2345,English,guaranteed
+S00991,C0331,2026-12-03,2026-12-04,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S00992,C0331,2027-03-16,2027-03-17,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S00993,C0331,2027-04-19,2027-04-20,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,2,1595,English,scheduled
+S00994,C0332,2026-09-22,2026-09-24,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,10,2345,English,guaranteed
+S00995,C0332,2027-01-26,2027-01-28,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S00996,C0332,2027-04-19,2027-04-21,09:00,Onsite,,Client premises,12,0,2345,English,full
+S00997,C0333,2026-11-17,2026-11-18,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S00998,C0333,2027-02-08,2027-02-09,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,0,1595,English,full
+S00999,C0333,2027-03-01,2027-03-02,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S01000,C0334,2026-10-05,2026-10-06,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01001,C0334,2027-05-24,2027-05-25,09:00,Classroom,Prague,Academia Training Centre Prague,14,0,1595,English,full
+S01002,C0335,2027-01-04,2027-01-06,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S01003,C0335,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,12,2345,English,guaranteed
+S01004,C0335,2027-06-07,2027-06-09,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01005,C0336,2026-12-15,2026-12-16,09:00,Classroom,Rome,Academia Training Centre Rome,14,10,1395,English,scheduled
+S01006,C0336,2027-01-25,2027-01-26,09:00,Onsite,,Client premises,12,11,1395,English,scheduled
+S01007,C0336,2027-04-27,2027-04-28,09:00,Online,,Virtual classroom,12,0,1245,English,full
+S01008,C0337,2027-02-23,2027-02-25,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S01009,C0337,2027-03-04,2027-03-08,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01010,C0338,2026-09-22,2026-09-23,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,13,1395,English,scheduled
+S01011,C0338,2027-04-21,2027-04-22,09:00,Onsite,,Client premises,12,12,1395,English,guaranteed
+S01012,C0339,2026-09-08,2026-09-10,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S01013,C0339,2026-09-28,2026-09-30,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S01014,C0339,2027-06-16,2027-06-18,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S01015,C0340,2026-11-19,2026-11-23,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01016,C0340,2027-03-08,2027-03-10,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01017,C0340,2027-05-03,2027-05-05,09:00,Onsite,,Client premises,12,3,2345,English,guaranteed
+S01018,C0341,2026-12-22,2026-12-22,09:00,Classroom,Prague,Academia Training Centre Prague,14,0,695,English,full
+S01019,C0341,2027-01-18,2027-01-18,09:00,Onsite,,Client premises,12,0,695,English,full
+S01020,C0341,2027-02-03,2027-02-03,09:00,Online,,Virtual classroom,12,10,645,English,guaranteed
+S01021,C0342,2026-11-18,2026-11-20,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S01022,C0342,2027-06-09,2027-06-11,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,13,2345,English,scheduled
+S01023,C0343,2026-09-22,2026-09-22,09:00,Onsite,,Client premises,12,8,695,English,guaranteed
+S01024,C0343,2026-10-12,2026-10-12,09:00,Online,,Virtual classroom,12,10,645,English,guaranteed
+S01025,C0343,2027-05-17,2027-05-17,09:00,Online,,Virtual classroom,12,0,645,English,full
+S01026,C0343,2027-05-17,2027-05-17,09:00,Onsite,,Client premises,12,8,695,English,scheduled
+S01027,C0344,2027-01-11,2027-01-13,09:00,Online,,Virtual classroom,12,11,2095,English,guaranteed
+S01028,C0344,2027-04-19,2027-04-21,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,13,2345,English,scheduled
+S01029,C0344,2027-05-18,2027-05-20,09:00,Online,,Virtual classroom,12,3,2095,English,scheduled
+S01030,C0345,2027-03-11,2027-03-15,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,10,2345,English,scheduled
+S01031,C0345,2027-05-03,2027-05-05,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01032,C0345,2027-05-24,2027-05-26,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S01033,C0346,2026-10-05,2026-10-06,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,7,1395,English,guaranteed
+S01034,C0346,2026-10-08,2026-10-09,09:00,Onsite,,Client premises,12,0,1395,English,full
+S01035,C0346,2026-10-19,2026-10-20,09:00,Online,,Virtual classroom,12,8,1245,English,scheduled
+S01036,C0347,2027-01-11,2027-01-12,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,12,1595,English,scheduled
+S01037,C0347,2027-03-16,2027-03-17,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,12,1595,English,scheduled
+S01038,C0347,2027-04-12,2027-04-13,09:00,Classroom,Milan,Academia Training Centre Milan,14,0,1595,English,full
+S01039,C0348,2027-01-05,2027-01-11,09:00,Online,,Virtual classroom,12,0,3545,English,full
+S01040,C0348,2027-06-07,2027-06-11,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,11,3945,English,scheduled
+S01041,C0349,2026-09-28,2026-10-07,09:00,Online,,Virtual classroom,12,11,7995,English,scheduled
+S01042,C0349,2026-09-28,2026-10-07,09:00,Onsite,,Client premises,12,7,8895,English,guaranteed
+S01043,C0349,2027-02-11,2027-02-22,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,2,8895,English,scheduled
+S01044,C0350,2026-09-17,2026-09-18,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S01045,C0350,2026-12-21,2026-12-22,09:00,Online,,Virtual classroom,12,1,1445,English,scheduled
+S01046,C0350,2027-03-08,2027-03-09,09:00,Onsite,,Client premises,12,7,1595,English,guaranteed
+S01047,C0351,2027-04-05,2027-04-07,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S01048,C0351,2027-05-31,2027-06-02,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01049,C0351,2027-05-31,2027-06-02,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01050,C0352,2027-01-27,2027-01-29,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01051,C0352,2027-03-15,2027-03-17,09:00,Online,,Virtual classroom,12,12,2095,English,guaranteed
+S01052,C0352,2027-06-28,2027-06-30,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01053,C0353,2026-12-07,2026-12-08,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01054,C0353,2027-01-11,2027-01-12,09:00,Online,,Virtual classroom,12,1,1445,English,scheduled
+S01055,C0353,2027-01-14,2027-01-15,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01056,C0353,2027-03-03,2027-03-04,09:00,Online,,Virtual classroom,12,11,1445,English,guaranteed
+S01057,C0354,2026-09-09,2026-09-11,09:00,Online,,Virtual classroom,12,3,2095,English,scheduled
+S01058,C0354,2027-02-04,2027-02-08,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S01059,C0355,2026-10-19,2026-10-20,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,13,1395,English,scheduled
+S01060,C0355,2026-11-02,2026-11-03,09:00,Onsite,,Client premises,12,3,1395,English,scheduled
+S01061,C0355,2027-06-07,2027-06-08,09:00,Online,,Virtual classroom,12,0,1245,English,full
+S01062,C0356,2026-09-23,2026-09-25,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,14,2345,English,scheduled
+S01063,C0356,2027-05-31,2027-06-02,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01064,C0357,2027-03-30,2027-04-01,09:00,Online,,Virtual classroom,12,9,2095,English,guaranteed
+S01065,C0357,2027-06-23,2027-06-25,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01066,C0358,2026-11-09,2026-11-11,09:00,Online,,Virtual classroom,12,12,2095,English,guaranteed
+S01067,C0358,2027-03-29,2027-03-31,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,7,2345,English,scheduled
+S01068,C0359,2026-09-14,2026-09-16,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S01069,C0359,2026-10-19,2026-10-21,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S01070,C0359,2027-01-18,2027-01-20,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01071,C0360,2027-04-05,2027-04-06,09:00,Onsite,,Client premises,12,1,1395,English,scheduled
+S01072,C0360,2027-05-31,2027-06-01,09:00,Onsite,,Client premises,12,8,1395,English,scheduled
+S01073,C0361,2027-01-20,2027-01-21,09:00,Online,,Virtual classroom,12,3,1245,English,scheduled
+S01074,C0361,2027-03-01,2027-03-02,09:00,Classroom,Munich,Academia Training Centre Munich,14,10,1395,English,scheduled
+S01075,C0361,2027-04-05,2027-04-06,09:00,Onsite,,Client premises,12,0,1395,English,full
+S01076,C0361,2027-06-16,2027-06-17,09:00,Online,,Virtual classroom,12,9,1245,English,scheduled
+S01077,C0362,2026-11-23,2026-11-25,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S01078,C0362,2027-03-08,2027-03-10,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,7,2345,English,scheduled
+S01079,C0362,2027-06-07,2027-06-09,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,13,2345,English,guaranteed
+S01080,C0363,2026-12-23,2026-12-25,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01081,C0363,2027-01-07,2027-01-11,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,3,2345,English,scheduled
+S01082,C0363,2027-02-11,2027-02-15,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01083,C0364,2026-10-26,2026-10-28,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,0,2345,English,full
+S01084,C0364,2027-03-22,2027-03-24,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,13,2345,English,guaranteed
+S01085,C0364,2027-06-28,2027-06-30,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S01086,C0365,2027-04-12,2027-04-12,09:00,Online,,Virtual classroom,12,9,645,English,scheduled
+S01087,C0365,2027-06-14,2027-06-14,09:00,Onsite,,Client premises,12,9,695,English,guaranteed
+S01088,C0366,2026-09-08,2026-09-10,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S01089,C0366,2027-01-18,2027-01-20,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,14,2345,English,guaranteed
+S01090,C0366,2027-03-09,2027-03-11,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01091,C0366,2027-05-03,2027-05-05,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S01092,C0367,2026-09-09,2026-09-11,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S01093,C0367,2027-01-06,2027-01-08,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01094,C0367,2027-06-09,2027-06-11,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,10,2345,English,scheduled
+S01095,C0368,2027-03-17,2027-03-18,09:00,Onsite,,Client premises,12,11,1595,English,guaranteed
+S01096,C0368,2027-05-03,2027-05-04,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S01097,C0369,2026-09-17,2026-09-21,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,11,2345,English,scheduled
+S01098,C0369,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S01099,C0369,2027-02-24,2027-02-26,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S01100,C0369,2027-03-22,2027-03-24,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,10,2345,English,scheduled
+S01101,C0370,2026-11-09,2026-11-11,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S01102,C0370,2027-03-18,2027-03-22,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,0,2345,English,full
+S01103,C0370,2027-06-24,2027-06-28,09:00,Onsite,,Client premises,12,7,2345,English,guaranteed
+S01104,C0371,2027-04-07,2027-04-08,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,11,1395,English,guaranteed
+S01105,C0371,2027-04-15,2027-04-16,09:00,Online,,Virtual classroom,12,0,1245,English,full
+S01106,C0371,2027-05-03,2027-05-04,09:00,Onsite,,Client premises,12,12,1395,English,guaranteed
+S01107,C0372,2026-12-07,2026-12-09,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01108,C0372,2027-05-05,2027-05-07,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,2,2345,English,scheduled
+S01109,C0372,2027-05-26,2027-05-28,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S01110,C0373,2026-12-08,2026-12-10,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,0,2345,English,full
+S01111,C0373,2027-01-06,2027-01-08,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01112,C0374,2027-02-11,2027-02-15,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S01113,C0374,2027-03-24,2027-03-26,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01114,C0374,2027-06-28,2027-06-30,09:00,Online,,Virtual classroom,12,7,2095,English,guaranteed
+S01115,C0375,2026-11-09,2026-11-11,09:00,Onsite,,Client premises,12,12,2645,English,scheduled
+S01116,C0375,2026-12-15,2026-12-17,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S01117,C0375,2027-04-05,2027-04-07,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,9,2645,English,scheduled
+S01118,C0375,2027-05-10,2027-05-12,09:00,Onsite,,Client premises,12,8,2645,English,scheduled
+S01119,C0376,2026-11-30,2026-12-01,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,3,1595,English,scheduled
+S01120,C0376,2026-12-14,2026-12-15,09:00,Onsite,,Client premises,12,8,1595,English,scheduled
+S01121,C0376,2027-02-15,2027-02-16,09:00,Online,,Virtual classroom,12,9,1445,English,scheduled
+S01122,C0376,2027-04-26,2027-04-27,09:00,Onsite,,Client premises,12,12,1595,English,scheduled
+S01123,C0377,2026-11-09,2026-11-09,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,10,695,English,guaranteed
+S01124,C0377,2027-03-01,2027-03-01,09:00,Onsite,,Client premises,12,8,695,English,scheduled
+S01125,C0377,2027-04-21,2027-04-21,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,0,695,English,full
+S01126,C0378,2026-09-08,2026-09-09,09:00,Onsite,,Client premises,12,8,1595,English,scheduled
+S01127,C0378,2026-10-19,2026-10-20,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S01128,C0378,2027-03-29,2027-03-30,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,14,1595,English,guaranteed
+S01129,C0379,2027-04-28,2027-04-29,09:00,Onsite,,Client premises,12,2,1595,English,scheduled
+S01130,C0379,2027-06-23,2027-06-24,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,1,1595,English,guaranteed
+S01131,C0380,2026-09-17,2026-09-18,09:00,Classroom,Milan,Academia Training Centre Milan,14,0,1595,English,full
+S01132,C0380,2026-11-23,2026-11-24,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S01133,C0380,2027-03-23,2027-03-24,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,11,1595,English,scheduled
+S01134,C0381,2026-10-26,2026-10-28,09:00,Classroom,Prague,Academia Training Centre Prague,14,2,2345,English,guaranteed
+S01135,C0381,2026-10-28,2026-10-30,09:00,Online,,Virtual classroom,12,9,2095,English,guaranteed
+S01136,C0381,2027-01-18,2027-01-20,09:00,Online,,Virtual classroom,12,9,2095,English,guaranteed
+S01137,C0381,2027-06-02,2027-06-04,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S01138,C0382,2026-10-20,2026-10-22,09:00,Onsite,,Client premises,12,12,2345,English,scheduled
+S01139,C0382,2026-12-21,2026-12-23,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S01140,C0382,2027-04-01,2027-04-05,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,1,2345,English,scheduled
+S01141,C0383,2026-10-19,2026-10-20,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S01142,C0383,2026-11-12,2026-11-13,09:00,Onsite,,Client premises,12,7,1595,English,scheduled
+S01143,C0383,2027-06-28,2027-06-29,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01144,C0384,2026-12-23,2026-12-25,09:00,Onsite,,Client premises,12,2,2345,English,guaranteed
+S01145,C0384,2027-04-13,2027-04-15,09:00,Onsite,,Client premises,12,1,2345,English,guaranteed
+S01146,C0384,2027-06-09,2027-06-11,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01147,C0385,2027-05-05,2027-05-07,09:00,Online,,Virtual classroom,12,3,2095,English,guaranteed
+S01148,C0385,2027-06-17,2027-06-21,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,2,2345,English,guaranteed
+S01149,C0386,2026-09-14,2026-09-16,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01150,C0386,2026-12-14,2026-12-16,09:00,Classroom,Prague,Academia Training Centre Prague,14,10,2345,English,scheduled
+S01151,C0386,2027-06-28,2027-06-30,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,9,2345,English,scheduled
+S01152,C0387,2026-10-06,2026-10-07,09:00,Classroom,Paris,Academia Training Centre Paris,14,0,1395,English,full
+S01153,C0387,2027-04-15,2027-04-16,09:00,Online,,Virtual classroom,12,0,1245,English,full
+S01154,C0388,2026-12-28,2026-12-29,09:00,Onsite,,Client premises,12,11,1595,English,scheduled
+S01155,C0388,2027-04-05,2027-04-06,09:00,Classroom,Rome,Academia Training Centre Rome,14,3,1595,English,scheduled
+S01156,C0388,2027-05-03,2027-05-04,09:00,Online,,Virtual classroom,12,2,1445,English,scheduled
+S01157,C0389,2026-09-28,2026-09-29,09:00,Onsite,,Client premises,12,0,1395,English,full
+S01158,C0389,2027-01-18,2027-01-19,09:00,Onsite,,Client premises,12,7,1395,English,guaranteed
+S01159,C0389,2027-02-22,2027-02-23,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,8,1395,English,scheduled
+S01160,C0390,2026-11-09,2026-11-11,09:00,Onsite,,Client premises,12,9,2645,English,guaranteed
+S01161,C0390,2026-12-15,2026-12-17,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S01162,C0391,2027-03-02,2027-03-03,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01163,C0391,2027-03-22,2027-03-23,09:00,Online,,Virtual classroom,12,1,1445,English,guaranteed
+S01164,C0392,2026-12-08,2026-12-08,09:00,Onsite,,Client premises,12,8,695,English,scheduled
+S01165,C0392,2026-12-17,2026-12-17,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,1,695,English,guaranteed
+S01166,C0392,2027-03-04,2027-03-04,09:00,Classroom,Milan,Academia Training Centre Milan,14,8,695,English,scheduled
+S01167,C0393,2026-09-21,2026-09-23,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01168,C0393,2026-10-08,2026-10-12,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,0,2345,English,full
+S01169,C0393,2027-02-22,2027-02-24,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01170,C0394,2026-11-16,2026-11-17,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S01171,C0394,2027-02-15,2027-02-16,09:00,Classroom,Paris,Academia Training Centre Paris,14,14,1595,English,guaranteed
+S01172,C0394,2027-03-15,2027-03-16,09:00,Onsite,,Client premises,12,12,1595,English,scheduled
+S01173,C0394,2027-06-07,2027-06-08,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S01174,C0395,2026-09-28,2026-09-29,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,2,1395,English,scheduled
+S01175,C0395,2027-05-20,2027-05-21,09:00,Onsite,,Client premises,12,0,1395,English,full
+S01176,C0396,2026-11-24,2026-11-26,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S01177,C0396,2026-12-02,2026-12-04,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,7,2345,English,scheduled
+S01178,C0397,2026-09-21,2026-09-23,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01179,C0397,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01180,C0397,2027-05-10,2027-05-12,09:00,Onsite,,Client premises,12,12,2345,English,guaranteed
+S01181,C0397,2027-05-19,2027-05-21,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,10,2345,English,guaranteed
+S01182,C0398,2026-10-26,2026-10-26,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,9,695,English,scheduled
+S01183,C0398,2026-11-23,2026-11-23,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,13,695,English,guaranteed
+S01184,C0399,2026-10-06,2026-10-08,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01185,C0399,2026-11-09,2026-11-11,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01186,C0399,2026-12-28,2026-12-30,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01187,C0400,2026-10-05,2026-10-07,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01188,C0400,2027-05-31,2027-06-02,09:00,Onsite,,Client premises,12,2,2345,English,guaranteed
+S01189,C0401,2026-10-29,2026-10-30,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,8,1395,English,scheduled
+S01190,C0401,2027-01-06,2027-01-07,09:00,Online,,Virtual classroom,12,0,1245,English,full
+S01191,C0401,2027-02-22,2027-02-23,09:00,Online,,Virtual classroom,12,3,1245,English,scheduled
+S01192,C0401,2027-05-18,2027-05-19,09:00,Onsite,,Client premises,12,9,1395,English,guaranteed
+S01193,C0402,2027-01-05,2027-01-07,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,8,2345,English,scheduled
+S01194,C0402,2027-01-25,2027-01-27,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01195,C0402,2027-03-22,2027-03-24,09:00,Online,,Virtual classroom,12,7,2095,English,guaranteed
+S01196,C0403,2026-11-23,2026-11-24,09:00,Online,,Virtual classroom,12,7,1445,English,scheduled
+S01197,C0403,2027-05-03,2027-05-04,09:00,Onsite,,Client premises,12,12,1595,English,scheduled
+S01198,C0404,2026-10-05,2026-10-07,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01199,C0404,2027-03-22,2027-03-24,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01200,C0405,2026-10-12,2026-10-14,09:00,Online,,Virtual classroom,12,2,2095,English,guaranteed
+S01201,C0405,2027-01-13,2027-01-15,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S01202,C0405,2027-02-10,2027-02-12,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S01203,C0405,2027-05-19,2027-05-21,09:00,Onsite,,Client premises,12,10,2345,English,guaranteed
+S01204,C0406,2026-11-09,2026-11-10,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01205,C0406,2027-02-01,2027-02-02,09:00,Online,,Virtual classroom,12,3,1445,English,guaranteed
+S01206,C0406,2027-03-01,2027-03-02,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S01207,C0407,2026-12-14,2026-12-16,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S01208,C0407,2026-12-17,2026-12-21,09:00,Classroom,Rome,Academia Training Centre Rome,14,12,2345,English,scheduled
+S01209,C0407,2027-06-24,2027-06-28,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,11,2345,English,scheduled
+S01210,C0408,2026-10-06,2026-10-08,09:00,Online,,Virtual classroom,12,11,2395,English,guaranteed
+S01211,C0408,2026-12-21,2026-12-23,09:00,Onsite,,Client premises,12,11,2645,English,guaranteed
+S01212,C0408,2027-05-11,2027-05-13,09:00,Online,,Virtual classroom,12,0,2395,English,full
+S01213,C0409,2026-12-08,2026-12-14,09:00,Onsite,,Client premises,12,9,4445,English,guaranteed
+S01214,C0409,2027-02-01,2027-02-05,09:00,Online,,Virtual classroom,12,2,3995,English,scheduled
+S01215,C0409,2027-03-22,2027-03-26,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,3,4445,English,scheduled
+S01216,C0409,2027-05-31,2027-06-04,09:00,Onsite,,Client premises,12,8,4445,English,scheduled
+S01217,C0410,2027-01-21,2027-01-25,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,14,2345,English,scheduled
+S01218,C0410,2027-03-10,2027-03-12,09:00,Onsite,,Client premises,12,10,2345,English,guaranteed
+S01219,C0411,2026-09-15,2026-09-15,09:00,Onsite,,Client premises,12,1,695,English,scheduled
+S01220,C0411,2026-12-14,2026-12-14,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,10,695,English,guaranteed
+S01221,C0411,2026-12-29,2026-12-29,09:00,Onsite,,Client premises,12,8,695,English,guaranteed
+S01222,C0412,2026-12-14,2026-12-16,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,0,2345,English,full
+S01223,C0412,2027-02-02,2027-02-04,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01224,C0412,2027-05-31,2027-06-02,09:00,Classroom,Prague,Academia Training Centre Prague,14,0,2345,English,full
+S01225,C0413,2026-10-08,2026-10-12,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S01226,C0413,2026-11-02,2026-11-04,09:00,Online,,Virtual classroom,12,11,2095,English,guaranteed
+S01227,C0413,2027-02-23,2027-02-25,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01228,C0414,2027-04-01,2027-04-02,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S01229,C0414,2027-04-12,2027-04-13,09:00,Online,,Virtual classroom,12,9,1445,English,guaranteed
+S01230,C0415,2027-02-01,2027-02-05,09:00,Onsite,,Client premises,12,8,4445,English,guaranteed
+S01231,C0415,2027-03-23,2027-03-29,09:00,Onsite,,Client premises,12,7,4445,English,scheduled
+S01232,C0415,2027-04-07,2027-04-12,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,2,4445,English,scheduled
+S01233,C0416,2026-11-02,2026-11-04,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S01234,C0416,2026-12-07,2026-12-09,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,0,2345,English,full
+S01235,C0416,2027-01-14,2027-01-18,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01236,C0417,2026-12-07,2026-12-08,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,10,1395,English,scheduled
+S01237,C0417,2027-03-16,2027-03-17,09:00,Online,,Virtual classroom,12,12,1245,English,guaranteed
+S01238,C0417,2027-06-14,2027-06-15,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,11,1395,English,scheduled
+S01239,C0418,2026-12-08,2026-12-09,09:00,Online,,Virtual classroom,12,1,1445,English,guaranteed
+S01240,C0418,2027-06-21,2027-06-22,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S01241,C0419,2026-09-09,2026-09-11,09:00,Onsite,,Client premises,12,8,2645,English,scheduled
+S01242,C0419,2026-12-28,2026-12-30,09:00,Onsite,,Client premises,12,2,2645,English,scheduled
+S01243,C0419,2027-05-24,2027-05-26,09:00,Online,,Virtual classroom,12,12,2395,English,guaranteed
+S01244,C0420,2026-09-28,2026-09-29,09:00,Classroom,Munich,Academia Training Centre Munich,14,2,1595,English,guaranteed
+S01245,C0420,2026-12-14,2026-12-15,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01246,C0420,2026-12-28,2026-12-29,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01247,C0421,2026-09-14,2026-09-16,09:00,Classroom,Rome,Academia Training Centre Rome,14,14,2345,English,guaranteed
+S01248,C0421,2026-10-26,2026-10-28,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01249,C0421,2027-05-18,2027-05-20,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01250,C0422,2026-10-26,2026-10-28,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S01251,C0422,2027-03-03,2027-03-05,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01252,C0422,2027-06-28,2027-06-30,09:00,Online,,Virtual classroom,12,8,2095,English,scheduled
+S01253,C0423,2026-10-20,2026-10-21,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,3,1595,English,scheduled
+S01254,C0423,2026-11-02,2026-11-03,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,8,1595,English,guaranteed
+S01255,C0423,2027-01-04,2027-01-05,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S01256,C0424,2026-09-17,2026-09-21,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,3,2345,English,guaranteed
+S01257,C0424,2026-11-04,2026-11-06,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,3,2345,English,scheduled
+S01258,C0424,2027-01-04,2027-01-06,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,2345,English,full
+S01259,C0424,2027-03-31,2027-04-02,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S01260,C0425,2026-10-05,2026-10-07,09:00,Classroom,Milan,Academia Training Centre Milan,14,8,2345,English,scheduled
+S01261,C0425,2026-12-07,2026-12-09,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01262,C0425,2027-04-29,2027-05-03,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,0,2345,English,full
+S01263,C0426,2026-12-07,2026-12-09,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,10,2345,English,guaranteed
+S01264,C0426,2027-01-04,2027-01-06,09:00,Classroom,Prague,Academia Training Centre Prague,14,11,2345,English,guaranteed
+S01265,C0426,2027-01-11,2027-01-13,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01266,C0426,2027-03-17,2027-03-19,09:00,Online,,Virtual classroom,12,1,2095,English,guaranteed
+S01267,C0427,2026-09-28,2026-09-30,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01268,C0427,2026-10-12,2026-10-14,09:00,Onsite,,Client premises,12,11,2345,English,guaranteed
+S01269,C0427,2027-04-06,2027-04-08,09:00,Classroom,Munich,Academia Training Centre Munich,14,1,2345,English,scheduled
+S01270,C0428,2027-03-15,2027-03-16,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,10,1595,English,scheduled
+S01271,C0428,2027-04-05,2027-04-06,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S01272,C0428,2027-05-04,2027-05-05,09:00,Onsite,,Client premises,12,2,1595,English,scheduled
+S01273,C0429,2026-09-24,2026-09-28,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01274,C0429,2026-10-26,2026-10-28,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01275,C0430,2026-10-26,2026-10-28,09:00,Onsite,,Client premises,12,10,2345,English,guaranteed
+S01276,C0430,2026-11-23,2026-11-25,09:00,Onsite,,Client premises,12,7,2345,English,guaranteed
+S01277,C0430,2027-01-14,2027-01-18,09:00,Online,,Virtual classroom,12,11,2095,English,guaranteed
+S01278,C0431,2027-02-08,2027-02-10,09:00,Online,,Virtual classroom,12,2,2095,English,guaranteed
+S01279,C0431,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,11,2345,English,scheduled
+S01280,C0431,2027-05-24,2027-05-26,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01281,C0432,2026-11-16,2026-11-18,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01282,C0432,2027-01-21,2027-01-25,09:00,Online,,Virtual classroom,12,7,2095,English,scheduled
+S01283,C0432,2027-02-25,2027-03-01,09:00,Classroom,Paris,Academia Training Centre Paris,14,11,2345,English,scheduled
+S01284,C0433,2026-12-29,2026-12-30,09:00,Online,,Virtual classroom,12,8,1245,English,scheduled
+S01285,C0433,2027-04-29,2027-04-30,09:00,Online,,Virtual classroom,12,12,1245,English,guaranteed
+S01286,C0433,2027-06-28,2027-06-29,09:00,Classroom,Rome,Academia Training Centre Rome,14,0,1395,English,full
+S01287,C0434,2027-01-28,2027-02-01,09:00,Classroom,Munich,Academia Training Centre Munich,14,11,2345,English,guaranteed
+S01288,C0434,2027-02-18,2027-02-22,09:00,Online,,Virtual classroom,12,3,2095,English,scheduled
+S01289,C0434,2027-03-08,2027-03-10,09:00,Onsite,,Client premises,12,7,2345,English,guaranteed
+S01290,C0434,2027-03-29,2027-03-31,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01291,C0435,2026-10-19,2026-10-20,09:00,Online,,Virtual classroom,12,1,1445,English,guaranteed
+S01292,C0435,2026-11-02,2026-11-03,09:00,Onsite,,Client premises,12,11,1595,English,guaranteed
+S01293,C0435,2026-11-23,2026-11-24,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,13,1595,English,guaranteed
+S01294,C0436,2026-09-07,2026-09-08,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,14,1595,English,scheduled
+S01295,C0436,2027-03-08,2027-03-09,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S01296,C0436,2027-03-22,2027-03-23,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S01297,C0437,2027-01-07,2027-01-07,09:00,Online,,Virtual classroom,12,10,645,English,scheduled
+S01298,C0437,2027-03-08,2027-03-08,09:00,Online,,Virtual classroom,12,0,645,English,full
+S01299,C0438,2026-09-09,2026-09-11,09:00,Onsite,,Client premises,12,7,2345,English,guaranteed
+S01300,C0438,2026-11-04,2026-11-06,09:00,Online,,Virtual classroom,12,3,2095,English,guaranteed
+S01301,C0438,2027-03-15,2027-03-17,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01302,C0439,2026-11-09,2026-11-12,09:00,Onsite,,Client premises,12,8,3545,English,scheduled
+S01303,C0439,2027-03-01,2027-03-04,09:00,Classroom,Munich,Academia Training Centre Munich,14,14,3545,English,scheduled
+S01304,C0439,2027-04-26,2027-04-29,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,8,3545,English,scheduled
+S01305,C0440,2026-09-24,2026-09-28,09:00,Classroom,Rome,Academia Training Centre Rome,14,1,2345,English,scheduled
+S01306,C0440,2027-01-12,2027-01-14,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,13,2345,English,scheduled
+S01307,C0441,2026-09-15,2026-09-16,09:00,Online,,Virtual classroom,12,2,1245,English,guaranteed
+S01308,C0441,2026-10-05,2026-10-06,09:00,Onsite,,Client premises,12,12,1395,English,scheduled
+S01309,C0441,2027-05-17,2027-05-18,09:00,Online,,Virtual classroom,12,11,1245,English,guaranteed
+S01310,C0442,2027-01-13,2027-01-14,09:00,Onsite,,Client premises,12,7,1395,English,scheduled
+S01311,C0442,2027-01-25,2027-01-26,09:00,Online,,Virtual classroom,12,1,1245,English,scheduled
+S01312,C0442,2027-04-29,2027-04-30,09:00,Online,,Virtual classroom,12,7,1245,English,guaranteed
+S01313,C0443,2027-01-18,2027-01-18,09:00,Onsite,,Client premises,12,0,695,English,full
+S01314,C0443,2027-05-10,2027-05-10,09:00,Classroom,Brussels,Academia Training Centre Brussels,14,0,695,English,full
+S01315,C0444,2026-10-19,2026-10-21,09:00,Onsite,,Client premises,12,8,2345,English,guaranteed
+S01316,C0444,2027-03-22,2027-03-24,09:00,Classroom,Milan,Academia Training Centre Milan,14,8,2345,English,scheduled
+S01317,C0444,2027-05-11,2027-05-13,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,8,2345,English,scheduled
+S01318,C0445,2026-09-14,2026-09-15,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,11,1395,English,scheduled
+S01319,C0445,2027-02-10,2027-02-11,09:00,Onsite,,Client premises,12,9,1395,English,scheduled
+S01320,C0445,2027-06-21,2027-06-22,09:00,Onsite,,Client premises,12,0,1395,English,full
+S01321,C0446,2026-09-22,2026-09-24,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01322,C0446,2026-10-26,2026-10-28,09:00,Classroom,Paris,Academia Training Centre Paris,14,9,2345,English,scheduled
+S01323,C0446,2027-02-01,2027-02-03,09:00,Onsite,,Client premises,12,8,2345,English,guaranteed
+S01324,C0447,2026-12-10,2026-12-11,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,1,1595,English,scheduled
+S01325,C0447,2027-03-15,2027-03-16,09:00,Online,,Virtual classroom,12,3,1445,English,scheduled
+S01326,C0447,2027-04-20,2027-04-21,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,0,1595,English,full
+S01327,C0448,2026-10-07,2026-10-09,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,13,2345,English,scheduled
+S01328,C0448,2026-12-21,2026-12-23,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01329,C0448,2027-02-24,2027-02-26,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,14,2345,English,scheduled
+S01330,C0448,2027-06-08,2027-06-10,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,0,2345,English,full
+S01331,C0449,2026-09-08,2026-09-10,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S01332,C0449,2026-12-14,2026-12-16,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01333,C0449,2027-06-21,2027-06-23,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01334,C0450,2027-06-21,2027-06-23,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01335,C0450,2027-06-28,2027-06-30,09:00,Onsite,,Client premises,12,10,2345,English,scheduled
+S01336,C0451,2026-10-12,2026-10-13,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,13,1395,English,guaranteed
+S01337,C0451,2026-11-24,2026-11-25,09:00,Classroom,Milan,Academia Training Centre Milan,14,10,1395,English,guaranteed
+S01338,C0451,2027-04-15,2027-04-16,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,14,1395,English,scheduled
+S01339,C0452,2026-11-10,2026-11-12,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S01340,C0452,2027-02-24,2027-02-26,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,14,2345,English,scheduled
+S01341,C0452,2027-04-20,2027-04-22,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01342,C0453,2026-11-23,2026-11-25,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01343,C0453,2027-01-05,2027-01-07,09:00,Onsite,,Client premises,12,8,2345,English,guaranteed
+S01344,C0453,2027-05-27,2027-05-31,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,12,2345,English,scheduled
+S01345,C0454,2026-10-19,2026-10-20,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,0,1395,English,full
+S01346,C0454,2027-03-25,2027-03-26,09:00,Online,,Virtual classroom,12,8,1245,English,guaranteed
+S01347,C0455,2026-11-18,2026-11-19,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S01348,C0455,2027-02-24,2027-02-25,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S01349,C0455,2027-03-11,2027-03-12,09:00,Online,,Virtual classroom,12,9,1445,English,scheduled
+S01350,C0456,2026-12-07,2026-12-09,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,12,2345,English,guaranteed
+S01351,C0456,2027-02-22,2027-02-24,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,1,2345,English,scheduled
+S01352,C0456,2027-03-17,2027-03-19,09:00,Onsite,,Client premises,12,1,2345,English,scheduled
+S01353,C0457,2026-09-21,2026-09-21,09:00,Online,,Virtual classroom,12,9,645,English,scheduled
+S01354,C0457,2026-11-16,2026-11-16,09:00,Online,,Virtual classroom,12,0,645,English,full
+S01355,C0457,2026-12-07,2026-12-07,09:00,Online,,Virtual classroom,12,7,645,English,scheduled
+S01356,C0458,2026-11-30,2026-12-04,09:00,Online,,Virtual classroom,12,0,3995,English,full
+S01357,C0458,2027-03-01,2027-03-05,09:00,Online,,Virtual classroom,12,2,3995,English,scheduled
+S01358,C0458,2027-03-24,2027-03-29,09:00,Onsite,,Client premises,12,10,4445,English,scheduled
+S01359,C0458,2027-06-16,2027-06-21,09:00,Onsite,,Client premises,12,10,4445,English,scheduled
+S01360,C0459,2026-09-07,2026-09-11,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,7,3945,English,scheduled
+S01361,C0459,2027-02-17,2027-02-22,09:00,Classroom,Rome,Academia Training Centre Rome,14,14,3945,English,guaranteed
+S01362,C0460,2026-12-14,2026-12-15,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,10,1595,English,scheduled
+S01363,C0460,2027-02-15,2027-02-16,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,9,1595,English,scheduled
+S01364,C0460,2027-02-22,2027-02-23,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,0,1595,English,full
+S01365,C0461,2027-01-25,2027-01-27,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,8,2345,English,scheduled
+S01366,C0461,2027-03-29,2027-03-31,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01367,C0462,2026-11-02,2026-11-04,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,2,2345,English,scheduled
+S01368,C0462,2027-01-04,2027-01-06,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S01369,C0462,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,7,2345,English,scheduled
+S01370,C0462,2027-06-21,2027-06-23,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,2,2345,English,scheduled
+S01371,C0463,2026-11-23,2026-11-25,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01372,C0463,2027-01-21,2027-01-25,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,0,2345,English,full
+S01373,C0464,2026-10-12,2026-10-13,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,0,1595,English,full
+S01374,C0464,2026-10-26,2026-10-27,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01375,C0464,2027-06-08,2027-06-09,09:00,Onsite,,Client premises,12,9,1595,English,guaranteed
+S01376,C0465,2027-03-18,2027-03-22,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S01377,C0465,2027-06-14,2027-06-16,09:00,Onsite,,Client premises,12,2,2345,English,scheduled
+S01378,C0466,2026-12-07,2026-12-09,09:00,Online,,Virtual classroom,12,12,2095,English,guaranteed
+S01379,C0466,2027-04-05,2027-04-07,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,12,2345,English,scheduled
+S01380,C0467,2026-11-11,2026-11-11,09:00,Online,,Virtual classroom,12,11,645,English,scheduled
+S01381,C0467,2027-05-10,2027-05-10,09:00,Online,,Virtual classroom,12,8,645,English,scheduled
+S01382,C0468,2026-11-02,2026-11-04,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,7,2345,English,guaranteed
+S01383,C0468,2027-03-24,2027-03-26,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S01384,C0468,2027-04-19,2027-04-21,09:00,Classroom,Amsterdam,Academia Training Centre Amsterdam,14,9,2345,English,scheduled
+S01385,C0468,2027-05-04,2027-05-06,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01386,C0469,2027-01-20,2027-01-22,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,3,2345,English,guaranteed
+S01387,C0469,2027-02-01,2027-02-03,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S01388,C0469,2027-02-22,2027-02-24,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01389,C0469,2027-05-19,2027-05-21,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01390,C0470,2026-12-07,2026-12-09,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01391,C0470,2026-12-07,2026-12-09,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,12,2345,English,scheduled
+S01392,C0470,2026-12-14,2026-12-16,09:00,Classroom,Milan,Academia Training Centre Milan,14,10,2345,English,scheduled
+S01393,C0471,2026-10-26,2026-10-28,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01394,C0471,2027-05-26,2027-05-28,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S01395,C0472,2026-11-30,2026-12-01,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01396,C0472,2027-04-12,2027-04-13,09:00,Classroom,Munich,Academia Training Centre Munich,14,7,1595,English,scheduled
+S01397,C0472,2027-05-13,2027-05-14,09:00,Classroom,Paris,Academia Training Centre Paris,14,9,1595,English,guaranteed
+S01398,C0472,2027-05-31,2027-06-01,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,7,1595,English,scheduled
+S01399,C0473,2026-09-30,2026-10-02,09:00,Online,,Virtual classroom,12,12,2095,English,guaranteed
+S01400,C0473,2027-01-18,2027-01-20,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,3,2345,English,scheduled
+S01401,C0473,2027-02-08,2027-02-10,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01402,C0473,2027-03-29,2027-03-31,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01403,C0474,2027-02-15,2027-02-17,09:00,Onsite,,Client premises,12,2,2345,English,guaranteed
+S01404,C0474,2027-06-28,2027-06-30,09:00,Online,,Virtual classroom,12,7,2095,English,guaranteed
+S01405,C0475,2026-09-08,2026-09-09,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S01406,C0475,2026-11-09,2026-11-10,09:00,Onsite,,Client premises,12,10,1595,English,guaranteed
+S01407,C0475,2027-04-05,2027-04-06,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S01408,C0475,2027-04-19,2027-04-20,09:00,Online,,Virtual classroom,12,12,1445,English,scheduled
+S01409,C0476,2026-09-14,2026-09-15,09:00,Onsite,,Client premises,12,12,1595,English,guaranteed
+S01410,C0476,2026-09-28,2026-09-29,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,7,1595,English,scheduled
+S01411,C0477,2026-11-16,2026-11-17,09:00,Classroom,Antwerp,Academia Training Centre Antwerp,14,3,1395,English,scheduled
+S01412,C0477,2027-06-15,2027-06-16,09:00,Classroom,Milan,Academia Training Centre Milan,14,8,1395,English,scheduled
+S01413,C0478,2026-11-19,2026-11-23,09:00,Online,,Virtual classroom,12,11,2395,English,scheduled
+S01414,C0478,2027-04-29,2027-05-03,09:00,Onsite,,Client premises,12,0,2645,English,full
+S01415,C0478,2027-05-10,2027-05-12,09:00,Online,,Virtual classroom,12,1,2395,English,scheduled
+S01416,C0479,2026-09-21,2026-09-23,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01417,C0479,2026-10-05,2026-10-07,09:00,Onsite,,Client premises,12,12,2345,English,guaranteed
+S01418,C0479,2027-01-18,2027-01-20,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01419,C0479,2027-05-31,2027-06-02,09:00,Classroom,Munich,Academia Training Centre Munich,14,10,2345,English,guaranteed
+S01420,C0480,2026-09-14,2026-09-15,09:00,Onsite,,Client premises,12,10,1595,English,scheduled
+S01421,C0480,2026-10-19,2026-10-20,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,2,1595,English,scheduled
+S01422,C0480,2027-03-09,2027-03-10,09:00,Onsite,,Client premises,12,3,1595,English,scheduled
+S01423,C0480,2027-05-26,2027-05-27,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01424,C0481,2026-10-12,2026-10-13,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01425,C0481,2026-10-15,2026-10-16,09:00,Online,,Virtual classroom,12,8,1445,English,scheduled
+S01426,C0481,2027-02-15,2027-02-16,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,11,1595,English,scheduled
+S01427,C0481,2027-04-20,2027-04-21,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,10,1595,English,scheduled
+S01428,C0482,2027-02-22,2027-02-24,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01429,C0482,2027-03-01,2027-03-03,09:00,Onsite,,Client premises,12,9,2345,English,scheduled
+S01430,C0482,2027-05-31,2027-06-02,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,2,2345,English,guaranteed
+S01431,C0482,2027-06-14,2027-06-16,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01432,C0483,2026-11-16,2026-11-18,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,2345,English,full
+S01433,C0483,2027-02-03,2027-02-05,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,0,2345,English,full
+S01434,C0483,2027-04-08,2027-04-12,09:00,Onsite,,Client premises,12,10,2345,English,guaranteed
+S01435,C0484,2026-10-05,2026-10-07,09:00,Online,,Virtual classroom,12,10,2095,English,guaranteed
+S01436,C0484,2026-10-21,2026-10-23,09:00,Classroom,Milan,Academia Training Centre Milan,14,2,2345,English,scheduled
+S01437,C0484,2027-01-25,2027-01-27,09:00,Classroom,Paris,Academia Training Centre Paris,14,13,2345,English,scheduled
+S01438,C0485,2027-01-11,2027-01-12,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S01439,C0485,2027-05-10,2027-05-11,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,2,1595,English,scheduled
+S01440,C0485,2027-06-14,2027-06-15,09:00,Online,,Virtual classroom,12,11,1445,English,guaranteed
+S01441,C0486,2026-11-02,2026-11-04,09:00,Online,,Virtual classroom,12,10,2095,English,guaranteed
+S01442,C0486,2026-12-21,2026-12-23,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01443,C0486,2026-12-21,2026-12-23,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,11,2345,English,scheduled
+S01444,C0486,2027-06-17,2027-06-21,09:00,Onsite,,Client premises,12,10,2345,English,guaranteed
+S01445,C0487,2026-10-14,2026-10-14,09:00,Online,,Virtual classroom,12,9,645,English,scheduled
+S01446,C0487,2027-01-05,2027-01-05,09:00,Classroom,Eindhoven,Academia Training Centre Eindhoven,14,13,695,English,scheduled
+S01447,C0487,2027-04-19,2027-04-19,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,7,695,English,guaranteed
+S01448,C0488,2026-11-23,2026-11-25,09:00,Classroom,Barcelona,Academia Training Centre Barcelona,14,0,2345,English,full
+S01449,C0488,2027-01-18,2027-01-20,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01450,C0488,2027-02-01,2027-02-03,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01451,C0489,2026-11-30,2026-12-02,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01452,C0489,2027-03-04,2027-03-08,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01453,C0489,2027-03-08,2027-03-10,09:00,Onsite,,Client premises,12,12,2345,English,guaranteed
+S01454,C0489,2027-04-12,2027-04-14,09:00,Online,,Virtual classroom,12,3,2095,English,guaranteed
+S01455,C0490,2027-03-15,2027-03-17,09:00,Classroom,Prague,Academia Training Centre Prague,14,7,2345,English,scheduled
+S01456,C0490,2027-04-19,2027-04-21,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,8,2345,English,scheduled
+S01457,C0491,2027-01-18,2027-01-18,09:00,Onsite,,Client premises,12,10,695,English,scheduled
+S01458,C0491,2027-02-01,2027-02-01,09:00,Online,,Virtual classroom,12,8,645,English,guaranteed
+S01459,C0491,2027-06-01,2027-06-01,09:00,Online,,Virtual classroom,12,10,645,English,scheduled
+S01460,C0492,2026-10-22,2026-10-26,09:00,Online,,Virtual classroom,12,10,2095,English,guaranteed
+S01461,C0492,2027-01-04,2027-01-06,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01462,C0492,2027-03-08,2027-03-10,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,11,2345,English,scheduled
+S01463,C0492,2027-03-29,2027-03-31,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,0,2345,English,full
+S01464,C0493,2026-11-16,2026-11-17,09:00,Onsite,,Client premises,12,11,1395,English,guaranteed
+S01465,C0493,2027-01-18,2027-01-19,09:00,Online,,Virtual classroom,12,1,1245,English,scheduled
+S01466,C0493,2027-06-23,2027-06-24,09:00,Online,,Virtual classroom,12,9,1245,English,scheduled
+S01467,C0494,2026-11-04,2026-11-05,09:00,Online,,Virtual classroom,12,11,1245,English,guaranteed
+S01468,C0494,2027-02-02,2027-02-03,09:00,Online,,Virtual classroom,12,2,1245,English,scheduled
+S01469,C0494,2027-02-02,2027-02-03,09:00,Onsite,,Client premises,12,8,1395,English,scheduled
+S01470,C0495,2027-01-25,2027-01-27,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,2345,English,full
+S01471,C0495,2027-02-03,2027-02-05,09:00,Online,,Virtual classroom,12,11,2095,English,guaranteed
+S01472,C0495,2027-06-21,2027-06-23,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01473,C0496,2026-11-30,2026-11-30,09:00,Onsite,,Client premises,12,0,695,English,full
+S01474,C0496,2027-01-21,2027-01-21,09:00,Onsite,,Client premises,12,12,695,English,scheduled
+S01475,C0497,2026-11-23,2026-11-24,09:00,Onsite,,Client premises,12,9,1395,English,guaranteed
+S01476,C0497,2026-12-16,2026-12-17,09:00,Online,,Virtual classroom,12,9,1245,English,scheduled
+S01477,C0497,2027-03-04,2027-03-05,09:00,Onsite,,Client premises,12,8,1395,English,guaranteed
+S01478,C0497,2027-05-10,2027-05-11,09:00,Onsite,,Client premises,12,9,1395,English,scheduled
+S01479,C0498,2026-11-12,2026-11-13,09:00,Online,,Virtual classroom,12,2,1245,English,guaranteed
+S01480,C0498,2026-12-21,2026-12-22,09:00,Classroom,Utrecht,Academia Training Centre Utrecht,14,0,1395,English,full
+S01481,C0499,2026-10-19,2026-10-21,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01482,C0499,2027-02-09,2027-02-11,09:00,Classroom,Lyon,Academia Training Centre Lyon,14,0,2345,English,full
+S01483,C0499,2027-04-05,2027-04-07,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S01484,C0499,2027-06-21,2027-06-23,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01485,C0500,2026-09-07,2026-09-08,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,8,1595,English,scheduled
+S01486,C0500,2027-05-27,2027-05-28,09:00,Classroom,Dublin,Academia Training Centre Dublin,14,3,1595,English,scheduled
+S01487,C0501,2026-12-31,2027-01-01,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01488,C0501,2027-01-18,2027-01-19,09:00,Onsite,,Client premises,12,2,1595,English,scheduled
+S01489,C0501,2027-04-05,2027-04-06,09:00,Online,,Virtual classroom,12,11,1445,English,scheduled
+S01490,C0502,2027-01-19,2027-01-21,09:00,Onsite,,Client premises,12,3,2345,English,scheduled
+S01491,C0502,2027-06-28,2027-06-30,09:00,Classroom,Berlin,Academia Training Centre Berlin,14,3,2345,English,scheduled
+S01492,C0503,2026-11-12,2026-11-13,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,10,1395,English,scheduled
+S01493,C0503,2026-12-23,2026-12-24,09:00,Onsite,,Client premises,12,10,1395,English,scheduled
+S01494,C0503,2027-03-15,2027-03-16,09:00,Classroom,Milan,Academia Training Centre Milan,14,1,1395,English,scheduled
+S01495,C0504,2026-10-19,2026-10-20,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,9,1595,English,scheduled
+S01496,C0504,2027-02-08,2027-02-09,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01497,C0504,2027-03-29,2027-03-30,09:00,Online,,Virtual classroom,12,10,1445,English,scheduled
+S01498,C0504,2027-03-29,2027-03-30,09:00,Onsite,,Client premises,12,7,1595,English,guaranteed
+S01499,C0505,2026-12-15,2026-12-17,09:00,Online,,Virtual classroom,12,3,2095,English,scheduled
+S01500,C0505,2027-02-18,2027-02-22,09:00,Classroom,Munich,Academia Training Centre Munich,14,7,2345,English,scheduled
+S01501,C0505,2027-02-22,2027-02-24,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01502,C0505,2027-06-03,2027-06-07,09:00,Online,,Virtual classroom,12,11,2095,English,scheduled
+S01503,C0506,2026-12-28,2026-12-30,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S01504,C0506,2027-01-04,2027-01-06,09:00,Classroom,Rome,Academia Training Centre Rome,14,11,2345,English,guaranteed
+S01505,C0506,2027-03-01,2027-03-03,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,2,2345,English,guaranteed
+S01506,C0506,2027-06-09,2027-06-11,09:00,Online,,Virtual classroom,12,10,2095,English,guaranteed
+S01507,C0507,2027-01-04,2027-01-05,09:00,Onsite,,Client premises,12,12,1395,English,scheduled
+S01508,C0507,2027-06-16,2027-06-17,09:00,Onsite,,Client premises,12,9,1395,English,guaranteed
+S01509,C0507,2027-06-22,2027-06-23,09:00,Classroom,Zurich,Academia Training Centre Zurich,14,12,1395,English,scheduled
+S01510,C0508,2026-09-30,2026-10-01,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,11,1595,English,scheduled
+S01511,C0508,2027-02-02,2027-02-03,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01512,C0508,2027-06-08,2027-06-09,09:00,Classroom,Lisbon,Academia Training Centre Lisbon,14,13,1595,English,scheduled
+S01513,C0509,2026-09-21,2026-09-22,09:00,Onsite,,Client premises,12,2,1395,English,scheduled
+S01514,C0509,2026-11-16,2026-11-17,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,0,1395,English,full
+S01515,C0509,2027-03-01,2027-03-02,09:00,Classroom,Rotterdam,Academia Training Centre Rotterdam,14,12,1395,English,guaranteed
+S01516,C0510,2027-01-28,2027-01-29,09:00,Classroom,Paris,Academia Training Centre Paris,14,11,1395,English,scheduled
+S01517,C0510,2027-02-15,2027-02-16,09:00,Online,,Virtual classroom,12,7,1245,English,scheduled
+S01518,C0510,2027-04-21,2027-04-22,09:00,Classroom,Milan,Academia Training Centre Milan,14,10,1395,English,scheduled
+S01519,C0511,2026-10-15,2026-10-19,09:00,Classroom,Stockholm,Academia Training Centre Stockholm,14,12,2345,English,scheduled
+S01520,C0511,2027-02-09,2027-02-11,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01521,C0511,2027-02-10,2027-02-12,09:00,Classroom,Vienna,Academia Training Centre Vienna,14,2,2345,English,guaranteed
+S01522,C0511,2027-05-17,2027-05-19,09:00,Classroom,Prague,Academia Training Centre Prague,14,11,2345,English,scheduled
+S01523,C0512,2026-09-07,2026-09-09,09:00,Classroom,Luxembourg,Academia Training Centre Luxembourg,14,11,2345,English,scheduled
+S01524,C0512,2027-05-19,2027-05-21,09:00,Online,,Virtual classroom,12,0,2095,English,full
+S01525,C0512,2027-05-24,2027-05-26,09:00,Online,,Virtual classroom,12,12,2095,English,guaranteed
+S01526,C0512,2027-05-31,2027-06-02,09:00,Classroom,Munich,Academia Training Centre Munich,14,8,2345,English,guaranteed
+S01527,C0513,2027-01-25,2027-01-26,09:00,Onsite,,Client premises,12,9,1595,English,scheduled
+S01528,C0513,2027-02-15,2027-02-16,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01529,C0514,2026-10-27,2026-10-29,09:00,Onsite,,Client premises,12,0,2345,English,full
+S01530,C0514,2027-03-29,2027-03-31,09:00,Online,,Virtual classroom,12,8,2095,English,guaranteed
+S01531,C0514,2027-04-13,2027-04-15,09:00,Online,,Virtual classroom,12,1,2095,English,scheduled
+S01532,C0514,2027-06-02,2027-06-04,09:00,Online,,Virtual classroom,12,12,2095,English,scheduled
+S01533,C0515,2026-12-07,2026-12-09,09:00,Online,,Virtual classroom,12,10,2095,English,scheduled
+S01534,C0515,2027-01-12,2027-01-14,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,0,2345,English,full
+S01535,C0515,2027-04-26,2027-04-28,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,12,2345,English,guaranteed
+S01536,C0516,2026-09-28,2026-09-29,09:00,Online,,Virtual classroom,12,1,1245,English,scheduled
+S01537,C0516,2026-12-28,2026-12-29,09:00,Onsite,,Client premises,12,9,1395,English,scheduled
+S01538,C0516,2027-04-14,2027-04-15,09:00,Classroom,Prague,Academia Training Centre Prague,14,13,1395,English,scheduled
+S01539,C0517,2027-01-26,2027-01-26,09:00,Onsite,,Client premises,12,0,695,English,full
+S01540,C0517,2027-06-07,2027-06-07,09:00,Online,,Virtual classroom,12,0,645,English,full
+S01541,C0517,2027-06-08,2027-06-08,09:00,Online,,Virtual classroom,12,8,645,English,guaranteed
+S01542,C0518,2026-10-26,2026-10-27,09:00,Classroom,Madrid,Academia Training Centre Madrid,14,7,1595,English,scheduled
+S01543,C0518,2026-11-05,2026-11-06,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01544,C0519,2026-09-14,2026-09-15,09:00,Onsite,,Client premises,12,0,1595,English,full
+S01545,C0519,2026-09-24,2026-09-25,09:00,Classroom,Warsaw,Academia Training Centre Warsaw,14,2,1595,English,scheduled
+S01546,C0519,2027-04-12,2027-04-13,09:00,Onsite,,Client premises,12,1,1595,English,scheduled
+S01547,C0519,2027-04-12,2027-04-13,09:00,Online,,Virtual classroom,12,0,1445,English,full
+S01548,C0520,2026-12-09,2026-12-11,09:00,Online,,Virtual classroom,12,2,2095,English,scheduled
+S01549,C0520,2027-02-08,2027-02-10,09:00,Online,,Virtual classroom,12,9,2095,English,scheduled
+S01550,C0520,2027-03-08,2027-03-10,09:00,Classroom,Frankfurt,Academia Training Centre Frankfurt,14,8,2345,English,guaranteed
+S01551,C0521,2026-10-22,2026-10-22,09:00,Classroom,Hamburg,Academia Training Centre Hamburg,14,9,695,English,scheduled
+S01552,C0521,2027-04-20,2027-04-20,09:00,Onsite,,Client premises,12,10,695,English,guaranteed
+S01553,C0522,2026-11-02,2026-11-04,09:00,Classroom,Geneva,Academia Training Centre Geneva,14,14,2345,English,scheduled
+S01554,C0522,2026-11-09,2026-11-11,09:00,Classroom,Copenhagen,Academia Training Centre Copenhagen,14,1,2345,English,scheduled
+S01555,C0522,2027-04-26,2027-04-28,09:00,Classroom,Milan,Academia Training Centre Milan,14,11,2345,English,scheduled
+S01556,C0523,2026-10-01,2026-10-02,09:00,Online,,Virtual classroom,12,10,1245,English,scheduled
+S01557,C0523,2027-01-13,2027-01-14,09:00,Online,,Virtual classroom,12,8,1245,English,guaranteed
+S01558,C0523,2027-01-20,2027-01-21,09:00,Onsite,,Client premises,12,7,1395,English,scheduled
+S01559,C0523,2027-05-10,2027-05-11,09:00,Online,,Virtual classroom,12,3,1245,English,guaranteed
+S01560,C0524,2026-11-30,2026-12-02,09:00,Onsite,,Client premises,12,8,2345,English,scheduled
+S01561,C0524,2027-01-11,2027-01-13,09:00,Classroom,Munich,Academia Training Centre Munich,14,13,2345,English,guaranteed
