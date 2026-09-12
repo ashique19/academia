@@ -111,6 +111,9 @@
             select(id) {
                 this.tab = id;
                 history.replaceState(null, '', '#' + id);
+                this.$nextTick(() => {
+                    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
             },
         }"
     >
