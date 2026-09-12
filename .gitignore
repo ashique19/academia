@@ -28,3 +28,6 @@ yarn-error.log
 /.idea
 /.vscode
 /database/*.sqlite
+
+# WordPress dump working copy (zip+sql stay in repo)
+/wp/extracted/

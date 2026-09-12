@@ -6,6 +6,8 @@ use App\Domain\Catalogue\Models\Course;
 use App\Domain\Catalogue\Models\CourseCategory;
 use App\Domain\Catalogue\Models\CourseSubcategory;
 use App\Domain\Catalogue\Models\Trainer;
+use App\Domain\Content\Models\BlogPost;
+use App\Domain\Content\Models\CaseStudy;
 use App\Domain\Content\Models\GlossaryTerm;
 use App\Domain\Shared\Models\City;
 use App\Domain\Shared\Models\Country;
@@ -70,6 +72,16 @@ Route::get('/offers', [PageController::class, 'offers'])->name('offers');
 
 /* -------------------------------------------------------------- content */
 
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/skills-credits', [PageController::class, 'skillsCredits'])->name('skills-credits');
+Route::get('/why-our-price', [PageController::class, 'whyOurPrice'])->name('why-our-price');
+
+Route::get('/insights', [PageController::class, 'insights'])->name('insights.index');
+Route::get('/insights/{post}', [PageController::class, 'insight'])->name('insights.show');
+
+Route::get('/success-stories', [PageController::class, 'successStories'])->name('success-stories.index');
+Route::get('/success-stories/{study}', [PageController::class, 'successStory'])->name('success-stories.show');
+
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');
 Route::get('/glossary', [PageController::class, 'glossary'])->name('glossary');
 Route::get('/glossary/{term}', [PageController::class, 'glossaryTerm'])->name('glossary.term');
@@ -84,6 +96,8 @@ Route::get('/trainers/{trainer}', [PageController::class, 'trainer'])->name('tra
 /* --------------------------------------------------------- conversion */
 
 Route::get('/thank-you/{type}', [PageController::class, 'thankYou'])->name('thank-you');
+Route::get('/newsletter/confirm/{token}', [PageController::class, 'confirmNewsletter'])
+    ->name('newsletter.confirm');
 
 /* ------------------------------------------------------------- legal */
 
@@ -135,5 +149,15 @@ Route::bind('trainer', fn (string $slug) => Trainer::query()
 
 Route::bind('term', fn (string $slug) => GlossaryTerm::query()
     ->active()
+    ->where('slug', $slug)
+    ->firstOrFail());
+
+Route::bind('post', fn (string $slug) => BlogPost::query()
+    ->published()
+    ->where('slug', $slug)
+    ->firstOrFail());
+
+Route::bind('study', fn (string $slug) => CaseStudy::query()
+    ->published()
     ->where('slug', $slug)
     ->firstOrFail());

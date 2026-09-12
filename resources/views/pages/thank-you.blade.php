@@ -8,6 +8,7 @@
         'brochure'     => ['Outline on its way', 'Check your inbox — the two-page course outline is there now.'],
         'callback'     => ['Callback booked', 'A training advisor will call you in the window you chose.'],
         'newsletter'   => ['Almost there', 'Click the link in the confirmation email to complete your subscription.'],
+        'contact'      => ['Message received', 'A training advisor will reply within one working day.'],
         default        => ['Thank you', 'We have received your message.'],
     };
 @endphp
