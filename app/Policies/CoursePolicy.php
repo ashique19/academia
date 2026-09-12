@@ -38,6 +38,16 @@ class CoursePolicy
         return $user->can('delete_course');
     }
 
+    public function restore(User $user): bool
+    {
+        return $user->can('delete_course');
+    }
+
+    public function forceDelete(User $user): bool
+    {
+        return $user->can('delete_course');
+    }
+
     public function publish(User $user): bool
     {
         return $user->can('publish_course');

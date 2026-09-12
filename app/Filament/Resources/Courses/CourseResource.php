@@ -6,6 +6,10 @@ use App\Domain\Catalogue\Models\Course;
 use App\Filament\Resources\Courses\Pages\CreateCourse;
 use App\Filament\Resources\Courses\Pages\EditCourse;
 use App\Filament\Resources\Courses\Pages\ListCourses;
+use App\Filament\Resources\Courses\RelationManagers\DeliveryModesRelationManager;
+use App\Filament\Resources\Courses\RelationManagers\FaqsRelationManager;
+use App\Filament\Resources\Courses\RelationManagers\ModulesRelationManager;
+use App\Filament\Resources\Courses\RelationManagers\TrainersRelationManager;
 use App\Filament\Resources\Courses\Schemas\CourseForm;
 use App\Filament\Resources\Courses\Tables\CoursesTable;
 use BackedEnum;
@@ -37,7 +41,10 @@ class CourseResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ModulesRelationManager::class,
+            FaqsRelationManager::class,
+            DeliveryModesRelationManager::class,
+            TrainersRelationManager::class,
         ];
     }
 

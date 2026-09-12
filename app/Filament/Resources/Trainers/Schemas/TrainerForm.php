@@ -30,14 +30,23 @@ class TrainerForm
                 TextInput::make('years_experience')
                     ->numeric(),
                 Textarea::make('certifications')
+                    ->helperText('One certification per line.')
+                    ->formatStateUsing(fn ($state) => is_array($state) ? implode("\n", $state) : $state)
+                    ->dehydrateStateUsing(fn ($state) => self::toList($state))
                     ->columnSpanFull(),
                 Textarea::make('languages')
+                    ->helperText('One language per line.')
+                    ->formatStateUsing(fn ($state) => is_array($state) ? implode("\n", $state) : $state)
+                    ->dehydrateStateUsing(fn ($state) => self::toList($state))
                     ->columnSpanFull(),
                 TextInput::make('linkedin_url')
                     ->url(),
                 Select::make('city_id')
-                    ->relationship('city', 'name'),
+                    ->relationship('city', 'name')
+                    ->searchable()
+                    ->preload(),
                 Toggle::make('is_public')
+                    ->label('Visible on public /trainers')
                     ->required(),
                 DateTimePicker::make('published_at'),
                 TextInput::make('status')
@@ -56,5 +65,15 @@ class TrainerForm
                     ->numeric()
                     ->default(0),
             ]);
+    }
+
+    /** @return list<string> */
+    private static function toList(mixed $state): array
+    {
+        if (is_array($state)) {
+            return array_values($state);
+        }
+
+        return array_values(array_filter(array_map('trim', explode("\n", (string) $state))));
     }
 }

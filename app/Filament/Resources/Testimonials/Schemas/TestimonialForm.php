@@ -23,19 +23,31 @@ class TestimonialForm
                     ->required()
                     ->columnSpanFull(),
                 Select::make('course_id')
-                    ->relationship('course', 'title'),
+                    ->relationship('course', 'title')
+                    ->searchable()
+                    ->preload(),
                 TextInput::make('delivery_mode'),
                 TextInput::make('rating')
                     ->numeric(),
                 Toggle::make('is_verified')
-                    ->required(),
+                    ->disabled()
+                    ->dehydrated(false)
+                    ->helperText('Set via the Verify header action.'),
                 TextInput::make('consent_reference'),
                 Toggle::make('is_illustrative')
                     ->required(),
                 TextInput::make('verified_by')
-                    ->numeric(),
-                DateTimePicker::make('verified_at'),
-                TextInput::make('status')
+                    ->disabled()
+                    ->dehydrated(false),
+                DateTimePicker::make('verified_at')
+                    ->disabled()
+                    ->dehydrated(false),
+                Select::make('status')
+                    ->options([
+                        'draft' => 'Draft',
+                        'published' => 'Published',
+                        'archived' => 'Archived',
+                    ])
                     ->required()
                     ->default('draft'),
                 TextInput::make('sort_order')

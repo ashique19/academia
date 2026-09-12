@@ -11,9 +11,21 @@ use App\Domain\Leads\Models\CorporateInquiry;
 use App\Domain\Scheduling\Models\CourseSchedule;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
+use Illuminate\Support\Facades\Auth;
 
 class AcademiaStatsOverview extends BaseWidget
 {
+    public static function canView(): bool
+    {
+        $user = Auth::user();
+
+        return $user !== null && (
+            $user->can('view_any_report')
+            || $user->can('view_any_corporate_inquiry')
+            || $user->hasRole('super-admin')
+        );
+    }
+
     protected function getStats(): array
     {
         $published = Course::query()->where('status', CourseStatus::Published)->count();
@@ -21,6 +33,7 @@ class AcademiaStatsOverview extends BaseWidget
         $openInquiries = CorporateInquiry::query()
             ->whereNotIn('status', [LeadStatus::Won, LeadStatus::Lost, LeadStatus::Closed])
             ->count();
+        $overdueSla = CorporateInquiry::query()->overdueSla()->count();
 
         return [
             Stat::make('Published courses', number_format($published))
@@ -34,6 +47,10 @@ class AcademiaStatsOverview extends BaseWidget
             Stat::make('Open corporate inquiries', number_format($openInquiries))
                 ->description('Awaiting a sales outcome')
                 ->color($openInquiries > 0 ? 'warning' : 'gray'),
+
+            Stat::make('Overdue SLA', number_format($overdueSla))
+                ->description('First response past due')
+                ->color($overdueSla > 0 ? 'danger' : 'success'),
         ];
     }
 }

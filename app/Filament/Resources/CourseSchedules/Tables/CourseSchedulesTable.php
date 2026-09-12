@@ -2,14 +2,19 @@
 
 namespace App\Filament\Resources\CourseSchedules\Tables;
 
+use App\Domain\Scheduling\Enums\ScheduleStatus;
+use App\Domain\Shared\Models\City;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class CourseSchedulesTable
 {
@@ -18,48 +23,39 @@ class CourseSchedulesTable
         return $table
             ->columns([
                 TextColumn::make('reference')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('course.title')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('deliveryMode.name')
-                    ->searchable(),
-                TextColumn::make('country.name')
-                    ->searchable(),
+                    ->toggleable(),
                 TextColumn::make('city.name')
-                    ->searchable(),
-                TextColumn::make('venue.name')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(),
                 TextColumn::make('trainer.name')
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('starts_at')
                     ->dateTime()
                     ->sortable(),
                 TextColumn::make('ends_at')
                     ->dateTime()
-                    ->sortable(),
-                TextColumn::make('timezone')
-                    ->searchable(),
-                TextColumn::make('seat_limit')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('seats_taken')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('price_cents')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('currency')
-                    ->searchable(),
-                TextColumn::make('status')
-                    ->badge()
-                    ->searchable(),
-                TextColumn::make('language')
-                    ->searchable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
+                TextColumn::make('seat_limit')
+                    ->numeric()
+                    ->sortable()
+                    ->toggleable(),
+                TextColumn::make('seats_taken')
+                    ->numeric()
+                    ->sortable()
+                    ->toggleable(),
+                TextColumn::make('status')
+                    ->badge()
+                    ->sortable(),
+                TextColumn::make('language')
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -68,7 +64,17 @@ class CourseSchedulesTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('starts_at')
             ->filters([
+                SelectFilter::make('status')
+                    ->options(ScheduleStatus::class),
+                SelectFilter::make('city_id')
+                    ->label('City')
+                    ->options(fn (): array => City::query()->orderBy('name')->pluck('name', 'id')->all())
+                    ->searchable(),
+                Filter::make('upcoming')
+                    ->label('Upcoming')
+                    ->query(fn (Builder $query): Builder => $query->where('starts_at', '>', now())),
                 TrashedFilter::make(),
             ])
             ->recordActions([

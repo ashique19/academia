@@ -38,6 +38,16 @@ class CorporateInquiryPolicy
         return $user->can('delete_corporate_inquiry');
     }
 
+    public function restore(User $user): bool
+    {
+        return $user->can('delete_corporate_inquiry');
+    }
+
+    public function forceDelete(User $user): bool
+    {
+        return $user->can('delete_corporate_inquiry');
+    }
+
     public function assign(User $user): bool
     {
         return $user->can('assign_inquiry');

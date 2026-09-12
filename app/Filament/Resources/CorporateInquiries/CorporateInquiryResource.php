@@ -6,6 +6,8 @@ use App\Domain\Leads\Models\CorporateInquiry;
 use App\Filament\Resources\CorporateInquiries\Pages\CreateCorporateInquiry;
 use App\Filament\Resources\CorporateInquiries\Pages\EditCorporateInquiry;
 use App\Filament\Resources\CorporateInquiries\Pages\ListCorporateInquiries;
+use App\Filament\Resources\CorporateInquiries\RelationManagers\NotesRelationManager;
+use App\Filament\Resources\CorporateInquiries\RelationManagers\StatusChangesRelationManager;
 use App\Filament\Resources\CorporateInquiries\Schemas\CorporateInquiryForm;
 use App\Filament\Resources\CorporateInquiries\Tables\CorporateInquiriesTable;
 use BackedEnum;
@@ -37,7 +39,8 @@ class CorporateInquiryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            NotesRelationManager::class,
+            StatusChangesRelationManager::class,
         ];
     }
 

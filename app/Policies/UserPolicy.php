@@ -37,4 +37,9 @@ class UserPolicy
     {
         return $user->can('delete_user');
     }
+
+    public function assignRoles(User $user): bool
+    {
+        return $user->can('assign_roles');
+    }
 }
