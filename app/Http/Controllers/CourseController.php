@@ -8,6 +8,7 @@ use App\Domain\Catalogue\Models\Course;
 use App\Domain\Catalogue\Models\CourseCategory;
 use App\Domain\Catalogue\Models\CourseSubcategory;
 use App\Domain\Catalogue\Services\PromotionService;
+use App\Domain\Content\Models\Faq;
 use App\Domain\Shared\Models\City;
 use Illuminate\Contracts\View\View;
 
@@ -16,7 +17,9 @@ class CourseController extends Controller
     public function show(Course $course, PromotionService $promotions): View
     {
         $course->load([
-            'subcategory.category', 'deliveryModes', 'modules', 'scheme', 'faqs',
+            'subcategory.category', 'deliveryModes', 'modules', 'scheme',
+            'faqs' => fn ($q) => $q->active()->orderBy('sort_order'),
+            'testimonials' => fn ($q) => $q->published()->orderBy('sort_order'),
             'schedules' => fn ($q) => $q->upcoming()->publiclyVisible()
                 ->with(['course.scheme', 'city.country', 'venue', 'deliveryMode'])->orderBy('starts_at')->take(12),
         ]);
@@ -24,6 +27,11 @@ class CourseController extends Controller
         // Fire-and-forget popularity counter. No model events, no updated_at
         // churn — a view is not an edit.
         $course->newQuery()->whereKey($course->id)->increment('view_count');
+
+        $faqsAreFallback = $course->faqs->isEmpty();
+        $faqs = $faqsAreFallback
+            ? Faq::query()->active()->global()->inGroup('general')->orderBy('sort_order')->get()
+            : $course->faqs;
 
         return view('pages.course', [
             'course' => $course,
@@ -33,6 +41,9 @@ class CourseController extends Controller
                 ->whereKeyNot($course->id)
                 ->withCardRelations()
                 ->take(4)->get(),
+            'faqs' => $faqs,
+            'faqsAreFallback' => $faqsAreFallback,
+            'reviews' => $course->testimonials,
         ]);
     }
 
