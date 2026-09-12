@@ -14,15 +14,24 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RoleSeeder::class,
+            SettingSeeder::class,
             PromotionSeeder::class,
             BlogCategorySeeder::class,
             FaqSeeder::class,
             TestimonialSeeder::class,
+            CaseStudySeeder::class,
         ]);
 
         if (app()->environment('local', 'testing')) {
             $this->seedStaff();
         }
+
+        // Blog posts need a staff author when available; SEO for posts runs here
+        // and again in PostImportSeeder after the catalogue import.
+        $this->call([
+            BlogPostSeeder::class,
+            SeoSeeder::class,
+        ]);
     }
 
     private function seedStaff(): void

@@ -21,8 +21,9 @@ php artisan key:generate
 # SQLite is the default so this runs with no service to install.
 touch database/database.sqlite
 
-php artisan migrate --seed        # schema + roles + promotions + FAQs
+php artisan migrate --seed        # schema + roles + settings + content seeders
 php artisan academia:import       # the real catalogue: 524 courses, 1,561 sessions
+php artisan db:seed --class=PostImportSeeder  # featured courses + per-entity SEO
 php artisan academia:validate     # referential integrity gate
 
 npm run build
@@ -67,20 +68,16 @@ MySQL 8 also works — it gets a `FULLTEXT` index instead of `tsvector`.
 | **Public site** | Home, catalogue with facets, course detail, course × city, schedule (list + calendar), 26 city pages, country pages, category and subcategory hubs, corporate, online, offers, FAQ, glossary, about, 4 legal pages, thank-you |
 | **Livewire** | `CourseCatalogue`, `ScheduleBrowser`, `CorporateInquiryForm`, `RegistrationForm`, `CourseSearch` |
 | **Design system** | Tailwind 4 theme from the five brand colours, with full tint ramps. Compiles to 45 KB (8 KB gzipped) |
-| **Auth & RBAC** | 8 roles, ~110 permissions, 4 policies, `Gate::before` for super-admin only |
+| **Admin panel** | Filament v4 panel at `/admin` with resources for catalogue, schedule, leads, content, settings and users |
+| **Auth & RBAC** | 8 roles, ~110 permissions, policies for Filament resources, `Gate::before` for super-admin only |
 | **GDPR** | Consent trio on every lead row, `gdpr:export`, `gdpr:forget`, retention config |
 | **Scheduled tasks** | Session completion, `next_session_at` refresh, Omnibus price recording, staleness alerts, nightly validation |
 | **Tests** | 7 test files — promotion arithmetic, scheme matching, SLA hours, spam guard, seat concurrency, city gate, testimonial gate |
 
 ### Not built (Phase 2+ in the spec)
 
-Admin panel (Filament — see spec §2.4, the largest single cost decision), blog module,
-notifications and mail, reports and exports, payment, learner and corporate portals, LMS,
-sitemap generation, media library integration.
-
-The **admin panel is the significant gap**: models, policies, permissions and the validation
-command are all in place for it, but no Filament resources are written. Spec §2.4 estimates
-60–80 hours with Filament against 200–280 hand-built.
+Public blog routes, notifications and mail, reports and exports, payment, learner and
+corporate portals, LMS, sitemap generation, media library integration on public pages.
 
 ---
 

@@ -42,7 +42,7 @@ class Course extends Model
         'prerequisites', 'includes', 'duration_days', 'duration_hours', 'level',
         'max_participants', 'price_cents', 'prior_price_cents',
         'self_paced_price_cents', 'day_rate_cents', 'currency', 'certificate',
-        'certification_note', 'is_featured', 'status', 'published_at',
+        'certification_note', 'is_featured', 'booking_count', 'status', 'published_at',
     ];
 
     protected function casts(): array
