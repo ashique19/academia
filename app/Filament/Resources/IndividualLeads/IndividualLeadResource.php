@@ -20,7 +20,7 @@ class IndividualLeadResource extends Resource
 {
     protected static ?string $model = IndividualLead::class;
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Leads';
+    protected static string|\UnitEnum|null $navigationGroup = 'Leads';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

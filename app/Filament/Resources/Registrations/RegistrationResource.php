@@ -20,7 +20,7 @@ class RegistrationResource extends Resource
 {
     protected static ?string $model = Registration::class;
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Scheduling';
+    protected static string|\UnitEnum|null $navigationGroup = 'Scheduling';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

@@ -20,7 +20,7 @@ class CorporateInquiryResource extends Resource
 {
     protected static ?string $model = CorporateInquiry::class;
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Leads';
+    protected static string|\UnitEnum|null $navigationGroup = 'Leads';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

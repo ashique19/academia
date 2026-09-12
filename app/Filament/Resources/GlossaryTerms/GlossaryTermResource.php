@@ -18,7 +18,7 @@ class GlossaryTermResource extends Resource
 {
     protected static ?string $model = GlossaryTerm::class;
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Content';
+    protected static string|\UnitEnum|null $navigationGroup = 'Content';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

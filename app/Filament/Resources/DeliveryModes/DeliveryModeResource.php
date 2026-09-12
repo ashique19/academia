@@ -18,7 +18,7 @@ class DeliveryModeResource extends Resource
 {
     protected static ?string $model = DeliveryMode::class;
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Catalogue';
+    protected static string|\UnitEnum|null $navigationGroup = 'Catalogue';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

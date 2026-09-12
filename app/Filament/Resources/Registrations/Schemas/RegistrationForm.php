@@ -5,8 +5,8 @@ namespace App\Filament\Resources\Registrations\Schemas;
 use App\Domain\Leads\Enums\RegistrationStatus;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
 class RegistrationForm

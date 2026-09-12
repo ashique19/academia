@@ -18,7 +18,7 @@ class CourseSubcategoryResource extends Resource
 {
     protected static ?string $model = CourseSubcategory::class;
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Catalogue';
+    protected static string|\UnitEnum|null $navigationGroup = 'Catalogue';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
