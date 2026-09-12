@@ -45,6 +45,17 @@ class AppServiceProvider extends ServiceProvider
         }
 
         /*
+         * Models live under App\Domain\...\Models, so Laravel's default
+         * policy guesser (which assumes App\Models) cannot find them. Map any
+         * model to App\Policies\{ClassName}Policy so the admin panel and every
+         * Gate check resolve the right policy regardless of the model's
+         * namespace.
+         */
+        Gate::guessPolicyNamesUsing(
+            fn (string $modelClass): string => 'App\\Policies\\'.class_basename($modelClass).'Policy'
+        );
+
+        /*
          * Super admin bypasses every gate. Deliberately the ONLY blanket
          * grant in the system — see RoleSeeder for why admins cannot assign
          * roles to themselves.

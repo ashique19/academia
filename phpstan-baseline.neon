@@ -473,15 +473,3 @@ parameters:
 			identifier: argument.type
 			count: 1
 			path: app/Livewire/Public/ScheduleBrowser.php
-
-		-
-			message: '#^Cannot call method isAfter\(\) on string\.$#'
-			identifier: method.nonObject
-			count: 1
-			path: app/Policies/CourseSchedulePolicy.php
-
-		-
-			message: '#^Cannot call method isBefore\(\) on string\.$#'
-			identifier: method.nonObject
-			count: 1
-			path: app/Policies/CourseSchedulePolicy.php

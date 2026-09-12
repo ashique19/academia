@@ -6,6 +6,8 @@ namespace App\Models;
 
 use App\Domain\Catalogue\Models\Trainer;
 use App\Domain\Leads\Models\CorporateInquiry;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -14,7 +16,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory;
     use HasRoles;
@@ -68,6 +70,12 @@ class User extends Authenticatable
         return $this->is_active && $this->hasAnyRole([
             'super-admin', 'admin', 'course-manager', 'sales-manager', 'content-editor',
         ]);
+    }
+
+    /** Filament panel gate. Only active staff roles reach /admin. */
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return $this->canAccessAdmin();
     }
 
     /**

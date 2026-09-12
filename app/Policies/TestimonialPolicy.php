@@ -4,41 +4,42 @@ declare(strict_types=1);
 
 namespace App\Policies;
 
-use App\Domain\Content\Models\Testimonial;
 use App\Models\User;
 
 class TestimonialPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasAnyRole(['admin', 'content-editor', 'course-manager', 'sales-manager']);
+        return $user->can('view_any_testimonial');
+    }
+
+    public function view(User $user): bool
+    {
+        return $user->can('view_testimonial');
     }
 
     public function create(User $user): bool
     {
-        return $user->hasAnyRole(['admin', 'content-editor']);
+        return $user->can('create_testimonial');
     }
 
-    public function update(User $user, Testimonial $testimonial): bool
+    public function update(User $user): bool
     {
-        return $user->hasAnyRole(['admin', 'content-editor']);
+        return $user->can('update_testimonial');
     }
 
-    /**
-     * Verification is deliberately NOT available to content editors.
-     *
-     * Verification is the gate that makes published social proof meaningful.
-     * If the person under pressure to publish can also self-verify, the gate
-     * is decorative — so it sits with admins, who are not measured on
-     * publishing volume.
-     */
-    public function verify(User $user, Testimonial $testimonial): bool
+    public function delete(User $user): bool
+    {
+        return $user->can('delete_testimonial');
+    }
+
+    public function deleteAny(User $user): bool
+    {
+        return $user->can('delete_testimonial');
+    }
+
+    public function verify(User $user): bool
     {
         return $user->can('verify_testimonial');
-    }
-
-    public function delete(User $user, Testimonial $testimonial): bool
-    {
-        return $user->hasRole('admin');
     }
 }

@@ -1,0 +1,84 @@
+<?php
+
+namespace App\Filament\Resources\Trainers\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+
+class TrainersTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('reference')
+                    ->searchable(),
+                TextColumn::make('name')
+                    ->searchable(),
+                TextColumn::make('slug')
+                    ->searchable(),
+                TextColumn::make('headline')
+                    ->searchable(),
+                TextColumn::make('years_experience')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('linkedin_url')
+                    ->searchable(),
+                TextColumn::make('city.name')
+                    ->searchable(),
+                IconColumn::make('is_public')
+                    ->boolean(),
+                TextColumn::make('published_at')
+                    ->dateTime()
+                    ->sortable(),
+                TextColumn::make('status')
+                    ->searchable(),
+                TextColumn::make('day_rate_cents')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('contract_type')
+                    ->searchable(),
+                TextColumn::make('reference_checked_at')
+                    ->date()
+                    ->sortable(),
+                TextColumn::make('internal_rating')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('days_delivered')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('deleted_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                TrashedFilter::make(),
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
+                ]),
+            ]);
+    }
+}
