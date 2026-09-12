@@ -58,7 +58,8 @@
         "setup": [
             "@php artisan key:generate --ansi",
             "@php artisan migrate:fresh --seed --ansi",
-            "@php artisan academia:import --ansi"
+            "@php artisan academia:import --ansi",
+            "@php artisan db:seed --class=PostImportSeeder --ansi"
         ],
         "test": "@php artisan test",
         "lint": "pint",

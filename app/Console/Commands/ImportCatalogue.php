@@ -373,6 +373,7 @@ class ImportCatalogue extends Command
                     'day_rate_cents' => $this->toCents($row['day_rate'] ?? null),
                     'currency' => 'EUR',
                     'certificate' => $row['certificate'] ?: null,
+                    'booking_count' => max(0, (int) ($row['bookings'] ?? 0)),
                     'status' => CourseStatus::Published,
                     'published_at' => now(),
                 ]
