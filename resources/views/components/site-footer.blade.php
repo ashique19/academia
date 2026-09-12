@@ -52,10 +52,29 @@
             <h5 class="mb-3 text-xs font-bold uppercase tracking-widest text-white">Company</h5>
             <ul class="space-y-2 text-sm">
                 <li><a href="{{ route('about') }}" class="hover:text-white" wire:navigate>About us</a></li>
+                <li><a href="{{ route('contact') }}" class="hover:text-white" wire:navigate>Contact</a></li>
+                <li><a href="{{ route('insights.index') }}" class="hover:text-white" wire:navigate>Insights</a></li>
+                <li><a href="{{ route('success-stories.index') }}" class="hover:text-white" wire:navigate>Success stories</a></li>
+                <li><a href="{{ route('skills-credits') }}" class="hover:text-white" wire:navigate>Skills Credits</a></li>
+                <li><a href="{{ route('why-our-price') }}" class="hover:text-white" wire:navigate>Why our price</a></li>
                 <li><a href="{{ route('glossary') }}" class="hover:text-white" wire:navigate>Glossary</a></li>
                 <li><a href="{{ route('faq') }}" class="hover:text-white" wire:navigate>FAQ</a></li>
-                <li><a href="mailto:{{ config('academia.email') }}" class="hover:text-white">Contact</a></li>
             </ul>
+        </div>
+    </div>
+
+
+    <div class="wrap border-t border-white/10 py-10">
+        <div class="grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+            <div>
+                <h5 class="text-xs font-bold uppercase tracking-widest text-white">Training updates</h5>
+                <p class="mt-2 max-w-[40ch] text-sm text-sand-400">
+                    Occasional notes on new dates, Skills Credits and capability programmes. No weekly noise.
+                </p>
+            </div>
+            <div>
+                <livewire:public.newsletter-form />
+            </div>
         </div>
     </div>
 

@@ -75,7 +75,7 @@
             @foreach ([
                 ['Training Catalogue', 'courses.index'], ['Schedule', 'schedule'],
                 ['Classroom Locations', 'locations'], ['Corporate Training', 'corporate'],
-                ['Online Training', 'online'], ['Offers', 'offers'], ['FAQ', 'faq'],
+                ['Online Training', 'online'], ['Offers', 'offers'], ['Contact', 'contact'], ['FAQ', 'faq'],
             ] as [$label, $routeName])
                 <a href="{{ route($routeName) }}" wire:navigate
                    class="rounded-lg px-3 py-2.5 text-sm font-semibold text-sand-800 hover:bg-sand-50">{{ $label }}</a>

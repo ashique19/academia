@@ -7,15 +7,90 @@ namespace App\Http\Controllers;
 use App\Domain\Catalogue\Models\Course;
 use App\Domain\Catalogue\Models\Trainer;
 use App\Domain\Catalogue\Services\PromotionService;
+use App\Domain\Content\Models\BlogPost;
+use App\Domain\Content\Models\CaseStudy;
 use App\Domain\Content\Models\Faq;
 use App\Domain\Content\Models\GlossaryTerm;
+use App\Domain\Leads\Models\IndividualLead;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class PageController extends Controller
 {
     public function about(): View
     {
         return view('pages.about');
+    }
+
+    public function contact(): View
+    {
+        return view('pages.contact');
+    }
+
+    public function skillsCredits(): View
+    {
+        return view('pages.skills-credits');
+    }
+
+    public function whyOurPrice(): View
+    {
+        return view('pages.why-our-price');
+    }
+
+    public function insights(): View
+    {
+        return view('pages.insights.index', [
+            'posts' => BlogPost::query()
+                ->published()
+                ->with(['category', 'author'])
+                ->orderByDesc('published_at')
+                ->paginate(9),
+        ]);
+    }
+
+    public function insight(BlogPost $post): View
+    {
+        abort_unless($post->status === 'published'
+            && $post->published_at !== null
+            && $post->published_at->lte(now()), 404);
+
+        $post->load(['category', 'author', 'seo']);
+
+        return view('pages.insights.show', compact('post'));
+    }
+
+    public function successStories(): View
+    {
+        return view('pages.success-stories.index', [
+            'studies' => CaseStudy::query()->published()->orderBy('title')->get(),
+        ]);
+    }
+
+    public function successStory(CaseStudy $study): View
+    {
+        abort_unless($study->status === 'published', 404);
+
+        return view('pages.success-stories.show', compact('study'));
+    }
+
+    /**
+     * Double opt-in confirmation for newsletter signups.
+     */
+    public function confirmNewsletter(string $token): RedirectResponse
+    {
+        $lead = IndividualLead::query()
+            ->where('confirmation_token', $token)
+            ->where('source', 'newsletter')
+            ->firstOrFail();
+
+        if ($lead->confirmed_at === null) {
+            $lead->forceFill([
+                'confirmed_at' => now(),
+                'confirmation_token' => null,
+            ])->save();
+        }
+
+        return redirect()->route('thank-you', ['type' => 'newsletter']);
     }
 
     public function corporate(): View
@@ -99,7 +174,7 @@ class PageController extends Controller
     public function thankYou(string $type): View
     {
         abort_unless(in_array($type, [
-            'corporate', 'registration', 'interest', 'brochure', 'callback', 'newsletter',
+            'corporate', 'registration', 'interest', 'brochure', 'callback', 'newsletter', 'contact',
         ], true), 404);
 
         return view('pages.thank-you', compact('type'));

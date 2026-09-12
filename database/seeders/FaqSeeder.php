@@ -41,6 +41,15 @@ class FaqSeeder extends Seeder
                 .'apply automatically from three people. Combined savings are capped at a published '
                 .'ceiling, and we never raise a list price to make a discount look larger.'],
 
+
+            ['How do I book a place on a public course?',
+                'Choose your date on the course page and complete the registration form. You can pay by card or request an invoice for your employer. Confirmation and joining instructions arrive by email.'],
+
+            ['Can my employer be invoiced directly?',
+                'Yes. Select pay by invoice and enter your company details and PO number. We issue a VAT-compliant invoice with 30-day terms and handle EU reverse-charge for valid VAT numbers.'],
+
+            ['Do I receive a certificate?',
+                'Every participant who completes a course receives a digital Academia certificate with a verification code, plus a LinkedIn-ready credential. Accredited programmes also carry the awarding body\'s certificate.'],
             ['Is the exam included in certification courses?',
                 'No. Where a course prepares you for a third-party certification we say so explicitly, name '
                 .'the scheme owner, and tell you exactly how to book the exam. Our fee does not include it.'],

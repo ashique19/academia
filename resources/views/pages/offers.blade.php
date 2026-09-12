@@ -118,7 +118,7 @@
                     replaces promotional codes rather than stacking with them — for most
                     organisations spending €10,000 or more a year it is the larger saving.
                 </p>
-                <a href="{{ route('corporate') }}#proposal" wire:navigate class="btn-gold mt-6">Talk to an advisor</a>
+                <a href="{{ route(\'skills-credits\') }}" wire:navigate class="btn-gold mt-6">Talk to an advisor</a>
             </div>
         </div>
 
