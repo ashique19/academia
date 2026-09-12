@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Cities\Schemas;
 
+use App\Filament\Support\SeoFormSection;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -17,6 +18,8 @@ class CityForm
             ->components([
                 Select::make('country_id')
                     ->relationship('country', 'name')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 TextInput::make('name')
                     ->required(),
@@ -34,6 +37,7 @@ class CityForm
                     ->image(),
                 Toggle::make('is_active')
                     ->required(),
+                SeoFormSection::make(),
             ]);
     }
 }

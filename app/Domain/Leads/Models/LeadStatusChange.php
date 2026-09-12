@@ -21,7 +21,7 @@ class LeadStatusChange extends Model
     public const UPDATED_AT = null;
 
     protected $fillable = [
-        'corporate_inquiry_id', 'user_id', 'from_status', 'to_status', 'note',
+        'corporate_inquiry_id', 'user_id', 'from_status', 'to_status', 'note', 'created_at',
     ];
 
     protected function casts(): array

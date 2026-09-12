@@ -2,12 +2,14 @@
 
 namespace App\Filament\Resources\IndividualLeads\Tables;
 
+use App\Domain\Leads\Enums\LeadSource;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
@@ -17,66 +19,41 @@ class IndividualLeadsTable
     {
         return $table
             ->columns([
-                TextColumn::make('uuid')
-                    ->label('UUID')
-                    ->searchable(),
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('email')
-                    ->label('Email address')
-                    ->searchable(),
-                TextColumn::make('phone')
-                    ->searchable(),
-                TextColumn::make('country.name')
-                    ->searchable(),
-                TextColumn::make('city.name')
+                    ->label('Email')
                     ->searchable(),
                 TextColumn::make('course.title')
-                    ->searchable(),
-                TextColumn::make('course_schedule_id')
-                    ->numeric()
+                    ->label('Course')
+                    ->searchable()
+                    ->placeholder('—'),
+                TextColumn::make('status')
+                    ->badge()
                     ->sortable(),
-                TextColumn::make('preferred_date')
-                    ->date()
-                    ->sortable(),
+                TextColumn::make('assignee.name')
+                    ->label('Assignee')
+                    ->placeholder('Unassigned'),
                 TextColumn::make('source')
                     ->badge()
-                    ->searchable(),
-                TextColumn::make('status')
-                    ->searchable(),
-                TextColumn::make('assigned_to')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('utm_source')
-                    ->searchable(),
-                TextColumn::make('utm_medium')
-                    ->searchable(),
-                TextColumn::make('utm_campaign')
-                    ->searchable(),
-                TextColumn::make('consented_at')
-                    ->dateTime()
-                    ->sortable(),
-                TextColumn::make('consent_ip')
-                    ->searchable(),
-                TextColumn::make('consent_version')
-                    ->searchable(),
-                TextColumn::make('confirmed_at')
-                    ->dateTime()
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
+                SelectFilter::make('status')
+                    ->options([
+                        'new' => 'New',
+                        'contacted' => 'Contacted',
+                        'qualified' => 'Qualified',
+                        'converted' => 'Converted',
+                        'closed' => 'Closed',
+                    ]),
+                SelectFilter::make('source')
+                    ->options(LeadSource::class),
                 TrashedFilter::make(),
             ])
             ->recordActions([

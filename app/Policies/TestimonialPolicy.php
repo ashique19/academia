@@ -38,6 +38,16 @@ class TestimonialPolicy
         return $user->can('delete_testimonial');
     }
 
+    public function restore(User $user): bool
+    {
+        return $user->can('delete_testimonial');
+    }
+
+    public function forceDelete(User $user): bool
+    {
+        return $user->can('delete_testimonial');
+    }
+
     public function verify(User $user): bool
     {
         return $user->can('verify_testimonial');

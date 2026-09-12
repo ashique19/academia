@@ -20,6 +20,10 @@ class SettingResource extends Resource
 
     protected static string|\UnitEnum|null $navigationGroup = 'System';
 
+    protected static ?string $navigationLabel = 'Settings (raw)';
+
+    protected static ?int $navigationSort = 20;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     public static function form(Schema $schema): Schema

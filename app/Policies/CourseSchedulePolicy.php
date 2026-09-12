@@ -38,6 +38,16 @@ class CourseSchedulePolicy
         return $user->can('delete_course_schedule');
     }
 
+    public function restore(User $user): bool
+    {
+        return $user->can('delete_course_schedule');
+    }
+
+    public function forceDelete(User $user): bool
+    {
+        return $user->can('delete_course_schedule');
+    }
+
     public function cancel(User $user): bool
     {
         return $user->can('cancel_course_schedule');

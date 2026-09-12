@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Courses\Tables;
 
+use App\Domain\Catalogue\Enums\CourseStatus;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -9,6 +10,8 @@ use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
@@ -18,70 +21,49 @@ class CoursesTable
     {
         return $table
             ->columns([
-                TextColumn::make('course_subcategory_id')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('certification_scheme_id')
-                    ->numeric()
-                    ->sortable(),
                 TextColumn::make('code')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('title')
-                    ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable()
+                    ->wrap(),
+                TextColumn::make('subcategory.name')
+                    ->label('Subcategory')
+                    ->sortable()
+                    ->toggleable(),
+                TextColumn::make('scheme.name')
+                    ->label('Scheme')
+                    ->placeholder('—')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('summary')
-                    ->searchable(),
-                TextColumn::make('duration_days')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('duration_hours')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('level')
-                    ->badge()
-                    ->searchable(),
-                TextColumn::make('max_participants')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('price_cents')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('prior_price_cents')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('self_paced_price_cents')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('day_rate_cents')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('currency')
-                    ->searchable(),
-                TextColumn::make('certificate')
-                    ->searchable(),
-                IconColumn::make('is_featured')
-                    ->boolean(),
+                    ->limit(60)
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('status')
                     ->badge()
-                    ->searchable(),
+                    ->sortable(),
+                IconColumn::make('is_featured')
+                    ->boolean()
+                    ->sortable(),
                 TextColumn::make('published_at')
                     ->dateTime()
-                    ->sortable(),
-                TextColumn::make('next_session_at')
-                    ->dateTime()
-                    ->sortable(),
-                TextColumn::make('view_count')
-                    ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(),
                 TextColumn::make('booking_count')
                     ->numeric()
-                    ->sortable(),
-                TextColumn::make('created_at')
+                    ->sortable()
+                    ->toggleable(),
+                TextColumn::make('next_session_at')
                     ->dateTime()
                     ->sortable()
+                    ->toggleable(),
+                TextColumn::make('level')
+                    ->badge()
                     ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
+                TextColumn::make('price_cents')
+                    ->numeric()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -90,7 +72,12 @@ class CoursesTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('title')
             ->filters([
+                SelectFilter::make('status')
+                    ->options(CourseStatus::class),
+                TernaryFilter::make('is_featured')
+                    ->label('Featured'),
                 TrashedFilter::make(),
             ])
             ->recordActions([

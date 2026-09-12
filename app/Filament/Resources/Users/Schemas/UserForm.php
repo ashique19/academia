@@ -6,6 +6,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Facades\Auth;
 
 class UserForm
 {
@@ -41,7 +42,9 @@ class UserForm
                     ->relationship('roles', 'name')
                     ->multiple()
                     ->preload()
-                    ->searchable(),
+                    ->searchable()
+                    ->disabled(fn (): bool => ! Auth::user()?->can('assign_roles'))
+                    ->dehydrated(fn (): bool => (bool) Auth::user()?->can('assign_roles')),
                 TextInput::make('locale')
                     ->required()
                     ->default('en'),

@@ -19,18 +19,30 @@ class CourseScheduleForm
                     ->required(),
                 Select::make('course_id')
                     ->relationship('course', 'title')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 Select::make('delivery_mode_id')
                     ->relationship('deliveryMode', 'name')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 Select::make('country_id')
-                    ->relationship('country', 'name'),
+                    ->relationship('country', 'name')
+                    ->searchable()
+                    ->preload(),
                 Select::make('city_id')
-                    ->relationship('city', 'name'),
+                    ->relationship('city', 'name')
+                    ->searchable()
+                    ->preload(),
                 Select::make('venue_id')
-                    ->relationship('venue', 'name'),
+                    ->relationship('venue', 'name')
+                    ->searchable()
+                    ->preload(),
                 Select::make('trainer_id')
-                    ->relationship('trainer', 'name'),
+                    ->relationship('trainer', 'name')
+                    ->searchable()
+                    ->preload(),
                 DateTimePicker::make('starts_at')
                     ->required(),
                 DateTimePicker::make('ends_at')
@@ -42,9 +54,11 @@ class CourseScheduleForm
                     ->required()
                     ->numeric(),
                 TextInput::make('seats_taken')
-                    ->required()
                     ->numeric()
-                    ->default(0),
+                    ->default(0)
+                    ->disabled()
+                    ->dehydrated(false)
+                    ->helperText('Updated automatically by bookings.'),
                 TextInput::make('price_cents')
                     ->numeric(),
                 TextInput::make('currency')
@@ -52,8 +66,11 @@ class CourseScheduleForm
                     ->default('EUR'),
                 Select::make('status')
                     ->options(ScheduleStatus::class)
-                    ->default('scheduled')
-                    ->required(),
+                    ->default(ScheduleStatus::Scheduled)
+                    ->required()
+                    ->disabled()
+                    ->dehydrated(fn (string $operation): bool => $operation === 'create')
+                    ->helperText('Use header actions to publish or cancel.'),
                 TextInput::make('language')
                     ->required()
                     ->default('en'),

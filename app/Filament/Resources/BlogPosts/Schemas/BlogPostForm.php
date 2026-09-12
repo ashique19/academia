@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\BlogPosts\Schemas;
 
+use App\Filament\Support\SeoFormSection;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -14,11 +15,16 @@ class BlogPostForm
     {
         return $schema
             ->components([
-                TextInput::make('blog_category_id')
-                    ->required()
-                    ->numeric(),
+                Select::make('blog_category_id')
+                    ->label('Category')
+                    ->relationship('category', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
                 Select::make('author_id')
-                    ->relationship('author', 'name'),
+                    ->relationship('author', 'name')
+                    ->searchable()
+                    ->preload(),
                 TextInput::make('title')
                     ->required(),
                 TextInput::make('slug')
@@ -28,10 +34,16 @@ class BlogPostForm
                     ->columnSpanFull(),
                 TextInput::make('reading_minutes')
                     ->numeric(),
-                TextInput::make('status')
+                Select::make('status')
+                    ->options([
+                        'draft' => 'Draft',
+                        'published' => 'Published',
+                        'archived' => 'Archived',
+                    ])
                     ->required()
                     ->default('draft'),
                 DateTimePicker::make('published_at'),
+                SeoFormSection::make(),
             ]);
     }
 }
