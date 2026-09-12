@@ -93,7 +93,7 @@
 <?php unset($__componentOriginal222c87a019257fb1d70ae0ff46ab02e1); ?>
 <?php endif; ?>
 
-    <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::scriptConfig(); ?>
+    <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::scripts(); ?>
 
 </body>
 </html>
