@@ -4,39 +4,42 @@ declare(strict_types=1);
 
 namespace App\Policies;
 
-use App\Domain\Catalogue\Models\Course;
 use App\Models\User;
 
 class CoursePolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->canAccessAdmin();
+        return $user->can('view_any_course');
     }
 
-    public function view(User $user, Course $course): bool
+    public function view(User $user): bool
     {
-        return $user->canAccessAdmin();
+        return $user->can('view_course');
     }
 
     public function create(User $user): bool
     {
-        return $user->hasAnyRole(['admin', 'course-manager']);
+        return $user->can('create_course');
     }
 
-    public function update(User $user, Course $course): bool
+    public function update(User $user): bool
     {
-        return $user->hasAnyRole(['admin', 'course-manager']);
+        return $user->can('update_course');
     }
 
-    /** Publishing is separate from saving — a draft edit is not a release. */
-    public function publish(User $user, Course $course): bool
+    public function delete(User $user): bool
+    {
+        return $user->can('delete_course');
+    }
+
+    public function deleteAny(User $user): bool
+    {
+        return $user->can('delete_course');
+    }
+
+    public function publish(User $user): bool
     {
         return $user->can('publish_course');
-    }
-
-    public function delete(User $user, Course $course): bool
-    {
-        return $user->hasAnyRole(['admin', 'course-manager']);
     }
 }

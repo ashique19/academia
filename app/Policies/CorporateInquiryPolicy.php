@@ -4,38 +4,38 @@ declare(strict_types=1);
 
 namespace App\Policies;
 
-use App\Domain\Leads\Models\CorporateInquiry;
 use App\Models\User;
 
 class CorporateInquiryPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasAnyRole(['admin', 'sales-manager']);
+        return $user->can('view_any_corporate_inquiry');
     }
 
-    /**
-     * Sales sees their own leads plus the unassigned queue.
-     *
-     * Not every lead: a shared pipeline where everyone reads everyone's
-     * negotiation notes is a pipeline nobody writes honest notes in.
-     */
-    public function view(User $user, CorporateInquiry $inquiry): bool
+    public function view(User $user): bool
     {
-        if ($user->hasRole('admin')) {
-            return true;
-        }
-
-        if (! $user->hasRole('sales-manager')) {
-            return false;
-        }
-
-        return $inquiry->assigned_to === $user->id || $inquiry->assigned_to === null;
+        return $user->can('view_corporate_inquiry');
     }
 
-    public function update(User $user, CorporateInquiry $inquiry): bool
+    public function create(User $user): bool
     {
-        return $this->view($user, $inquiry);
+        return $user->can('create_corporate_inquiry');
+    }
+
+    public function update(User $user): bool
+    {
+        return $user->can('update_corporate_inquiry');
+    }
+
+    public function delete(User $user): bool
+    {
+        return $user->can('delete_corporate_inquiry');
+    }
+
+    public function deleteAny(User $user): bool
+    {
+        return $user->can('delete_corporate_inquiry');
     }
 
     public function assign(User $user): bool
@@ -43,14 +43,8 @@ class CorporateInquiryPolicy
         return $user->can('assign_inquiry');
     }
 
-    /** Exporting personal data is separately permissioned and always logged. */
-    public function export(User $user): bool
+    public function exportPersonalData(User $user): bool
     {
         return $user->can('export_personal_data');
-    }
-
-    public function delete(User $user, CorporateInquiry $inquiry): bool
-    {
-        return $user->hasRole('admin');
     }
 }

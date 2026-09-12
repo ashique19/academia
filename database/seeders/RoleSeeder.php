@@ -30,10 +30,12 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         $resources = [
-            'course', 'course_category', 'course_schedule', 'trainer', 'city', 'venue',
-            'corporate_inquiry', 'individual_lead', 'registration', 'blog_post',
-            'testimonial', 'faq', 'glossary_term', 'case_study', 'promotion',
-            'seo_metadata', 'user', 'setting', 'activity_log', 'report',
+            'course', 'course_category', 'course_subcategory', 'delivery_mode',
+            'certification_scheme', 'course_schedule', 'trainer', 'city', 'country',
+            'venue', 'corporate_inquiry', 'individual_lead', 'registration',
+            'blog_post', 'blog_category', 'testimonial', 'faq', 'glossary_term',
+            'case_study', 'promotion', 'seo_metadata', 'user', 'setting',
+            'activity_log', 'report',
         ];
 
         $verbs = ['view_any', 'view', 'create', 'update', 'delete'];
@@ -66,7 +68,15 @@ class RoleSeeder extends Seeder
         $this->grant('course-manager', [
             'view_any_course', 'view_course', 'create_course', 'update_course', 'delete_course',
             'publish_course', 'import_catalogue',
-            'view_any_course_category', 'create_course_category', 'update_course_category',
+            'view_any_course_category', 'view_course_category', 'create_course_category',
+            'update_course_category', 'delete_course_category',
+            'view_any_course_subcategory', 'view_course_subcategory', 'create_course_subcategory',
+            'update_course_subcategory', 'delete_course_subcategory',
+            'view_any_delivery_mode', 'view_delivery_mode', 'create_delivery_mode',
+            'update_delivery_mode', 'delete_delivery_mode',
+            'view_any_certification_scheme', 'view_certification_scheme',
+            'create_certification_scheme', 'update_certification_scheme', 'delete_certification_scheme',
+            'view_any_country', 'view_country', 'update_country',
             'view_any_course_schedule', 'view_course_schedule', 'create_course_schedule',
             'update_course_schedule', 'delete_course_schedule', 'cancel_course_schedule',
             'view_any_trainer', 'view_trainer',
@@ -91,6 +101,8 @@ class RoleSeeder extends Seeder
         $this->grant('content-editor', [
             'view_any_blog_post', 'view_blog_post', 'create_blog_post',
             'update_blog_post', 'delete_blog_post',
+            'view_any_blog_category', 'view_blog_category', 'create_blog_category',
+            'update_blog_category', 'delete_blog_category',
             'view_any_testimonial', 'view_testimonial', 'create_testimonial', 'update_testimonial',
             'view_any_faq', 'create_faq', 'update_faq', 'delete_faq',
             'view_any_glossary_term', 'create_glossary_term', 'update_glossary_term',
