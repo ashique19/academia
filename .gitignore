@@ -1,15 +1,7 @@
 /node_modules
-/public/build
-/public/css/filament
-/public/fonts/filament
 /public/hot
-/public/js/filament
 /public/storage
 /storage/*.key
-/public/css/filament
-/public/js/filament
-/public/fonts/filament
-/public/filament
 /bootstrap/cache/*.php
 /storage/framework/cache/data/*
 /storage/framework/cache/*.php
@@ -29,5 +21,5 @@ yarn-error.log
 /.vscode
 /database/*.sqlite
 
-# WordPress dump working copy (zip+sql stay in repo)
-/wp/extracted/
+# WordPress dump removed — no longer needed in this repo
+/wp/
