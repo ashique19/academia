@@ -65,14 +65,14 @@
 
 
     <div class="wrap border-t border-white/10 py-10">
-        <div class="grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+        <div class="grid items-start gap-6 lg:grid-cols-2">
             <div>
                 <h5 class="text-xs font-bold uppercase tracking-widest text-white">Training updates</h5>
                 <p class="mt-2 max-w-[40ch] text-sm text-sand-400">
                     Occasional notes on new dates, Skills Credits and capability programmes. No weekly noise.
                 </p>
             </div>
-            <div>
+            <div class="min-w-0">
                 <livewire:public.newsletter-form />
             </div>
         </div>
