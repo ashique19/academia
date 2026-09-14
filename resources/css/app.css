@@ -3,6 +3,9 @@
 @source '../views';
 @source '../../app/Livewire';
 
+/* Hide Alpine-bound panels until the component initialises. */
+[x-cloak] { display: none !important; }
+
 /* ==========================================================================
    ACADEMIA DESIGN SYSTEM
 
