@@ -7,7 +7,7 @@
     <title>{{ $title ?? 'Academia Training Solutions — Professional Training Across Europe' }}</title>
 
     <meta name="description" content="{{ $description ?? 'Practical, expert-led professional training delivered online, onsite and in classrooms across Europe. Over 500 courses in business, finance, technology, supply chain, HR and compliance.' }}">
-    <meta name="robots" content="{{ $robots ?? 'index,follow' }}">
+    <meta name="robots" content="{{ app(\App\Domain\Content\Services\IndexingPolicy::class)->directive($robots ?? null) }}">
     @isset($canonical)<link rel="canonical" href="{{ $canonical }}">@endisset
 
     <meta property="og:site_name" content="Academia Training Solutions">
