@@ -69,11 +69,43 @@ it('shows the outline lead magnet on a course page and emails a pdf', function (
     $component->assertRedirect('/thank-you/brochure?lead='.$lead->uuid);
 
     Mail::assertSent(CourseOutlineMail::class, function (CourseOutlineMail $mail) use ($course): bool {
+        $mail->assertSeeInHtml('<html', false);
+        $mail->assertSeeInHtml('<body', false);
+        $mail->assertSeeInText('is attached as a PDF.');
+        $mail->assertSeeInText('No sales sequence unless you ask for one.');
+
         return $mail->hasTo('buyer@example.com')
             && $mail->filename === $course->slug.'-outline.pdf'
             && str_starts_with($mail->pdf, '%PDF')
-            && str_contains($mail->render(), 'No sales sequence unless you ask for one.');
+            && str_contains($mail->render(), '<html')
+            && ($mail->headers()->text['List-Unsubscribe'] ?? null) === '<mailto:info@academiatraining.eu>';
     });
+});
+
+it('sends the outline as multipart html and plain text with list-unsubscribe', function () {
+    $course = Course::factory()->create([
+        'title' => 'Leadership Essentials for New Managers',
+        'slug' => 'leadership-outline-mail',
+    ]);
+
+    $downloadUrl = 'https://example.test/courses/leadership-outline-mail/outline.pdf?signature=abc&expires=1';
+
+    Mail::to('buyer@example.com')->send(new CourseOutlineMail(
+        $course,
+        $downloadUrl,
+        "%PDF-1.4\n",
+        $course->slug.'-outline.pdf',
+    ));
+
+    $message = app('mailer')->getSymfonyTransport()->messages()->first()->getOriginalMessage();
+    $raw = $message->toString();
+
+    expect($message->getHtmlBody())->toContain('<html')
+        ->and($message->getTextBody())->toContain($downloadUrl)
+        ->and($message->getTextBody())->toContain('Leadership Essentials for New Managers')
+        ->and($raw)->toContain('text/plain')
+        ->and($raw)->toContain('text/html')
+        ->and($raw)->toContain('List-Unsubscribe: <mailto:info@academiatraining.eu>');
 });
 
 it('rejects an outline download without a signature and serves a signed one', function () {
