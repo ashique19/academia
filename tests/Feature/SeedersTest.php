@@ -19,7 +19,7 @@ it('seeds site settings for the admin panel', function () {
 
     expect(Setting::query()->count())->toBeGreaterThan(0)
         ->and(Setting::get('seo.default_title'))->toMatchArray([
-            'value' => 'Academia Training Solutions — Professional Training Across Europe',
+            'value' => 'Academia Training EU — Professional Training Across Europe',
         ]);
 });
 

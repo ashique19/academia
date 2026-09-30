@@ -1,6 +1,7 @@
 <x-layouts.app
-    title="Insights | Academia Training Solutions"
+    :title="'Insights | '.\App\Support\PublicSite::name()"
     description="Practical articles on corporate training, capability building and course selection — written for L&D and hiring managers."
+    :robots="$posts->isEmpty() ? 'noindex,follow' : null"
 >
     <section class="bg-sand-900 py-16 text-white">
         <div class="wrap max-w-[820px]">
@@ -16,7 +17,11 @@
     <section class="py-14">
         <div class="wrap">
             @if ($posts->isEmpty())
-                <p class="text-sand-600">No articles published yet. Check back soon.</p>
+                <p class="text-sand-600">No articles published yet.</p>
+                <p class="mt-4 text-sm text-sand-700">
+                    If you need help choosing a course in the meantime,
+                    <a href="{{ route('contact') }}" class="font-semibold text-orange-600 hover:underline" wire:navigate>talk to a training advisor</a>.
+                </p>
             @else
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     @foreach ($posts as $post)

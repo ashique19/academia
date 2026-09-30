@@ -1,4 +1,4 @@
-<x-layouts.app :title="$trainer->name . ' | Academia Training Solutions'">
+<x-layouts.app :title="$trainer->name.' | '.\App\Support\PublicSite::name()">
     <div class="wrap max-w-[760px] py-14">
         <h1>{{ $trainer->name }}</h1>
         <p class="lede mt-2">{{ $trainer->headline }}</p>

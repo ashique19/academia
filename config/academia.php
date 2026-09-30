@@ -11,8 +11,16 @@ return [
 
     'legal_entity' => env('ACADEMIA_LEGAL_ENTITY', 'SlimCijfers Analytics B.V.'),
     'trade_name' => env('ACADEMIA_TRADE_NAME', 'Academia Training Solutions'),
-    'email' => env('ACADEMIA_EMAIL', 'info@academiatraining.eu'),
-    'phone' => env('ACADEMIA_PHONE', '+31 20 000 0000'),
+    // Market-facing brand used in <title> and Open Graph. The legal trade
+    // name above is unchanged.
+    'public_name' => env('ACADEMIA_PUBLIC_NAME', 'Academia Training EU'),
+    'default_title' => env('ACADEMIA_DEFAULT_TITLE', 'Academia Training EU — Professional Training Across Europe'),
+    'email' => env('CONTACT_EMAIL') ?: env('ACADEMIA_EMAIL', 'info@academiatraining.eu'),
+    // Blank unless Ops sets a real number. PublicSite::phone() also hides
+    // the old +31 20 000 0000 placeholder if it is still in the environment.
+    'phone' => env('CONTACT_PHONE') ?: env('ACADEMIA_PHONE'),
+    'kvk' => env('COMPANY_KVK'),
+    'vat' => env('COMPANY_VAT'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,6 +66,17 @@ return [
         // Prices round to the nearest multiple of this, in cents. A price
         // ending in 5 reads as a considered number; .99 reads as a nudge.
         'round_to_cents' => 500,
+
+        // Banner and offers both read the active campaign, then
+        // PromotionService replaces this code's end date with the value
+        // below so the two surfaces cannot drift.
+        'featured' => [
+            'name' => env('PROMO_NAME', 'Autumn Skills Sprint'),
+            'code' => env('PROMO_CODE', 'AUTUMN20'),
+            'percentage' => (int) env('PROMO_PERCENT', 20),
+            'starts_at' => env('PROMO_STARTS_AT', '2026-09-01'),
+            'ends_at' => env('PROMO_ENDS_AT', '2026-09-30'),
+        ],
     ],
 
     /*

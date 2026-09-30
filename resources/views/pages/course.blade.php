@@ -1,4 +1,4 @@
-<x-layouts.app :title="$course->display_title . ' | Academia Training Solutions'"
+<x-layouts.app :title="$course->display_title.' | '.\App\Support\PublicSite::name()"
                :description="$course->summary">
 
     @push('schema')

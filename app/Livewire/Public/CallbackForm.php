@@ -7,6 +7,7 @@ namespace App\Livewire\Public;
 use App\Domain\Leads\Enums\LeadSource;
 use App\Domain\Leads\Models\IndividualLead;
 use App\Domain\Leads\Services\SpamGuard;
+use App\Support\PublicSite;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Validation\ValidationException;
@@ -59,9 +60,13 @@ class CallbackForm extends Component
 
         if (RateLimiter::tooManyAttempts($throttleKey, maxAttempts: 5)) {
             throw ValidationException::withMessages([
-                'phone' => __('Too many callback requests from this connection. Please call us on :phone.', [
-                    'phone' => config('academia.phone'),
-                ]),
+                'phone' => PublicSite::phone()
+                    ? __('Too many callback requests from this connection. Please call us on :phone.', [
+                        'phone' => PublicSite::phone(),
+                    ])
+                    : __('Too many callback requests from this connection. Please email :email.', [
+                        'email' => PublicSite::email(),
+                    ]),
             ]);
         }
 

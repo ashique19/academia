@@ -40,11 +40,36 @@ class PromotionService
     /** The campaign running right now, or null. Expiry is not optional. */
     public function active(): ?Promotion
     {
-        return Promotion::query()
+        $promotion = Promotion::query()
             ->active()
             ->where('type', 'campaign')
             ->orderByDesc('percentage')
             ->first();
+
+        return $this->alignFeaturedEndDate($promotion);
+    }
+
+    /**
+     * The configured campaign code has one end date, used by the banner and
+     * the offers page even when the stored row was seeded with another day.
+     */
+    private function alignFeaturedEndDate(?Promotion $promotion): ?Promotion
+    {
+        $featured = config('academia.promotions.featured');
+
+        if (! is_array($featured) || $promotion === null || $promotion->code !== ($featured['code'] ?? null)) {
+            return $promotion;
+        }
+
+        $ends = Carbon::parse((string) ($featured['ends_at'] ?? 'now'))->endOfDay();
+
+        if ($ends->isPast()) {
+            return null;
+        }
+
+        $promotion->ends_at = $ends;
+
+        return $promotion;
     }
 
     /** The active campaign, if it applies to this particular course. */
