@@ -56,6 +56,21 @@ class ContactForm extends Component
         ];
     }
 
+    /**
+     * @return array<string, string>
+     */
+    protected function messages(): array
+    {
+        return [
+            'name.required' => 'Please enter your name.',
+            'email.required' => 'Please enter your work email.',
+            'email.email' => 'That email address does not look right.',
+            'subject.required' => 'Please add a subject.',
+            'message.required' => 'Please tell us how we can help.',
+            'consent.accepted' => 'Please confirm you are happy for us to contact you about this enquiry.',
+        ];
+    }
+
     public function submit(SpamGuard $guard): void
     {
         if ($guard->looksAutomated($this->website, $this->renderedAt)) {

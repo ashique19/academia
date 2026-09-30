@@ -3,7 +3,7 @@
     // page view rather than on a click that may never have succeeded.
     $copy = match ($type) {
         'corporate'    => ['Proposal request received', 'A training advisor will be in touch within two working hours, and you will have a written proposal within two working days.'],
-        'registration' => ['You are registered', 'We have emailed your confirmation and joining details. Your place is held.'],
+        'registration' => ['Enquiry received', 'We have noted your interest in this course. A training advisor will email you to confirm availability. Nothing is booked and no payment has been taken.'],
         'interest'     => ['Interest registered', 'We will tell you as soon as a date is confirmed for this course.'],
         'brochure'     => ['Outline on its way', 'Check your inbox — the two-page course outline is there now.'],
         'callback'     => ['Callback booked', 'A training advisor will call you in the window you chose.'],
@@ -21,6 +21,13 @@
             </div>
             <h1 class="mt-6">{{ $copy[0] }}</h1>
             <p class="lede mt-4">{{ $copy[1] }}</p>
+
+            @if ($type === 'brochure' && session('outline_download_url'))
+                <p class="mt-6">
+                    <a href="{{ session('outline_download_url') }}" class="btn-primary">Download the PDF</a>
+                </p>
+                <p class="mt-3 text-sm text-sand-500">The same file is in the email. The link expires in 14 days.</p>
+            @endif
 
             <div class="mt-8 flex flex-wrap justify-center gap-3">
                 <a href="{{ route('courses.index') }}" wire:navigate class="btn-primary">Browse courses</a>

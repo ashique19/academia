@@ -12,6 +12,7 @@ use App\Domain\Content\Models\GlossaryTerm;
 use App\Domain\Shared\Models\City;
 use App\Domain\Shared\Models\Country;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CourseOutlineController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PageController;
@@ -47,6 +48,12 @@ Route::get('/courses/category/{category}/{subcategory}', [CourseController::clas
     ->name('courses.subcategory');
 
 Route::get('/courses/{course}', [CourseController::class, 'show'])->name('courses.show');
+
+// Signed outline PDF. Registered before the city route so "outline.pdf"
+// is not treated as a city slug.
+Route::get('/courses/{course}/outline.pdf', [CourseOutlineController::class, 'download'])
+    ->middleware('signed')
+    ->name('courses.outline');
 
 // Course x city. 404s unless a real session exists — the doorway-page gate.
 Route::get('/courses/{course}/{city}', [CourseController::class, 'showInCity'])

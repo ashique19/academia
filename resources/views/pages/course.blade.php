@@ -397,6 +397,18 @@
                     </div>
                 @endif
             </div>
+
+            <section class="mt-10 rounded-card border border-sand-200 bg-sand-50 p-6" aria-labelledby="outline-heading">
+                <h2 id="outline-heading" class="flex items-center gap-2 text-xl">
+                    <svg class="h-5 w-5 flex-none text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+                    Take the full outline with you
+                </h2>
+                <p class="mt-2 text-sm text-sand-600">
+                    Complete syllabus, objectives, prerequisites, dates and pricing as a two-page PDF — the version you forward to your manager.
+                </p>
+                <livewire:public.outline-download-form :course="$course" />
+                <p class="mt-3 text-xs text-sand-500">One email with the PDF. No sales sequence unless you ask for one.</p>
+            </section>
         </div>
 
         {{-- BOOKING SIDEBAR ---------------------------------------------- --}}
