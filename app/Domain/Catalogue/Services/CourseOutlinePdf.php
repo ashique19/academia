@@ -12,6 +12,9 @@ use Dompdf\Options;
 /**
  * Two-page-style course outline built from the catalogue already in the database.
  *
+ * PDF rendering uses dompdf/dompdf (Dompdf\Options), a production Composer
+ * require. A missing class means vendor was not updated: composer install --no-dev.
+ *
  * There is no imported WordPress PDF. Syllabus, objectives, prerequisites,
  * dates and the current price are rendered here so the emailed file matches
  * the course page.
