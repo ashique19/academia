@@ -1,4 +1,4 @@
-<x-layouts.app title="Frequently Asked Questions | Academia Training Solutions">
+<x-layouts.app :title="'Frequently Asked Questions | '.\App\Support\PublicSite::name()">
     @push('schema')
         <script type="application/ld+json">
         {!! json_encode([

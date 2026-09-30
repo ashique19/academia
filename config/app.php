@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => env('APP_NAME', 'Academia Training Solutions'),
+    'name' => env('APP_NAME', 'Academia Training EU'),
     'env' => env('APP_ENV', 'production'),
     'debug' => (bool) env('APP_DEBUG', false),
     'url' => env('APP_URL', 'http://localhost'),

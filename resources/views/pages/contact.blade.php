@@ -1,5 +1,5 @@
 <x-layouts.app
-    title="Contact Academia Training Solutions"
+    :title="'Contact '.\App\Support\PublicSite::name()"
     description="Talk to a training advisor about public courses, in-company programmes, Skills Credits or invoicing. Course enquiries answered the same working day."
 >
     <section class="bg-sand-900 py-16 text-white">
@@ -34,16 +34,18 @@
                     <h3 class="text-base">Direct channels</h3>
                     <ul class="mt-4 space-y-3 text-sm text-sand-700">
                         <li>
-                            <a href="mailto:{{ config('academia.email') }}" class="font-semibold text-orange-600 hover:underline">
-                                {{ config('academia.email') }}
+                            <a href="mailto:{{ \App\Support\PublicSite::email() }}" class="font-semibold text-orange-600 hover:underline">
+                                {{ \App\Support\PublicSite::email() }}
                             </a>
                         </li>
-                        <li>
-                            <a href="tel:{{ preg_replace('/\s+/', '', config('academia.phone')) }}" class="font-semibold text-orange-600 hover:underline">
-                                {{ config('academia.phone') }}
-                            </a>
-                            <span class="block text-xs text-sand-500">Monday–Friday 08:00–18:00 CET</span>
-                        </li>
+                        @if ($phone = \App\Support\PublicSite::phone())
+                            <li>
+                                <a href="tel:{{ preg_replace('/\s+/', '', $phone) }}" class="font-semibold text-orange-600 hover:underline">
+                                    {{ $phone }}
+                                </a>
+                                <span class="block text-xs text-sand-500">Monday–Friday 08:00–18:00 CET</span>
+                            </li>
+                        @endif
                     </ul>
 
                     <hr class="my-5 border-sand-200">

@@ -1,4 +1,4 @@
-<x-layouts.app title="About Academia Training Solutions"
+<x-layouts.app :title="'About '.\App\Support\PublicSite::name()"
                description="A European training academy built by practitioners. Small groups, practising experts, and quality standards we put in writing.">
     <section class="bg-sand-900 py-16 text-white">
         <div class="wrap grid gap-10 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
@@ -6,7 +6,7 @@
                 <p class="eyebrow !text-gold-400">About Academia</p>
                 <h1 class="mt-3 text-white">A European training academy built by practitioners</h1>
                 <p class="lede mt-4 text-white/80">
-                    Academia Training Solutions is a trade name of {{ config('academia.legal_entity') }}.
+                    {{ config('academia.trade_name') }} is a trade name of {{ config('academia.legal_entity') }}.
                     We exist because most professional training is written by people who no longer do
                     the work. We build every programme with someone currently practising the subject,
                     deliver it in small groups, and measure whether anything changed afterwards.

@@ -6,8 +6,10 @@
             <span class="hidden sm:inline">A trade name of {{ str_replace(' B.V.', '', config('academia.legal_entity')) }}</span>
         </div>
         <div class="flex flex-wrap items-center gap-x-5 gap-y-1">
-            <a href="mailto:{{ config('academia.email') }}" class="hover:text-white">{{ config('academia.email') }}</a>
-            <a href="tel:{{ preg_replace('/\s+/', '', config('academia.phone')) }}" class="hover:text-white">{{ config('academia.phone') }}</a>
+            <a href="mailto:{{ \App\Support\PublicSite::email() }}" class="hover:text-white">{{ \App\Support\PublicSite::email() }}</a>
+            @if ($phone = \App\Support\PublicSite::phone())
+                <a href="tel:{{ preg_replace('/\s+/', '', $phone) }}" class="hover:text-white">{{ $phone }}</a>
+            @endif
         </div>
     </div>
 </div>

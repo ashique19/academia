@@ -10,6 +10,7 @@ use App\Domain\Leads\Services\CorporateInquiryService;
 use App\Domain\Leads\Services\SpamGuard;
 use App\Domain\Shared\Models\City;
 use App\Domain\Shared\Models\Country;
+use App\Support\PublicSite;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Validation\ValidationException;
@@ -169,9 +170,13 @@ class CorporateInquiryForm extends Component
 
         if (RateLimiter::tooManyAttempts($throttleKey, maxAttempts: 3)) {
             throw ValidationException::withMessages([
-                'email' => __('We have had several enquiries from this connection in the last hour. '
-                    .'Please call us on :phone and we will take the details directly.',
-                    ['phone' => config('academia.phone')]),
+                'email' => PublicSite::phone()
+                    ? __('We have had several enquiries from this connection in the last hour. '
+                        .'Please call us on :phone and we will take the details directly.',
+                        ['phone' => PublicSite::phone()])
+                    : __('We have had several enquiries from this connection in the last hour. '
+                        .'Please email :email and we will take the details directly.',
+                        ['email' => PublicSite::email()]),
             ]);
         }
 

@@ -56,6 +56,28 @@ final class IndexingPolicy
         return $pageDirective !== '' ? $pageDirective : 'index,follow';
     }
 
+    /**
+     * Absolute canonical on an indexable host. Staging hosts get none, so a
+     * noindex page is not also advertised as the production URL.
+     */
+    public function canonicalUrl(?string $override = null): ?string
+    {
+        if (! $this->allowsIndexing()) {
+            return null;
+        }
+
+        $override = trim((string) $override);
+
+        if ($override !== '') {
+            return $override;
+        }
+
+        $path = '/'.ltrim(request()->getPathInfo(), '/');
+        $path = rtrim($path, '/') ?: '/';
+
+        return 'https://'.self::PRODUCTION_HOSTS[0].$path;
+    }
+
     /** @return list<string> */
     private function productionHosts(): array
     {

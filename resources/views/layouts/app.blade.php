@@ -4,16 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ $title ?? 'Academia Training Solutions — Professional Training Across Europe' }}</title>
+    @php
+        $indexing = app(\App\Domain\Content\Services\IndexingPolicy::class);
+        $pageTitle = $title ?? \App\Support\PublicSite::defaultTitle();
+        $canonicalUrl = $indexing->canonicalUrl($canonical ?? null);
+        $ogImageUrl = $ogImage ?? \App\Support\PublicSite::ogImageUrl();
+    @endphp
+
+    <title>{{ $pageTitle }}</title>
 
     <meta name="description" content="{{ $description ?? 'Practical, expert-led professional training delivered online, onsite and in classrooms across Europe. Over 500 courses in business, finance, technology, supply chain, HR and compliance.' }}">
-    <meta name="robots" content="{{ app(\App\Domain\Content\Services\IndexingPolicy::class)->directive($robots ?? null) }}">
-    @isset($canonical)<link rel="canonical" href="{{ $canonical }}">@endisset
+    <meta name="robots" content="{{ $indexing->directive($robots ?? null) }}">
+    @if ($canonicalUrl)<link rel="canonical" href="{{ $canonicalUrl }}">@endif
 
-    <meta property="og:site_name" content="Academia Training Solutions">
+    <meta property="og:site_name" content="{{ \App\Support\PublicSite::name() }}">
     <meta property="og:type" content="{{ $ogType ?? 'website' }}">
-    <meta property="og:title" content="{{ $title ?? 'Academia Training Solutions' }}">
-    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:url" content="{{ $canonicalUrl ?: url()->current() }}">
+    <meta property="og:image" content="{{ $ogImageUrl }}">
 
     {{--
         Fonts are self-hosted via @fontsource, not loaded from Google's CDN.

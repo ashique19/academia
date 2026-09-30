@@ -1,4 +1,4 @@
-<x-layouts.app title="Our Faculty | Academia Training Solutions">
+<x-layouts.app :title="'Our Faculty | '.\App\Support\PublicSite::name()">
     <section class="bg-sand-900 py-14 text-white">
         <div class="wrap"><h1 class="text-white">Our faculty</h1></div>
     </section>

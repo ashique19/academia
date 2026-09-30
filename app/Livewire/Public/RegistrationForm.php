@@ -23,6 +23,11 @@ use Livewire\Component;
 /**
  * Individual registration of interest.
  *
+ * Soft launch is enquiry-only. This form does not take card, iDEAL,
+ * Bancontact or invoice payment. Seat locking stays in RegistrationService
+ * so a later checkout can use the same write path. Do not present this
+ * screen as a completed purchase.
+ *
  * Goes through RegistrationService so the seat reservation is atomic even
  * though MVP takes no payment — retrofitting the locking after checkout
  * exists means auditing every write path that was added in between.

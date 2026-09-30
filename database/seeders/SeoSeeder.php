@@ -32,10 +32,11 @@ class SeoSeeder extends Seeder
     {
         Course::query()->published()->with('seo')->orderBy('id')->chunkById(100, function ($courses): void {
             foreach ($courses as $course) {
-                $title = Str::limit($course->title.' | Academia Training Solutions', 60, '');
+                $brand = config('academia.public_name');
+                $title = Str::limit($course->title.' | '.$brand, 60, '');
                 $description = $this->metaDescription(
                     $course->summary
-                        ?: "Book {$course->title} with Academia Training Solutions — expert-led professional training across Europe."
+                        ?: "Book {$course->title} with {$brand} — expert-led professional training across Europe."
                 );
 
                 $this->upsertSeo($course, [
@@ -59,10 +60,11 @@ class SeoSeeder extends Seeder
     private function seedCategories(): void
     {
         CourseCategory::query()->active()->with('seo')->each(function (CourseCategory $category): void {
-            $title = Str::limit($category->name.' courses | Academia Training Solutions', 60, '');
+            $brand = config('academia.public_name');
+            $title = Str::limit($category->name.' courses | '.$brand, 60, '');
             $description = $this->metaDescription(
                 $category->summary
-                    ?: "Browse {$category->name} courses from Academia Training Solutions — classroom, online and in-company delivery across Europe."
+                    ?: "Browse {$category->name} courses from {$brand} — classroom, online and in-company delivery across Europe."
             );
 
             $this->upsertSeo($category, [
@@ -83,10 +85,11 @@ class SeoSeeder extends Seeder
             $place = $city->country?->name
                 ? "{$city->name}, {$city->country->name}"
                 : $city->name;
-            $title = Str::limit("Training in {$place} | Academia Training Solutions", 60, '');
+            $brand = config('academia.public_name');
+            $title = Str::limit("Training in {$place} | {$brand}", 60, '');
             $description = $this->metaDescription(
                 $city->intro
-                    ?: "Upcoming classroom courses in {$place}. Book public seats or arrange in-company delivery with Academia Training Solutions."
+                    ?: "Upcoming classroom courses in {$place}. Book public seats or arrange in-company delivery with {$brand}."
             );
 
             $this->upsertSeo($city, [
@@ -104,7 +107,7 @@ class SeoSeeder extends Seeder
     private function seedBlogPosts(): void
     {
         BlogPost::query()->published()->with('seo')->each(function (BlogPost $post): void {
-            $title = Str::limit($post->title.' | Academia Training Solutions', 60, '');
+            $title = Str::limit($post->title.' | '.config('academia.public_name'), 60, '');
             $description = $this->metaDescription(
                 $post->excerpt
                     ?: Str::limit(strip_tags((string) $post->body), 155)

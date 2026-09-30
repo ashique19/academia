@@ -83,7 +83,7 @@
             <span>
                 © {{ date('Y') }} {{ config('academia.trade_name') }}, a trade name of
                 <strong class="text-gold-400">{{ config('academia.legal_entity') }}</strong>
-                · KvK 00000000 · VAT NL000000000B01
+                · {{ \App\Support\PublicSite::registrationLine() }}
             </span>
             {{-- Every one of these resolves. In an earlier build of this
                  product they had no destination on any page of the site. --}}
