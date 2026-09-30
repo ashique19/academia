@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\ApplyIndexingPolicy;
 use App\Http\Middleware\CaptureAttribution;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -18,6 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
         // is a guess — see spec §17.5.
         $middleware->web(append: [
             CaptureAttribution::class,
+            ApplyIndexingPolicy::class,
         ]);
 
         $middleware->alias([

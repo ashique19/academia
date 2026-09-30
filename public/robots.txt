@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /thank-you/
-Disallow: /admin/
-Allow: /
-
-Sitemap: https://academiatraining.eu/sitemap.xml

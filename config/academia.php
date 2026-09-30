@@ -128,4 +128,26 @@ return [
         'bookings_years' => 7,
         'dead_leads_months' => 24,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Indexing
+    |--------------------------------------------------------------------------
+    | academiatraining.eu and www.academiatraining.eu are always indexable.
+    | Any host starting with "x." is never indexable. Those two rules are
+    | hardcoded so an env mistake cannot noindex production or leave staging
+    | open. Hosts below are extras: production hosts are added to the always-
+    | indexable set, staging hosts are never indexable. Anything else follows
+    | APP_ENV — only production is indexable.
+    */
+    'seo' => [
+        'production_hosts' => array_values(array_filter(array_map(
+            'trim',
+            explode(',', (string) env('SEO_PRODUCTION_HOSTS', ''))
+        ))),
+        'staging_hosts' => array_values(array_filter(array_map(
+            'trim',
+            explode(',', (string) env('SEO_STAGING_HOSTS', 'x.academiatraining.eu'))
+        ))),
+    ],
 ];

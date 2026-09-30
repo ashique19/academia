@@ -8,6 +8,7 @@ use App\Domain\Catalogue\Models\Course;
 use App\Domain\Catalogue\Models\CourseCategory;
 use App\Domain\Catalogue\Models\DeliveryMode;
 use App\Domain\Catalogue\Services\CourseSearchService;
+use App\Domain\Content\Services\IndexingPolicy;
 use App\Domain\Content\Services\SeoService;
 use App\Domain\Shared\Models\City;
 use Illuminate\Contracts\View\View;
@@ -239,6 +240,12 @@ class CourseCatalogue extends Component
     #[Computed]
     public function robots(): string
     {
+        $policy = app(IndexingPolicy::class);
+
+        if (! $policy->allowsIndexing()) {
+            return IndexingPolicy::NOINDEX;
+        }
+
         return app(SeoService::class)->facetedRobots(
             count($this->activeFilters()),
             (int) $this->getPage()

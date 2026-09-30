@@ -15,6 +15,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\SeoController;
 use App\Livewire\Public\CourseCatalogue;
 use App\Livewire\Public\ScheduleBrowser;
 use Illuminate\Support\Facades\Route;
@@ -98,6 +99,14 @@ Route::get('/trainers/{trainer}', [PageController::class, 'trainer'])->name('tra
 Route::get('/thank-you/{type}', [PageController::class, 'thankYou'])->name('thank-you');
 Route::get('/newsletter/confirm/{token}', [PageController::class, 'confirmNewsletter'])
     ->name('newsletter.confirm');
+
+/* ------------------------------------------------------- robots / sitemap */
+// Served by the app, not public/robots.txt, so the directive can follow the
+// request host. A static file would keep staging crawlable and would point
+// every host at the production sitemap.
+
+Route::get('/robots.txt', [SeoController::class, 'robots'])->name('robots');
+Route::get('/sitemap.xml', [SeoController::class, 'sitemap'])->name('sitemap');
 
 /* ------------------------------------------------------------- legal */
 
