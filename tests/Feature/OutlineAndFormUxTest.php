@@ -11,6 +11,8 @@ use App\Livewire\Public\ContactForm;
 use App\Livewire\Public\CorporateInquiryForm;
 use App\Livewire\Public\OutlineDownloadForm;
 use App\Mail\CourseOutlineMail;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 use Livewire\Livewire;
@@ -52,18 +54,19 @@ it('shows the outline lead magnet on a course page and emails a pdf', function (
         ->toContain('Explain the principles of first-time leadership')
         ->toContain('€695');
 
-    Livewire::test(OutlineDownloadForm::class, ['course' => $course])
+    $component = Livewire::test(OutlineDownloadForm::class, ['course' => $course])
         ->set('email', 'buyer@example.com')
         ->set('renderedAt', now()->subSeconds(10)->timestamp)
         ->call('submit')
-        ->assertHasNoErrors()
-        ->assertRedirect(route('thank-you', ['type' => 'brochure']));
+        ->assertHasNoErrors();
 
     $lead = IndividualLead::query()->first();
     expect($lead)->not->toBeNull()
         ->and($lead->source)->toBe(LeadSource::BrochureDownload)
         ->and($lead->email)->toBe('buyer@example.com')
         ->and($lead->course_id)->toBe($course->id);
+
+    $component->assertRedirect('/thank-you/brochure?lead='.$lead->uuid);
 
     Mail::assertSent(CourseOutlineMail::class, function (CourseOutlineMail $mail) use ($course): bool {
         return $mail->hasTo('buyer@example.com')
@@ -93,13 +96,65 @@ it('does not offer an outline pdf for an unpublished course', function () {
     $this->get($url)->assertNotFound();
 });
 
-it('shows the outline download link on the thank-you page', function () {
-    $this->withSession(['outline_download_url' => 'https://example.test/outline.pdf?signature=test'])
-        ->get(route('thank-you', 'brochure'))
+it('shows the outline download from the lead on the redirect, without session', function () {
+    $course = Course::factory()->create([
+        'slug' => 'outline-thank-you-course',
+        'price_cents' => 100000,
+    ]);
+
+    $lead = IndividualLead::query()->create([
+        'name' => 'Outline download',
+        'email' => 'buyer@example.com',
+        'course_id' => $course->id,
+        'source' => LeadSource::BrochureDownload,
+        'status' => 'new',
+    ]);
+
+    $this->flushSession();
+
+    $this->get(route('thank-you', ['type' => 'brochure', 'lead' => $lead->uuid]))
         ->assertOk()
         ->assertSee('Outline on its way', false)
         ->assertSee('Download the PDF', false)
+        ->assertSee('/courses/'.$course->slug.'/outline.pdf', false)
+        ->assertSee('signature=', false);
+
+    $this->get(route('thank-you', 'brochure'))
+        ->assertOk()
+        ->assertDontSee('Download the PDF', false);
+
+    $lead->forceFill(['created_at' => now()->subDays(15)])->save();
+
+    $this->get(route('thank-you', ['type' => 'brochure', 'lead' => $lead->uuid]))
+        ->assertOk()
+        ->assertDontSee('Download the PDF', false);
+});
+
+it('keeps a session fallback for the outline download link', function () {
+    $this->withSession(['outline_download_url' => 'https://example.test/outline.pdf?signature=test'])
+        ->get(route('thank-you', 'brochure'))
+        ->assertOk()
+        ->assertSee('Download the PDF', false)
         ->assertSee('https://example.test/outline.pdf?signature=test', false);
+});
+
+it('does not turn another lead into an outline download', function () {
+    $lead = IndividualLead::query()->create([
+        'name' => 'Alex',
+        'email' => 'alex@example.com',
+        'source' => LeadSource::Contact,
+        'status' => 'new',
+        'message' => 'Hello',
+    ]);
+
+    $this->get(route('thank-you', ['type' => 'brochure', 'lead' => $lead->uuid]))
+        ->assertOk()
+        ->assertDontSee('Download the PDF', false);
+});
+
+it('loads dompdf from the production composer require', function () {
+    expect(class_exists(Options::class))->toBeTrue()
+        ->and(class_exists(Dompdf::class))->toBeTrue();
 });
 
 it('shows contact validation instead of a silent empty submit', function () {

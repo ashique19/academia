@@ -6,6 +6,7 @@ namespace App\Livewire\Public;
 
 use App\Domain\Catalogue\Models\Course;
 use App\Domain\Catalogue\Services\CourseOutlinePdf;
+use App\Domain\Catalogue\Services\OutlineDownloadLink;
 use App\Domain\Leads\Enums\LeadSource;
 use App\Domain\Leads\Models\IndividualLead;
 use App\Domain\Leads\Services\SpamGuard;
@@ -14,7 +15,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\RateLimiter;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Locked;
 use Livewire\Component;
@@ -29,8 +29,6 @@ use Livewire\Component;
  */
 class OutlineDownloadForm extends Component
 {
-    private const LINK_DAYS = 14;
-
     #[Locked]
     public int $courseId;
 
@@ -102,11 +100,8 @@ class OutlineDownloadForm extends Component
             'consent_version' => config('academia.leads.consent_version'),
         ]);
 
-        $downloadUrl = URL::temporarySignedRoute(
-            'courses.outline',
-            now()->addDays(self::LINK_DAYS),
-            ['course' => $course],
-        );
+        $lead->setRelation('course', $course);
+        $downloadUrl = app(OutlineDownloadLink::class)->urlForLead($lead) ?? '';
 
         try {
             Mail::to($lead->email)->send(new CourseOutlineMail(
@@ -123,9 +118,18 @@ class OutlineDownloadForm extends Component
             ]);
         }
 
-        session()->flash('outline_download_url', $downloadUrl);
+        // Query string is the source of truth. Session put survives a later
+        // visit in the same browser; flash alone does not survive a cookie
+        // that the Livewire redirect drops.
+        session()->put('outline_lead_uuid', $lead->uuid);
+        if (is_string($downloadUrl) && $downloadUrl !== '') {
+            session()->flash('outline_download_url', $downloadUrl);
+        }
 
-        $this->redirectRoute('thank-you', ['type' => 'brochure'], navigate: false);
+        $this->redirectRoute('thank-you', [
+            'type' => 'brochure',
+            'lead' => $lead->uuid,
+        ], absolute: false);
     }
 
     public function render(): View

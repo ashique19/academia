@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Domain\Catalogue\Models\Course;
 use App\Domain\Catalogue\Models\Trainer;
+use App\Domain\Catalogue\Services\OutlineDownloadLink;
 use App\Domain\Catalogue\Services\PromotionService;
 use App\Domain\Content\Models\BlogPost;
 use App\Domain\Content\Models\CaseStudy;
@@ -171,13 +172,20 @@ class PageController extends Controller
         ]);
     }
 
-    public function thankYou(string $type): View
+    public function thankYou(string $type, OutlineDownloadLink $outlines): View
     {
         abort_unless(in_array($type, [
             'corporate', 'registration', 'interest', 'brochure', 'callback', 'newsletter', 'contact',
         ], true), 404);
 
-        return view('pages.thank-you', compact('type'));
+        $lead = request()->query('lead');
+
+        return view('pages.thank-you', [
+            'type' => $type,
+            'outlineDownloadUrl' => $type === 'brochure'
+                ? $outlines->resolve(is_string($lead) ? $lead : null)
+                : null,
+        ]);
     }
 
     public function legal(string $document): View
