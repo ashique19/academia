@@ -31,6 +31,10 @@
     --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    {{-- Hides wire:loading until a request is in flight. Without this, "Sending…"
+         is visible on every submit button before anyone clicks. --}}
+    @livewireStyles
+
     @stack('schema')
 </head>
 <body class="min-h-screen bg-white">

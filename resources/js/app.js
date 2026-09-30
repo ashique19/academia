@@ -36,3 +36,76 @@ function localiseSessionTimes() {
 
 document.addEventListener('DOMContentLoaded', localiseSessionTimes);
 document.addEventListener('livewire:navigated', localiseSessionTimes);
+
+/**
+ * Stop an invalid public form before Livewire starts a request.
+ *
+ * Livewire disables the submit button and swaps in "Sending…" as soon as
+ * submit fires. HTML5 validation that loses that race leaves the button
+ * stuck, with no message under the fields. This listener runs in the
+ * capture phase, so an invalid form never reaches that handler.
+ */
+document.addEventListener('invalid', (event) => {
+    const field = event.target;
+
+    if (!(field instanceof HTMLElement)) {
+        return;
+    }
+
+    const form = field.closest('form');
+
+    if (!form?.hasAttribute('data-validate')) {
+        return;
+    }
+
+    // The invalid event fires before submit, and it does not bubble. Swallow
+    // the browser tooltip and show the message that sits in the form.
+    event.preventDefault();
+
+    form.querySelectorAll(':invalid').forEach((el) => {
+        el.setAttribute('aria-invalid', 'true');
+    });
+
+    const banner = form.querySelector('[data-form-error]');
+
+    if (banner) {
+        banner.hidden = false;
+    }
+
+    field.focus();
+}, true);
+
+document.addEventListener('submit', (event) => {
+    const form = event.target;
+
+    if (!(form instanceof HTMLFormElement) || !form.hasAttribute('data-validate')) {
+        return;
+    }
+
+    form.querySelectorAll('[aria-invalid="true"]').forEach((el) => {
+        el.removeAttribute('aria-invalid');
+    });
+
+    const banner = form.querySelector('[data-form-error]');
+
+    if (form.checkValidity()) {
+        if (banner) {
+            banner.hidden = true;
+        }
+
+        return;
+    }
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    form.querySelectorAll(':invalid').forEach((el) => {
+        el.setAttribute('aria-invalid', 'true');
+    });
+
+    if (banner) {
+        banner.hidden = false;
+    }
+
+    form.querySelector(':invalid')?.focus();
+}, true);

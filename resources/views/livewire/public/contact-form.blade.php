@@ -1,7 +1,14 @@
-<form wire:submit="submit" class="space-y-4">
+<form wire:submit="submit" data-validate class="space-y-4">
     <div class="hidden" aria-hidden="true">
         <label>Website<input type="text" wire:model="website" tabindex="-1" autocomplete="off"></label>
     </div>
+
+    <p data-form-error hidden class="field-error !mt-0" role="alert">
+        Please complete the highlighted fields before sending.
+    </p>
+    @if ($errors->any())
+        <p class="field-error !mt-0" role="alert">Please correct the fields below and try again.</p>
+    @endif
 
     <div class="grid gap-4 sm:grid-cols-2">
         <div>
@@ -43,7 +50,7 @@
     </div>
 
     <label class="flex items-start gap-2.5 text-xs text-sand-600">
-        <input type="checkbox" wire:model="consent"
+        <input type="checkbox" wire:model="consent" required
                class="mt-0.5 rounded border-sand-300 text-orange-500 focus:ring-orange-500">
         <span>
             I am happy for Academia to contact me about this enquiry. We keep enquiry data for
@@ -53,7 +60,7 @@
     </label>
     @error('consent') <p class="field-error">{{ $message }}</p> @enderror
 
-    <button type="submit" class="btn-primary w-full sm:w-auto" wire:loading.attr="disabled">
+    <button type="submit" class="btn-primary w-full sm:w-auto" wire:loading.attr="disabled" wire:target="submit">
         <span wire:loading.remove wire:target="submit">Send message</span>
         <span wire:loading wire:target="submit">Sending…</span>
     </button>

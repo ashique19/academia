@@ -113,7 +113,7 @@ class CorporateInquiryForm extends Component
     public function rules(): array
     {
         return [
-            'deliveryModeId' => ['required', 'integer', 'exists:delivery_modes,id'],
+            'deliveryModeId' => ['bail', 'required', 'integer', 'exists:delivery_modes,id'],
             'participants' => ['required', 'integer', 'min:1', 'max:5000'],
             'topic' => ['required', 'string', 'max:240'],
             'courseId' => ['nullable', 'integer', 'exists:courses,id'],
@@ -121,7 +121,7 @@ class CorporateInquiryForm extends Component
             'preferredWindow' => ['nullable', 'string', 'max:60'],
 
             'companyName' => ['required', 'string', 'max:180'],
-            'countryId' => ['required', 'integer', 'exists:countries,id'],
+            'countryId' => ['bail', 'required', 'integer', 'exists:countries,id'],
             'cityId' => ['nullable', 'integer', 'exists:cities,id'],
             'sector' => ['nullable', 'string', 'max:80'],
             'companySize' => ['nullable', 'string', 'max:40'],
@@ -140,8 +140,27 @@ class CorporateInquiryForm extends Component
     {
         return [
             'consent.accepted' => 'Please confirm you are happy for us to contact you about this enquiry.',
+            'deliveryModeId.required' => 'Please choose a delivery mode.',
             'participants.required' => 'Roughly how many people need the training? An estimate is fine.',
+            'topic.required' => 'Please tell us what training you need.',
+            'companyName.required' => 'Please enter the company name.',
+            'countryId.required' => 'Please choose a country.',
+            'contactName.required' => 'Please enter your name.',
+            'email.required' => 'Please enter a work email.',
             'email.email' => 'That email address does not look right — we need it to send the proposal.',
+        ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    protected function validationAttributes(): array
+    {
+        return [
+            'deliveryModeId' => 'delivery mode',
+            'countryId' => 'country',
+            'cityId' => 'city',
+            'courseId' => 'course',
         ];
     }
 
