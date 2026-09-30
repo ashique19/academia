@@ -22,11 +22,11 @@
             <h1 class="mt-6">{{ $copy[0] }}</h1>
             <p class="lede mt-4">{{ $copy[1] }}</p>
 
-            @if ($type === 'brochure' && session('outline_download_url'))
+            @if ($type === 'brochure' && filled($outlineDownloadUrl ?? null))
                 <p class="mt-6">
-                    <a href="{{ session('outline_download_url') }}" class="btn-primary">Download the PDF</a>
+                    <a href="{{ $outlineDownloadUrl }}" class="btn-primary">Download the PDF</a>
                 </p>
-                <p class="mt-3 text-sm text-sand-500">The same file is in the email. The link expires in 14 days.</p>
+                <p class="mt-3 text-sm text-sand-500">The same file is in the email. This link works for 14 days.</p>
             @endif
 
             <div class="mt-8 flex flex-wrap justify-center gap-3">
