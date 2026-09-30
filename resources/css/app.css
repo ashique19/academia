@@ -162,6 +162,23 @@
 
   .wrap { @apply mx-auto w-full max-w-[1240px] px-5 sm:px-6; }
 
+  /* Promo sentence is wider than .wrap, so this bar uses the viewport.
+     11.5px is the size that still fits at 1024px; it eases back to 14px
+     by 1280px. Below lg the bar wraps instead. */
+  .promo-bar {
+    @apply mx-auto flex w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 px-5 py-2.5 text-center text-sm font-semibold sm:px-6;
+  }
+  @media (min-width: 64rem) {
+    .promo-bar {
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      column-gap: 0.45rem;
+      padding-inline: 1rem;
+      font-weight: 500;
+      font-size: clamp(11.5px, calc(11.5px + (100vw - 1024px) * 0.0098), 14px);
+    }
+  }
+
   /* Buttons.
      In Tailwind 4 a component class cannot @apply another component class in
      the same layer, so the shared base is declared once across the selector
